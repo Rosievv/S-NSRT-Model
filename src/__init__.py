@@ -1,15 +1,16 @@
-"""SCRAM source package"""
+"""SCRAM — Supply Chain Risk Analysis Model"""
 
 from .config_manager import config, ConfigManager
 from .collectors import (
     BaseCollector,
     USCensusCollector,
     USGSCollector,
-    MacroIndicatorCollector
+    MacroIndicatorCollector,
+    FREDCollector,
 )
 from .utils import *
 
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 __all__ = [
     'config',
@@ -17,5 +18,6 @@ __all__ = [
     'BaseCollector',
     'USCensusCollector',
     'USGSCollector',
-    'MacroIndicatorCollector'
+    'MacroIndicatorCollector',
+    'FREDCollector',
 ]

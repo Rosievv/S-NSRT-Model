@@ -73,7 +73,7 @@ data/processed/*
 *.bak
 *.orig
 
-# Model artifacts (for future)
-models/*.pkl
-models/*.h5
-models/*.pt
+# Model artifacts
+models/**/*.pkl
+models/**/*.h5
+models/**/*.pt
