@@ -1,0 +1,24 @@
+{
+  "model_type": "log_transformed",
+  "transformation": "log1p",
+  "inverse_transformation": "expm1",
+  "target_variable_log": "log_value_usd",
+  "target_variable_original": "value_usd",
+  "metrics_log_space": {
+    "mae": 5.485147900357432,
+    "rmse": 7.10425526156177,
+    "r2": -0.10374098994341918,
+    "mape": 22.410115501522473
+  },
+  "metrics_original_space": {
+    "mae": 41074162.79115457,
+    "rmse": 194419689.83927262,
+    "r2": -0.04384139744934257,
+    "mape": 2152.188998786814
+  },
+  "improvement_vs_baseline": {
+    "mae_reduction": 37.39770275509755,
+    "rmse_reduction": -3.396940310797447,
+    "r2_improvement": 0.0
+  }
+}

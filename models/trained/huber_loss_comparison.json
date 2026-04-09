@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-03-12T21:46:25.421648",
+  "strategy": "huber_loss_regression",
+  "test_metrics": {
+    "mae": 41280669.82841669,
+    "rmse": 193932302.50146097,
+    "r2": -0.038614381753642624,
+    "mape": 5046.55900388693
+  },
+  "all_models_comparison": {
+    "\u57fa\u7ebf\u6a21\u578b (MSE)": {
+      "mae": 65611270.83,
+      "r2": 0.0236,
+      "approach": "\u76f4\u63a5\u9884\u6d4bvalue_usd"
+    },
+    "\u5355\u4e00\u5bf9\u6570\u6a21\u578b (MSE)": {
+      "mae": 41074162.79,
+      "r2": -0.0438,
+      "approach": "\u5bf9\u6570\u53d8\u6362 + MSE\u635f\u5931"
+    },
+    "\u5206\u7ec4\u5bf9\u6570\u6a21\u578b (MSE)": {
+      "mae": 55114287.12,
+      "r2": -0.0516,
+      "approach": "\u6309HS\u4ee3\u7801\u5206\u7ec4 + MSE\u635f\u5931"
+    },
+    "Huber Loss\u6a21\u578b": {
+      "mae": 41280669.82841669,
+      "r2": -0.038614381753642624,
+      "approach": "\u5bf9\u6570\u53d8\u6362 + Huber Loss"
+    }
+  },
+  "improvement_vs_baseline": 37.08295951868443,
+  "prediction_stats": {
+    "pred_mean": 2113053.25,
+    "true_mean": 41098412.84425844,
+    "pred_std": 6077613.5,
+    "true_std": 190293076.6109459,
+    "pred_max": 197308464.0,
+    "true_max": 3212467524.0000052
+  }
+}

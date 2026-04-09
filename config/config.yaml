@@ -1,0 +1,119 @@
+# SCRAM - Supply Chain Risk Analysis Model Configuration
+
+# Time range for data collection
+time_range:
+  train_start: "2010-01-01"
+  train_end: "2019-12-31"
+  test_start: "2020-01-01"
+  test_end: "2024-12-31"
+  
+# Data sources configuration
+data_sources:
+  us_census:
+    base_url: "https://api.census.gov/data/timeseries/intltrade"
+    # API key should be set in .env file
+    endpoints:
+      imports: "/imports/hs"
+      exports: "/exports/hs"
+    rate_limit:
+      requests_per_minute: 30
+      retry_attempts: 3
+      retry_delay: 5
+    
+  usgs:
+    base_url: "https://www.usgs.gov/centers/national-minerals-information-center"
+    minerals:
+      - gallium
+      - germanium
+      - silicon
+    data_types:
+      - production
+      - imports
+      - exports
+      - prices
+    
+  fed_ny:
+    gscpi_url: "https://www.newyorkfed.org/research/policy/gscpi"
+    data_file: "gscpi.csv"
+    
+  ism:
+    base_url: "https://www.ismworld.org/supply-management-news-and-reports/reports/pmi/"
+    sectors:
+      - manufacturing
+      - computer_electronics
+
+# HS Codes for semiconductor supply chain
+hs_codes:
+  integrated_circuits:
+    - code: "854231"
+      description: "Processors and controllers"
+      category: "logic"
+    - code: "854232"
+      description: "Memories"
+      category: "memory"
+    - code: "854233"
+      description: "Amplifiers"
+      category: "analog"
+    - code: "854239"
+      description: "Other integrated circuits"
+      category: "other"
+  
+  manufacturing_equipment:
+    - code: "848620"
+      description: "Semiconductor manufacturing equipment"
+      category: "capex_lead_indicator"
+    - code: "848610"
+      description: "Wafer/substrate manufacturing equipment"
+      category: "capex_upstream"
+  
+  raw_materials:
+    - code: "381800"
+      description: "Silicon wafers"
+      category: "critical_substrate"
+    - code: "811292"
+      description: "Gallium/Germanium unwrought"
+      category: "strategic_metal"
+    - code: "280461"
+      description: "Silicon >99.99%"
+      category: "polysilicon"
+
+# Automotive proxy (alternative data source)
+automotive_hs_codes:
+  - code: "870829"
+    description: "Parts and accessories of motor vehicles"
+  - code: "870899"
+    description: "Other motor vehicle parts"
+
+# Data storage configuration
+storage:
+  raw_data_path: "data/raw"
+  processed_data_path: "data/processed"
+  file_format: "parquet"  # parquet, csv, or feather
+  compression: "snappy"
+  partitioning: "year_month"
+
+# Logging configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/scram_{date}.log"
+  console: true
+  max_file_size: 10485760  # 10MB
+  backup_count: 5
+
+# Data validation rules
+validation:
+  required_columns:
+    trade_data: ["date", "hs_code", "country", "value_usd", "quantity"]
+    mineral_data: ["year", "mineral", "metric", "value", "unit"]
+    macro_data: ["date", "indicator", "value"]
+  
+  data_quality_checks:
+    max_missing_pct: 0.2  # Maximum 20% missing values
+    outlier_std_threshold: 5.0  # Z-score threshold for outliers
+    date_continuity_check: true
+
+# Feature engineering preparation (for future modules)
+features:
+  lookback_periods: [3, 6, 12]  # months
+  aggregation_functions: ["mean", "std", "min", "max"]

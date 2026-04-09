@@ -1,0 +1,16 @@
+{
+  "log_space_r2": -0.10374098994341918,
+  "original_space_r2": -0.04384139744934257,
+  "top_10_error_contribution": 0.021748679286187716,
+  "top_100_error_contribution": 0.16798936606692694,
+  "mean_log_error": 5.485147900357432,
+  "mean_original_error": 41074162.79115457,
+  "prediction_mean": 728413.375,
+  "ground_truth_mean": 41098412.84425844,
+  "recommendations": [
+    "Use Huber Loss to reduce sensitivity to outliers",
+    "Add temporal features (lags, moving averages)",
+    "Consider quantile regression for prediction intervals",
+    "Evaluate LSTM or Prophet for time series patterns"
+  ]
+}
