@@ -157,7 +157,7 @@ print("="*70)
 
 import os
 for fname in ['src/models/time_series_model.py', 
-              'train_baseline_models.py',
+              'scripts/training/train_baseline_models.py',
               'models/trained/hhi_forecaster_lgb.pkl']:
     if os.path.exists(fname):
         size = os.path.getsize(fname)

@@ -1,0 +1,4 @@
+event,description,simulated_gap_pct,observed_change_pct,simulation_vs_actual_diff
+covid_q1_2020,COVID-19 initial lockdowns,0.0,328.62,-328.62
+japan_earthquake_2011,Tōhoku earthquake and tsunami,0.0,51.86,-51.86
+thai_flood_2011,Thailand flooding (HDD/memory supply),0.0,35.46,-35.46

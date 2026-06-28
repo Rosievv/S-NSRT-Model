@@ -201,7 +201,7 @@ data/
 
 ```bash
 # Step 1: 验证配置
-python3 verify_setup.py
+python3 scripts/setup/verify_setup.py
 
 # Step 2: 安装依赖（如果还没装）
 pip install -r requirements.txt

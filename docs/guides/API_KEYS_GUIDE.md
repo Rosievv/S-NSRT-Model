@@ -139,7 +139,7 @@ python -c "from src.collectors import MacroIndicatorCollector; c = MacroIndicato
 ### Q5: 如何验证 API Key 是否有效？
 **A**: 运行示例脚本会自动验证：
 ```bash
-python examples.py --example 1
+python scripts/demo/examples.py --example 1
 ```
 
 ---

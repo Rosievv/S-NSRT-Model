@@ -181,7 +181,7 @@ scram/
 │       ├── temporal_features.py           # 时间序列特征
 │       ├── growth_features.py             # 增长特征
 │       └── feature_pipeline.py            # Pipeline
-├── feature_engineering_example.py         # 示例脚本
+├── scripts/training/feature_engineering_example.py  # 示例脚本
 └── data/
     └── processed/
         └── features_sample.parquet        # 输出示例

@@ -1,4 +1,8 @@
 #!/bin/bash
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+cd "$REPO_ROOT"
+
 LOG_FILE="logs/test_collection_retry.log"
 
 echo "====================================="
@@ -31,7 +35,9 @@ for i in {1..25}; do
     MINS=$((i/2))
     echo "[$TIME] (${MINS}min) $PROGRESS"
     
-    # 每5次显示-------------"
+    # 每5次显示分隔线
+    if (( i % 5 == 0 )); then
+        echo "-------------------------------------"
     fi
 done
 

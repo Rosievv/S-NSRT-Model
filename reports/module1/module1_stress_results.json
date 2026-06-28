@@ -1,0 +1,558 @@
+[
+  {
+    "scenario_name": "top_1_supplier_failure",
+    "shocked_nodes": [
+      "Malaysia"
+    ],
+    "severity": 1.0,
+    "original_supply": 1330303120304.0,
+    "disrupted_supply": 1161442796007.3,
+    "supply_gap_pct": 12.69,
+    "substitution_absorbed_pct": 56.87,
+    "most_affected_hs": [
+      {
+        "hs_code": "854231",
+        "direct_loss_usd": 322727817986.0,
+        "substitution_usd": 153867493689.3,
+        "net_loss_usd": 168860324296.7,
+        "loss_pct": 20.21,
+        "remaining_suppliers": 187
+      },
+      {
+        "hs_code": "280461",
+        "direct_loss_usd": 4186231.0,
+        "substitution_usd": 4186231.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 34
+      },
+      {
+        "hs_code": "381800",
+        "direct_loss_usd": 221254031.0,
+        "substitution_usd": 221254031.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 72
+      },
+      {
+        "hs_code": "811292",
+        "direct_loss_usd": 373529.0,
+        "substitution_usd": 373529.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 46
+      },
+      {
+        "hs_code": "848610",
+        "direct_loss_usd": 1221746.0,
+        "substitution_usd": 1221746.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 37
+      },
+      {
+        "hs_code": "848620",
+        "direct_loss_usd": 2142381670.0,
+        "substitution_usd": 2142381670.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 74
+      },
+      {
+        "hs_code": "854232",
+        "direct_loss_usd": 7147249730.0,
+        "substitution_usd": 7147249730.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 137
+      },
+      {
+        "hs_code": "854233",
+        "direct_loss_usd": 6519952822.0,
+        "substitution_usd": 6519952822.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 125
+      },
+      {
+        "hs_code": "854239",
+        "direct_loss_usd": 52705900764.0,
+        "substitution_usd": 52705900764.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 193
+      }
+    ],
+    "details": {
+      "direct_loss_usd": 391470338509.0,
+      "substitution_usd": 222610014212.3,
+      "net_loss_usd": 168860324296.7
+    }
+  },
+  {
+    "scenario_name": "top_3_supplier_failure",
+    "shocked_nodes": [
+      "Malaysia",
+      "Taiwan",
+      "Korea, South"
+    ],
+    "severity": 0.5,
+    "original_supply": 1330303120304.0,
+    "disrupted_supply": 1292338143731.1,
+    "supply_gap_pct": 2.85,
+    "substitution_absorbed_pct": 88.47,
+    "most_affected_hs": [
+      {
+        "hs_code": "854232",
+        "direct_loss_usd": 24192498859.0,
+        "substitution_usd": 15913897196.4,
+        "net_loss_usd": 8278601662.6,
+        "loss_pct": 10.72,
+        "remaining_suppliers": 135
+      },
+      {
+        "hs_code": "854231",
+        "direct_loss_usd": 209503450477.0,
+        "substitution_usd": 187834803942.0,
+        "net_loss_usd": 21668646535.0,
+        "loss_pct": 2.59,
+        "remaining_suppliers": 185
+      },
+      {
+        "hs_code": "854239",
+        "direct_loss_usd": 86650870974.0,
+        "substitution_usd": 78633142598.7,
+        "net_loss_usd": 8017728375.300003,
+        "loss_pct": 2.3,
+        "remaining_suppliers": 191
+      },
+      {
+        "hs_code": "280461",
+        "direct_loss_usd": 115736932.5,
+        "substitution_usd": 115736932.5,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 32
+      },
+      {
+        "hs_code": "381800",
+        "direct_loss_usd": 1059614234.5,
+        "substitution_usd": 1059614234.5,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 70
+      },
+      {
+        "hs_code": "811292",
+        "direct_loss_usd": 34278115.5,
+        "substitution_usd": 34278115.5,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 44
+      },
+      {
+        "hs_code": "848610",
+        "direct_loss_usd": 100066627.0,
+        "substitution_usd": 100066627.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 35
+      },
+      {
+        "hs_code": "848620",
+        "direct_loss_usd": 2304220241.5,
+        "substitution_usd": 2304220241.5,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 72
+      },
+      {
+        "hs_code": "854233",
+        "direct_loss_usd": 5332358118.5,
+        "substitution_usd": 5332358118.5,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 123
+      }
+    ],
+    "details": {
+      "direct_loss_usd": 329293094579.5,
+      "substitution_usd": 291328118006.6,
+      "net_loss_usd": 37964976572.9
+    }
+  },
+  {
+    "scenario_name": "east_asia_moderate",
+    "shocked_nodes": [
+      "China",
+      "Taiwan",
+      "Japan",
+      "Korea, South",
+      "Malaysia",
+      "Vietnam",
+      "Thailand",
+      "Singapore"
+    ],
+    "severity": 0.3,
+    "original_supply": 1330303120304.0,
+    "disrupted_supply": 1324750912711.43,
+    "supply_gap_pct": 0.42,
+    "substitution_absorbed_pct": 97.92,
+    "most_affected_hs": [
+      {
+        "hs_code": "854232",
+        "direct_loss_usd": 22004430243.3,
+        "substitution_usd": 16570317781.109999,
+        "net_loss_usd": 5434112462.190001,
+        "loss_pct": 7.04,
+        "remaining_suppliers": 130
+      },
+      {
+        "hs_code": "381800",
+        "direct_loss_usd": 1927546292.3999999,
+        "substitution_usd": 1885883329.98,
+        "net_loss_usd": 41662962.41999984,
+        "loss_pct": 0.51,
+        "remaining_suppliers": 65
+      },
+      {
+        "hs_code": "848620",
+        "direct_loss_usd": 6466154665.2,
+        "substitution_usd": 6389722497.24,
+        "net_loss_usd": 76432167.96000004,
+        "loss_pct": 0.28,
+        "remaining_suppliers": 67
+      },
+      {
+        "hs_code": "280461",
+        "direct_loss_usd": 100098831.6,
+        "substitution_usd": 100098831.6,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 27
+      },
+      {
+        "hs_code": "811292",
+        "direct_loss_usd": 74851697.39999999,
+        "substitution_usd": 74851697.39999999,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 40
+      },
+      {
+        "hs_code": "848610",
+        "direct_loss_usd": 252428605.2,
+        "substitution_usd": 252428605.2,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 30
+      },
+      {
+        "hs_code": "854231",
+        "direct_loss_usd": 163730239930.8,
+        "substitution_usd": 163730239930.8,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 180
+      },
+      {
+        "hs_code": "854233",
+        "direct_loss_usd": 4613733870.599999,
+        "substitution_usd": 4613733870.599999,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 118
+      },
+      {
+        "hs_code": "854239",
+        "direct_loss_usd": 68379000181.2,
+        "substitution_usd": 68379000181.2,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 186
+      }
+    ],
+    "details": {
+      "direct_loss_usd": 267548484317.69998,
+      "substitution_usd": 261996276725.13,
+      "net_loss_usd": 5552207592.570001
+    }
+  },
+  {
+    "scenario_name": "east_asia_severe",
+    "shocked_nodes": [
+      "China",
+      "Taiwan",
+      "Japan",
+      "Korea, South",
+      "Malaysia",
+      "Vietnam",
+      "Thailand",
+      "Singapore"
+    ],
+    "severity": 0.7,
+    "original_supply": 1330303120304.0,
+    "disrupted_supply": 917507654210.1901,
+    "supply_gap_pct": 31.03,
+    "substitution_absorbed_pct": 33.88,
+    "most_affected_hs": [
+      {
+        "hs_code": "854232",
+        "direct_loss_usd": 51343670567.7,
+        "substitution_usd": 7768545683.790001,
+        "net_loss_usd": 43575124883.909996,
+        "loss_pct": 56.42,
+        "remaining_suppliers": 130
+      },
+      {
+        "hs_code": "381800",
+        "direct_loss_usd": 4497608015.599999,
+        "substitution_usd": 1114864813.0200002,
+        "net_loss_usd": 3382743202.579999,
+        "loss_pct": 41.18,
+        "remaining_suppliers": 65
+      },
+      {
+        "hs_code": "848620",
+        "direct_loss_usd": 15087694218.8,
+        "substitution_usd": 3803260631.1600003,
+        "net_loss_usd": 11284433587.64,
+        "loss_pct": 40.64,
+        "remaining_suppliers": 67
+      },
+      {
+        "hs_code": "848610",
+        "direct_loss_usd": 589000078.8,
+        "substitution_usd": 167236238.46,
+        "net_loss_usd": 421763840.3399999,
+        "loss_pct": 36.79,
+        "remaining_suppliers": 30
+      },
+      {
+        "hs_code": "854239",
+        "direct_loss_usd": 159551000422.8,
+        "substitution_usd": 56763103764.060005,
+        "net_loss_usd": 102787896658.73999,
+        "loss_pct": 29.47,
+        "remaining_suppliers": 186
+      },
+      {
+        "hs_code": "854231",
+        "direct_loss_usd": 382037226505.19995,
+        "substitution_usd": 136074671133.54001,
+        "net_loss_usd": 245962555371.65994,
+        "loss_pct": 29.43,
+        "remaining_suppliers": 180
+      },
+      {
+        "hs_code": "280461",
+        "direct_loss_usd": 233563940.39999998,
+        "substitution_usd": 107371639.38000001,
+        "net_loss_usd": 126192301.01999997,
+        "loss_pct": 21.34,
+        "remaining_suppliers": 27
+      },
+      {
+        "hs_code": "854233",
+        "direct_loss_usd": 10765379031.4,
+        "substitution_usd": 5510622783.48,
+        "net_loss_usd": 5254756247.92,
+        "loss_pct": 18.04,
+        "remaining_suppliers": 118
+      },
+      {
+        "hs_code": "811292",
+        "direct_loss_usd": 174653960.6,
+        "substitution_usd": 174653960.6,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 40
+      }
+    ],
+    "details": {
+      "direct_loss_usd": 624279796741.2999,
+      "substitution_usd": 211484330647.49005,
+      "net_loss_usd": 412795466093.80994
+    }
+  },
+  {
+    "scenario_name": "china_decoupling",
+    "shocked_nodes": [
+      "China"
+    ],
+    "severity": 1.0,
+    "original_supply": 1330303120304.0,
+    "disrupted_supply": 1330303120304.0,
+    "supply_gap_pct": 0.0,
+    "substitution_absorbed_pct": 100.0,
+    "most_affected_hs": [
+      {
+        "hs_code": "280461",
+        "direct_loss_usd": 54517144.0,
+        "substitution_usd": 54517144.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 34
+      },
+      {
+        "hs_code": "381800",
+        "direct_loss_usd": 683239256.0,
+        "substitution_usd": 683239256.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 72
+      },
+      {
+        "hs_code": "811292",
+        "direct_loss_usd": 129978293.0,
+        "substitution_usd": 129978293.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 46
+      },
+      {
+        "hs_code": "848610",
+        "direct_loss_usd": 143591776.0,
+        "substitution_usd": 143591776.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 37
+      },
+      {
+        "hs_code": "848620",
+        "direct_loss_usd": 1590658428.0,
+        "substitution_usd": 1590658428.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 74
+      },
+      {
+        "hs_code": "854231",
+        "direct_loss_usd": 35449401914.0,
+        "substitution_usd": 35449401914.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 187
+      },
+      {
+        "hs_code": "854232",
+        "direct_loss_usd": 6628030364.0,
+        "substitution_usd": 6628030364.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 137
+      },
+      {
+        "hs_code": "854233",
+        "direct_loss_usd": 2025037842.0,
+        "substitution_usd": 2025037842.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 125
+      },
+      {
+        "hs_code": "854239",
+        "direct_loss_usd": 16966652406.0,
+        "substitution_usd": 16966652406.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 193
+      }
+    ],
+    "details": {
+      "direct_loss_usd": 63671107423.0,
+      "substitution_usd": 63671107423.0,
+      "net_loss_usd": 0.0
+    }
+  },
+  {
+    "scenario_name": "taiwan_crisis",
+    "shocked_nodes": [
+      "Taiwan"
+    ],
+    "severity": 0.8,
+    "original_supply": 1330303120304.0,
+    "disrupted_supply": 1324294088276.48,
+    "supply_gap_pct": 0.45,
+    "substitution_absorbed_pct": 95.99,
+    "most_affected_hs": [
+      {
+        "hs_code": "280461",
+        "direct_loss_usd": 177498433.60000002,
+        "substitution_usd": 124191291.41999999,
+        "net_loss_usd": 53307142.18000004,
+        "loss_pct": 9.01,
+        "remaining_suppliers": 34
+      },
+      {
+        "hs_code": "854232",
+        "direct_loss_usd": 22405670568.800003,
+        "substitution_usd": 16449945683.46,
+        "net_loss_usd": 5955724885.340004,
+        "loss_pct": 7.71,
+        "remaining_suppliers": 137
+      },
+      {
+        "hs_code": "381800",
+        "direct_loss_usd": 813336184.8000001,
+        "substitution_usd": 813336184.8000001,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 72
+      },
+      {
+        "hs_code": "811292",
+        "direct_loss_usd": 13906676.0,
+        "substitution_usd": 13906676.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 46
+      },
+      {
+        "hs_code": "848610",
+        "direct_loss_usd": 28853280.0,
+        "substitution_usd": 28853280.0,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 37
+      },
+      {
+        "hs_code": "848620",
+        "direct_loss_usd": 975824428.8000001,
+        "substitution_usd": 975824428.8000001,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 74
+      },
+      {
+        "hs_code": "854231",
+        "direct_loss_usd": 60656518357.600006,
+        "substitution_usd": 60656518357.600006,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 187
+      },
+      {
+        "hs_code": "854233",
+        "direct_loss_usd": 2496422432.8,
+        "substitution_usd": 2496422432.8,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 125
+      },
+      {
+        "hs_code": "854239",
+        "direct_loss_usd": 62144729813.600006,
+        "substitution_usd": 62144729813.600006,
+        "net_loss_usd": 0.0,
+        "loss_pct": 0.0,
+        "remaining_suppliers": 193
+      }
+    ],
+    "details": {
+      "direct_loss_usd": 149712760176.0,
+      "substitution_usd": 143703728148.48,
+      "net_loss_usd": 6009032027.520004
+    }
+  }
+]

@@ -21,7 +21,8 @@ from pathlib import Path
 import logging
 
 # Add src to path
-sys.path.insert(0, str(Path(__file__).parent / 'src'))
+REPO_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO_ROOT / 'src'))
 
 from models.time_series_model import TimeSeriesForecaster
 

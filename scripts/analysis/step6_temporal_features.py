@@ -26,7 +26,8 @@ import logging
 import warnings
 warnings.filterwarnings('ignore')
 
-sys.path.insert(0, str(Path(__file__).parent / 'src'))
+REPO_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO_ROOT / 'src'))
 
 from models.time_series_model import TimeSeriesForecaster, mean_absolute_error, mean_squared_error, r2_score
 
