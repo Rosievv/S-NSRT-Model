@@ -1,7 +1,6 @@
 # SCRAM - Supply Chain Risk Analysis Model
 
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 
 **SCRAM** is an open-source framework for analysing and predicting structural risks in complex supply chains. It translates recurring coordination challenges - concentration risk, disruption propagation, logistics fragility, cost-push transmission - into reusable predictive and decision-support modules.
 
@@ -267,7 +266,6 @@ scram/
   reports/                        Generated reports
   tests/
   requirements.txt
-  LICENSE                         Apache 2.0
   README.md
 ```
 
@@ -313,7 +311,3 @@ flake8 src/ tests/
 ```
 
 ---
-
-## License
-
-This project is licensed under the Apache License 2.0. See the LICENSE file for details.
