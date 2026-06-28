@@ -27,7 +27,8 @@ import matplotlib.pyplot as plt
 import pickle
 from sklearn.preprocessing import StandardScaler
 
-sys.path.insert(0, str(Path(__file__).parent / 'src'))
+REPO_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO_ROOT / 'src'))
 from models.time_series_model import mean_absolute_error, mean_squared_error, r2_score
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

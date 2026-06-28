@@ -171,7 +171,7 @@ anomalies = detector.fit_predict(X)
 ```bash
 cd /Users/duanyihan/Desktop/rosie/NIW-Project/scram
 source venv_arm64/bin/activate
-python train_baseline_models.py
+python scripts/training/train_baseline_models.py
 ```
 
 ### 2. 创建便捷脚本
@@ -180,7 +180,7 @@ python train_baseline_models.py
 #!/bin/bash
 cd "$(dirname "$0")"
 source venv_arm64/bin/activate
-python train_baseline_models.py "$@"
+python scripts/training/train_baseline_models.py "$@"
 ```
 
 ### 3. 添加到requirements.txt
@@ -250,7 +250,7 @@ print(f"预测的HHI值: {predictions[:10]}")
 source venv_arm64/bin/activate
 
 # 运行训练
-python train_baseline_models.py
+python scripts/training/train_baseline_models.py
 
 # 检查模型
 ls -lh models/trained/

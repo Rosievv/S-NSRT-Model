@@ -7,13 +7,16 @@ import os
 from pathlib import Path
 
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
+
+
 def check_env_file():
     """Check if .env file exists and has API keys"""
     print("\n" + "="*60)
     print("Checking Environment Configuration")
     print("="*60)
     
-    env_path = Path(__file__).parent / '.env'
+    env_path = REPO_ROOT / '.env'
     
     if not env_path.exists():
         print("✗ .env file not found")
@@ -66,7 +69,7 @@ def check_project_structure():
         'tests'
     ]
     
-    base_path = Path(__file__).parent
+    base_path = REPO_ROOT
     all_exist = True
     
     for dir_path in required_dirs:
@@ -86,7 +89,7 @@ def check_config_files():
     print("Checking Configuration Files")
     print("="*60)
     
-    base_path = Path(__file__).parent
+    base_path = REPO_ROOT
     
     required_files = [
         'config/config.yaml',

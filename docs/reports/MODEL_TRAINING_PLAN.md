@@ -198,7 +198,7 @@ src/models/
 pip install scikit-learn xgboost lightgbm
 
 # 2. 运行基线模型（自动创建）
-python train_baseline_models.py
+python scripts/training/train_baseline_models.py
 ```
 
 **选项B: 交互式开发**

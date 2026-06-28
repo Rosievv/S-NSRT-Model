@@ -77,7 +77,7 @@
 - ✅ `src/models/base_model.py` - 抽象基类
 - ✅ `src/models/time_series_model.py` - 时间序列预测模型
 - ✅ `src/models/__init__.py` - 模块初始化
-- ✅ `train_baseline_models.py` - 训练脚本
+- ✅ `scripts/training/train_baseline_models.py` - 训练脚本
 - ✅ 模型保存/加载机制
 - ✅ 评估指标 (MAE, RMSE, R², MAPE)
 
@@ -142,7 +142,7 @@ pip install scikit-learn xgboost lightgbm
 pip install matplotlib seaborn jupyter
 
 # 6. 运行训练
-python train_baseline_models.py
+python scripts/training/train_baseline_models.py
 ```
 
 ### 方案 2: 使用Conda (推荐)
@@ -165,7 +165,7 @@ conda install -c conda-forge xgboost lightgbm
 pip install pyarrow python-dotenv pyyaml requests beautifulsoup4
 
 # 5. 运行训练
-python train_baseline_models.py
+python scripts/training/train_baseline_models.py
 ```
 
 ### 方案 3: Docker容器 (生产环境)
@@ -180,7 +180,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY . .
-CMD ["python", "train_baseline_models.py"]
+CMD ["python", "scripts/training/train_baseline_models.py"]
 ```
 
 ---
@@ -224,7 +224,7 @@ python -c "import xgboost; import lightgbm; print('✓ Environment OK')"
 **步骤4**: 运行训练
 ```bash
 cd /Users/duanyihan/Desktop/rosie/NIW-Project/scram
-python train_baseline_models.py
+python scripts/training/train_baseline_models.py
 ```
 
 ### 解决后的工作（预计1-2小时）
