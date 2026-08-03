@@ -9,7 +9,11 @@ Disruption model
 1. **Node shock** — a supplier country's capacity is reduced by a given
    severity (0–1).  Direct supply from that country drops proportionally.
 2. **Substitution effect** — remaining suppliers may partially absorb the
-   shortfall, but only up to a configurable ``substitution_elasticity``.
+   shortfall.  Elasticity is looked up from ``HS_ELASTICITY_MAP`` first;
+   if no specific entry exists the global ``substitution_elasticity``
+   fallback is used.  This means CPUs/logic (8542.31, low substitutability)
+   and commodity memory (8542.32, high substitutability) are treated
+   differently, giving more accurate Taiwan / advanced-node risk exposure.
 3. **Cascading impact** — for HS codes where the shocked country was a
    dominant supplier, the effective loss can exceed the direct share loss
    because substitution options are limited (high-HHI products).
@@ -31,6 +35,62 @@ except ImportError:
     raise ImportError("networkx is required")
 
 logger = logging.getLogger("SCRAM.RiskPropagation.PropagationEngine")
+
+
+# ---------------------------------------------------------------------------
+# Per-HS-code substitution elasticity lookup
+# ---------------------------------------------------------------------------
+# Values represent the fraction [0, 1] of lost supply that remaining suppliers
+# can realistically absorb in the short-to-medium term.
+#
+# Rationale:
+#   8542.31  Advanced logic / CPUs / SoCs — highly fab-specific, long lead
+#            times, almost no short-run substitution → 0.10
+#   8542.32  Memory (DRAM / NAND) — multiple commodity producers, faster
+#            capacity ramp → 0.50
+#   8542.33  Programmable logic (FPGAs) — moderate lock-in → 0.25
+#   8542.39  Other ICs — mixed; default-ish → 0.35
+#   8541.xx  Discrete semiconductors — commodity-like, moderate → 0.40
+#   2804.61  Silicon — bulk commodity, highly substitutable → 0.70
+#   2804.69  Other rare-earth-related → 0.30
+#
+# Keys may be 4-digit (HS chapter+heading), 6-digit, or 8-digit strings.
+# The lookup tries the most-specific match first, then progressively shorter
+# prefixes, then falls back to the global ``substitution_elasticity``.
+HS_ELASTICITY_MAP: Dict[str, float] = {
+    # --- Advanced logic (CPUs, GPUs, SoCs, ASICs) ---
+    "854231": 0.10,
+    "85423100": 0.10,
+    # --- Memory (DRAM, NAND flash) ---
+    "854232": 0.50,
+    "85423200": 0.50,
+    # --- Programmable logic (FPGAs, CPLDs) ---
+    "854233": 0.25,
+    "85423300": 0.25,
+    # --- Other ICs ---
+    "854239": 0.35,
+    "85423900": 0.35,
+    # --- Discrete semiconductors ---
+    "8541": 0.40,
+    # --- Silicon (bulk) ---
+    "280461": 0.70,
+    "280469": 0.30,
+}
+
+
+def _resolve_hs_elasticity(
+    hs_code: str,
+    hs_map: Dict[str, float],
+    fallback: float,
+) -> float:
+    """Return the elasticity for *hs_code* via longest-prefix match."""
+    code = str(hs_code).replace(".", "").strip()
+    # Try lengths: 8, 6, 4 digits
+    for length in (8, 6, 4):
+        key = code[:length]
+        if key in hs_map:
+            return hs_map[key]
+    return fallback
 
 
 @dataclass
@@ -56,6 +116,7 @@ class PropagationEngine:
         self,
         trade_df: pd.DataFrame,
         substitution_elasticity: float = 0.3,
+        hs_elasticity_map: Optional[Dict[str, float]] = None,
     ):
         """
         Parameters
@@ -63,12 +124,19 @@ class PropagationEngine:
         trade_df : pd.DataFrame
             Raw trade data (``date, hs_code, country, value_usd``).
         substitution_elasticity : float
-            Fraction [0, 1] of the lost supply that remaining suppliers
-            can absorb.  0 = no substitution, 1 = perfect substitution.
+            Global fallback elasticity [0, 1] used when an HS code has no
+            entry in *hs_elasticity_map*.
+        hs_elasticity_map : dict[str, float], optional
+            Per-HS-code elasticity overrides.  Keys are HS code strings
+            (dots removed, any digit length).  Defaults to
+            ``HS_ELASTICITY_MAP``.
         """
         self.trade_df = trade_df.copy()
         self.trade_df["date"] = pd.to_datetime(self.trade_df["date"])
         self.substitution_elasticity = substitution_elasticity
+        self.hs_elasticity_map: Dict[str, float] = (
+            hs_elasticity_map if hs_elasticity_map is not None else HS_ELASTICITY_MAP
+        )
         # Pre-compute per-HS, per-country aggregates for speed
         self._agg = (
             self.trade_df.groupby(["hs_code", "country"])["value_usd"]
@@ -130,8 +198,13 @@ class PropagationEngine:
                 ~mask & (agg["hs_code"] == hs_code)
             ].shape[0]
 
+            # Per-HS elasticity (longest-prefix match, then global fallback)
+            elasticity = _resolve_hs_elasticity(
+                hs_code, self.hs_elasticity_map, self.substitution_elasticity
+            )
+
             # Substitution: remaining suppliers absorb part of the loss
-            substitution = min(hs_loss, remaining * self.substitution_elasticity)
+            substitution = min(hs_loss, remaining * elasticity)
             net_loss = hs_loss - substitution
             loss_pct = (net_loss / hs_total * 100) if hs_total > 0 else 0
 
@@ -142,6 +215,7 @@ class PropagationEngine:
                 "net_loss_usd": float(net_loss),
                 "loss_pct": round(float(loss_pct), 2),
                 "remaining_suppliers": int(n_remaining),
+                "elasticity_used": round(float(elasticity), 3),
             })
 
         hs_impacts.sort(key=lambda x: x["loss_pct"], reverse=True)
