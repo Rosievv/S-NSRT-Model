@@ -158,17 +158,16 @@ def main() -> None:
             output_path=FIG_DIR / "module1_substitution_absorbed_pct.png",
         )
 
-    if not backtest_df.empty and {"simulated_gap_pct", "observed_change_pct"}.issubset(backtest_df.columns):
+    if not backtest_df.empty and {"predicted_supply_gap_pct", "observed_supply_gap_pct"}.issubset(backtest_df.columns):
         plot_df = backtest_df.copy()
-        plot_df["observed_change_abs_pct"] = plot_df["observed_change_pct"].abs()
 
         plt.figure(figsize=(12, 5))
         x_positions = range(len(plot_df))
-        plt.bar([x - 0.2 for x in x_positions], plot_df["simulated_gap_pct"], width=0.4, label="Simulated Gap %")
-        plt.bar([x + 0.2 for x in x_positions], plot_df["observed_change_abs_pct"], width=0.4, label="Observed Change % (abs)")
+        plt.bar([x - 0.2 for x in x_positions], plot_df["predicted_supply_gap_pct"], width=0.4, label="Predicted Supply Gap %")
+        plt.bar([x + 0.2 for x in x_positions], plot_df["observed_supply_gap_pct"], width=0.4, label="Observed Supply Gap %")
         plt.xticks(list(x_positions), plot_df["event"], rotation=30, ha="right")
         plt.ylabel("Percent (%)")
-        plt.title("Module 1 Backtest: Simulated vs Observed Impact")
+        plt.title("Module 1 Backtest: Predicted vs Observed Supply Gap")
         plt.legend()
         plt.tight_layout()
         plt.savefig(FIG_DIR / "module1_backtest_comparison.png", dpi=150)
@@ -180,6 +179,14 @@ def main() -> None:
     if not summary_df.empty:
         print("\nScenario summary:")
         print(summary_df[["scenario", "supply_gap_pct", "substitution_absorbed_pct", "most_affected_hs"]].to_string(index=False))
+    if not backtest_df.empty and {"directional_accuracy_pct", "pairwise_ranking_accuracy_pct"}.issubset(backtest_df.columns):
+        print("\nBacktest directional metrics:")
+        print(
+            "Directional accuracy: "
+            f"{backtest_df['directional_accuracy_pct'].iloc[0]:.2f}% | "
+            "Pairwise ranking accuracy: "
+            f"{backtest_df['pairwise_ranking_accuracy_pct'].iloc[0]:.2f}%"
+        )
     print(f"\nSaved outputs to: {OUT_DIR}")
     print(f"Saved charts to: {FIG_DIR}")
 

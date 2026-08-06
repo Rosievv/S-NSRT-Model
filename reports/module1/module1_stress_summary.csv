@@ -1,7 +1,7 @@
 scenario,shocked_nodes,severity,original_supply_B,disrupted_supply_B,supply_gap_pct,substitution_absorbed_pct,most_affected_hs
-top_1_supplier_failure,Malaysia,1.0,1330.3,1161.44,12.69,56.87,854231
-top_3_supplier_failure,"Malaysia, Taiwan, Korea, South",0.5,1330.3,1292.34,2.85,88.47,854232
-east_asia_moderate,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.3,1330.3,1324.75,0.42,97.92,854232
-east_asia_severe,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.7,1330.3,917.51,31.03,33.88,854232
-china_decoupling,China,1.0,1330.3,1330.3,0.0,100.0,280461
-taiwan_crisis,Taiwan,0.8,1330.3,1324.29,0.45,95.99,280461
+top_1_supplier_failure,Malaysia,1.0,1330.3,1056.13,20.61,29.96,854231
+top_3_supplier_failure,"Malaysia, Taiwan, Korea, South",0.5,1330.3,1087.54,18.25,26.28,854232
+east_asia_moderate,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.3,1330.3,1117.97,15.96,20.64,854232
+east_asia_severe,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.7,1330.3,761.25,42.78,8.85,854232
+china_decoupling,China,1.0,1330.3,1329.92,0.03,99.4,848610
+taiwan_crisis,Taiwan,0.8,1330.3,1290.41,3.0,73.35,280461
