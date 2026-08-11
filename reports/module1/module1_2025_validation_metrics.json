@@ -1,0 +1,43 @@
+{
+  "validation_window": {
+    "start": "2025-01-01",
+    "end": "2025-12-31"
+  },
+  "metrics": {
+    "overall": {
+      "overall_mae_pct": 2.81,
+      "overall_rmse_pct": 3.528,
+      "records": 16
+    },
+    "by_scenario": [
+      {
+        "scenario": "baseline_moderate",
+        "mae_pct": 0.5524999999999998,
+        "rmse_pct": 0.6017266821406541,
+        "mean_predicted_gap_pct": 5.33,
+        "mean_actual_gap_pct": 5.0225
+      },
+      {
+        "scenario": "east_asia_severe",
+        "mae_pct": 1.620000000000001,
+        "rmse_pct": 2.300662947934791,
+        "mean_predicted_gap_pct": 37.3175,
+        "mean_actual_gap_pct": 38.5575
+      },
+      {
+        "scenario": "top_1_supplier_failure",
+        "mae_pct": 4.544999999999999,
+        "rmse_pct": 4.7213716227384595,
+        "mean_predicted_gap_pct": 19.2275,
+        "mean_actual_gap_pct": 14.682500000000001
+      },
+      {
+        "scenario": "top_3_supplier_failure",
+        "mae_pct": 4.5225,
+        "rmse_pct": 4.673422193639261,
+        "mean_predicted_gap_pct": 23.33,
+        "mean_actual_gap_pct": 18.8075
+      }
+    ]
+  }
+}

@@ -137,6 +137,37 @@ HISTORICAL_EVENTS = [
     },
 ]
 
+FORWARD_SCENARIO_LIBRARY = [
+    {
+        "name": "baseline_moderate",
+        "description": "Moderate ongoing East Asia friction",
+        "type": "regional",
+        "region": "east_asia",
+        "severity": 0.15,
+    },
+    {
+        "name": "top_1_supplier_failure",
+        "description": "Top-1 supplier goes completely offline",
+        "type": "top_supplier",
+        "n": 1,
+        "severity": 1.0,
+    },
+    {
+        "name": "top_3_supplier_failure",
+        "description": "Top-3 suppliers lose 50 % capacity simultaneously",
+        "type": "top_supplier",
+        "n": 3,
+        "severity": 0.5,
+    },
+    {
+        "name": "east_asia_severe",
+        "description": "Severe East Asian disruption (70 %)",
+        "type": "regional",
+        "region": "east_asia",
+        "severity": 0.7,
+    },
+]
+
 
 class StressTestRunner:
     """
@@ -482,6 +513,194 @@ class StressTestRunner:
         df["directional_accuracy_pct"] = round(directional_accuracy_pct, 2)
         df["pairwise_ranking_accuracy_pct"] = round(pairwise_accuracy_pct, 2)
         return df
+
+    # ------------------------------------------------------------------ #
+    #  Forward projections
+    # ------------------------------------------------------------------ #
+
+    def _project_monthly_trade_panel(
+        self,
+        start: str = "2025-01",
+        end: str = "2026-12",
+        lookback_months: int = 24,
+    ) -> pd.DataFrame:
+        """Project monthly trade values for the requested forward window."""
+        future_periods = pd.period_range(start=start, end=end, freq="M")
+        if self.trade_df.empty or future_periods.empty:
+            return pd.DataFrame(columns=list(self.trade_df.columns))
+
+        monthly = self.trade_df.copy()
+        monthly["period"] = monthly["date"].dt.to_period("M")
+
+        future_rows: List[Dict] = []
+        for (hs_code, country), grp in monthly.groupby(["hs_code", "country"], dropna=False):
+            series = grp.groupby("period")["value_usd"].sum().sort_index()
+            if series.empty:
+                continue
+
+            tail = series.tail(lookback_months)
+            y = tail.values.astype(float)
+            if len(y) == 0:
+                continue
+
+            x = np.arange(len(y), dtype=float)
+            if len(y) >= 2:
+                slope, intercept = np.polyfit(x, y, deg=1)
+                x_future = np.arange(len(y), len(y) + len(future_periods), dtype=float)
+                trend_forecast = intercept + slope * x_future
+            else:
+                trend_forecast = np.repeat(float(y.mean()), len(future_periods))
+
+            seasonal_adjustment = np.ones(len(future_periods))
+            overall_mean = float(series.mean())
+            if len(series) >= 12 and overall_mean > 0:
+                month_means = series.groupby(series.index.month).mean()
+                seasonal_adjustment = np.array(
+                    [
+                        float(month_means.get(period.month, overall_mean)) / overall_mean
+                        for period in future_periods
+                    ],
+                    dtype=float,
+                )
+
+            projected_values = np.clip(trend_forecast * seasonal_adjustment, 0.0, None)
+            for period, value in zip(future_periods, projected_values):
+                future_rows.append(
+                    {
+                        "date": period.to_timestamp(how="start"),
+                        "hs_code": str(hs_code),
+                        "country": country,
+                        "value_usd": float(value),
+                        "quantity": np.nan,
+                        "projection_source": "trend_extrapolation",
+                        "projection_method": "24m_trend_with_seasonality",
+                    }
+                )
+
+        projected_df = pd.DataFrame(future_rows)
+        if projected_df.empty:
+            return projected_df
+
+        projected_df["date"] = pd.to_datetime(projected_df["date"])
+        return projected_df
+
+    def _run_projection_case(
+        self,
+        trade_df: pd.DataFrame,
+        scenario: Dict,
+        severity_multiplier: float,
+        elasticity_multiplier: float,
+    ) -> DisruptionResult:
+        """Run a single forward projection case on a projected trade panel."""
+        engine = PropagationEngine(
+            trade_df=trade_df,
+            substitution_elasticity=max(
+                0.02, float(self.engine.substitution_elasticity * elasticity_multiplier)
+            ),
+            use_weighted_substitution=self.engine.use_weighted_substitution,
+            concentration_penalty_lambda=self.engine.concentration_penalty_lambda,
+            geo_penalty_factor=self.engine.geo_penalty_factor,
+        )
+
+        severity = min(1.0, float(scenario.get("severity", 1.0)) * severity_multiplier)
+        stype = scenario.get("type", "node_shock")
+
+        if stype == "top_supplier":
+            return engine.top_supplier_failure(
+                n=int(scenario.get("n", 1)),
+                severity=severity,
+            )
+        if stype == "regional":
+            region = scenario.get("region", "east_asia")
+            countries = (
+                PropagationEngine.EAST_ASIA
+                if region == "east_asia"
+                else scenario.get("countries", [])
+            )
+            return engine.simulate_regional_disruption(
+                region_countries=countries,
+                severity=severity,
+                scenario_name=scenario.get("name", "regional"),
+            )
+        return engine.simulate_node_shock(
+            countries=scenario.get("countries", []),
+            severity=severity,
+            scenario_name=scenario.get("name", "node_shock"),
+        )
+
+    def generate_forward_projections_2025_2026(self) -> pd.DataFrame:
+        """Generate quarterly out-of-sample projections for 2025-2026."""
+        projected_panel = self._project_monthly_trade_panel()
+        if projected_panel.empty:
+            logger.warning("No projected forward panel could be generated")
+            return pd.DataFrame()
+
+        projected_panel = projected_panel.copy()
+        projected_panel["quarter"] = projected_panel["date"].dt.to_period("Q")
+
+        projection_rows: List[Dict] = []
+        bound_cases = {
+            "lower": (0.85, 1.15),
+            "expected": (1.0, 1.0),
+            "upper": (1.15, 0.85),
+        }
+
+        for quarter in pd.period_range("2025Q1", "2026Q4", freq="Q"):
+            quarter_df = projected_panel.loc[projected_panel["quarter"] == quarter].copy()
+            if quarter_df.empty:
+                continue
+
+            for scenario in FORWARD_SCENARIO_LIBRARY:
+                case_results: Dict[str, DisruptionResult] = {}
+                for bound_name, (severity_multiplier, elasticity_multiplier) in bound_cases.items():
+                    case_results[bound_name] = self._run_projection_case(
+                        trade_df=quarter_df,
+                        scenario=scenario,
+                        severity_multiplier=severity_multiplier,
+                        elasticity_multiplier=elasticity_multiplier,
+                    )
+
+                lower_gap = min(
+                    case_results["lower"].supply_gap_pct,
+                    case_results["expected"].supply_gap_pct,
+                    case_results["upper"].supply_gap_pct,
+                )
+                upper_gap = max(
+                    case_results["lower"].supply_gap_pct,
+                    case_results["expected"].supply_gap_pct,
+                    case_results["upper"].supply_gap_pct,
+                )
+                expected_result = case_results["expected"]
+
+                projection_rows.append(
+                    {
+                        "quarter": str(quarter),
+                        "quarter_start": quarter.start_time.strftime("%Y-%m-%d"),
+                        "quarter_end": quarter.end_time.strftime("%Y-%m-%d"),
+                        "scenario": scenario["name"],
+                        "description": scenario["description"],
+                        "scenario_type": scenario["type"],
+                        "shocked_nodes": ", ".join(expected_result.shocked_nodes),
+                        "severity": scenario.get("severity", 1.0),
+                        "lower_gap_pct": round(float(lower_gap), 2),
+                        "expected_gap_pct": round(float(expected_result.supply_gap_pct), 2),
+                        "upper_gap_pct": round(float(upper_gap), 2),
+                        "projection_band_width_pct": round(float(upper_gap - lower_gap), 2),
+                        "original_supply_B": round(float(expected_result.original_supply / 1e9), 2),
+                        "disrupted_supply_B": round(float(expected_result.disrupted_supply / 1e9), 2),
+                        "substitution_absorbed_pct": round(
+                            float(expected_result.substitution_absorbed_pct), 2
+                        ),
+                        "most_affected_hs": (
+                            expected_result.most_affected_hs[0]["hs_code"]
+                            if expected_result.most_affected_hs
+                            else "N/A"
+                        ),
+                        "scenario_status": "out_of_sample",
+                    }
+                )
+
+        return pd.DataFrame(projection_rows)
 
     # ------------------------------------------------------------------ #
     #  Persistence

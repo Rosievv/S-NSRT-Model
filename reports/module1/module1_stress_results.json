@@ -6,36 +6,29 @@
     ],
     "severity": 1.0,
     "original_supply": 1330303120304.0,
-    "disrupted_supply": 1056134615181.6115,
-    "supply_gap_pct": 20.61,
-    "substitution_absorbed_pct": 29.96,
+    "disrupted_supply": 1019336290888.6904,
+    "supply_gap_pct": 23.38,
+    "substitution_absorbed_pct": 20.56,
     "most_affected_hs": [
       {
         "hs_code": "854231",
         "direct_loss_usd": 322727817986.0,
-        "substitution_capacity_usd": 64738014428.870674,
-        "substitution_usd": 64738014428.870674,
-        "net_loss_usd": 257989803557.12933,
-        "loss_pct": 30.87,
-        "remaining_suppliers": 187
+        "substitution_capacity_usd": 21579338142.956882,
+        "substitution_usd": 21579338142.956882,
+        "net_loss_usd": 301148479843.0431,
+        "loss_pct": 36.04,
+        "remaining_suppliers": 187,
+        "elasticity_used": 0.1
       },
       {
         "hs_code": "854233",
         "direct_loss_usd": 6519952822.0,
-        "substitution_capacity_usd": 2758574336.946118,
-        "substitution_usd": 2758574336.946118,
-        "net_loss_usd": 3761378485.053882,
-        "loss_pct": 12.91,
-        "remaining_suppliers": 125
-      },
-      {
-        "hs_code": "854239",
-        "direct_loss_usd": 52705900764.0,
-        "substitution_capacity_usd": 40920686294.903145,
-        "substitution_usd": 40920686294.903145,
-        "net_loss_usd": 11785214469.096855,
-        "loss_pct": 3.38,
-        "remaining_suppliers": 193
+        "substitution_capacity_usd": 2298811947.4550977,
+        "substitution_usd": 2298811947.4550977,
+        "net_loss_usd": 4221140874.5449023,
+        "loss_pct": 14.49,
+        "remaining_suppliers": 125,
+        "elasticity_used": 0.25
       },
       {
         "hs_code": "848620",
@@ -44,16 +37,28 @@
         "substitution_usd": 1510273058.8915079,
         "net_loss_usd": 632108611.1084921,
         "loss_pct": 2.28,
-        "remaining_suppliers": 74
+        "remaining_suppliers": 74,
+        "elasticity_used": 0.3
+      },
+      {
+        "hs_code": "854239",
+        "direct_loss_usd": 52705900764.0,
+        "substitution_capacity_usd": 47740800677.387,
+        "substitution_usd": 47740800677.387,
+        "net_loss_usd": 4965100086.612999,
+        "loss_pct": 1.42,
+        "remaining_suppliers": 193,
+        "elasticity_used": 0.35
       },
       {
         "hs_code": "280461",
         "direct_loss_usd": 4186231.0,
-        "substitution_capacity_usd": 32027322.491286565,
+        "substitution_capacity_usd": 74730419.14633532,
         "substitution_usd": 4186231.0,
         "net_loss_usd": 0.0,
         "loss_pct": 0.0,
-        "remaining_suppliers": 34
+        "remaining_suppliers": 34,
+        "elasticity_used": 0.7
       },
       {
         "hs_code": "381800",
@@ -62,7 +67,8 @@
         "substitution_usd": 221254031.0,
         "net_loss_usd": 0.0,
         "loss_pct": 0.0,
-        "remaining_suppliers": 72
+        "remaining_suppliers": 72,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "811292",
@@ -71,7 +77,8 @@
         "substitution_usd": 373529.0,
         "net_loss_usd": 0.0,
         "loss_pct": 0.0,
-        "remaining_suppliers": 46
+        "remaining_suppliers": 46,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "848610",
@@ -80,22 +87,24 @@
         "substitution_usd": 1221746.0,
         "net_loss_usd": 0.0,
         "loss_pct": 0.0,
-        "remaining_suppliers": 37
+        "remaining_suppliers": 37,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "854232",
         "direct_loss_usd": 7147249730.0,
-        "substitution_capacity_usd": 10479463328.013279,
+        "substitution_capacity_usd": 17465772213.355476,
         "substitution_usd": 7147249730.0,
         "net_loss_usd": 0.0,
         "loss_pct": 0.0,
-        "remaining_suppliers": 137
+        "remaining_suppliers": 137,
+        "elasticity_used": 0.5
       }
     ],
     "details": {
       "direct_loss_usd": 391470338509.0,
-      "substitution_usd": 117301833386.61145,
-      "net_loss_usd": 274168505122.38858,
+      "substitution_usd": 80503509093.69049,
+      "net_loss_usd": 310966829415.3095,
       "substitution_mode": "weighted",
       "substitution_elasticity": 0.3
     }
@@ -109,54 +118,59 @@
     ],
     "severity": 0.5,
     "original_supply": 1330303120304.0,
-    "disrupted_supply": 1087540469218.4614,
-    "supply_gap_pct": 18.25,
-    "substitution_absorbed_pct": 26.28,
+    "disrupted_supply": 1058190200229.6041,
+    "supply_gap_pct": 20.45,
+    "substitution_absorbed_pct": 17.36,
     "most_affected_hs": [
-      {
-        "hs_code": "854232",
-        "direct_loss_usd": 24192498859.0,
-        "substitution_capacity_usd": 4621392276.465727,
-        "substitution_usd": 4621392276.465727,
-        "net_loss_usd": 19571106582.53427,
-        "loss_pct": 25.34,
-        "remaining_suppliers": 135
-      },
       {
         "hs_code": "854231",
         "direct_loss_usd": 209503450477.0,
-        "substitution_capacity_usd": 54052009397.82603,
-        "substitution_usd": 54052009397.82603,
-        "net_loss_usd": 155451441079.17398,
-        "loss_pct": 18.6,
-        "remaining_suppliers": 185
+        "substitution_capacity_usd": 18017336465.94202,
+        "substitution_usd": 18017336465.94202,
+        "net_loss_usd": 191486114011.05798,
+        "loss_pct": 22.92,
+        "remaining_suppliers": 185,
+        "elasticity_used": 0.1
+      },
+      {
+        "hs_code": "854232",
+        "direct_loss_usd": 24192498859.0,
+        "substitution_capacity_usd": 7702320460.776213,
+        "substitution_usd": 7702320460.776213,
+        "net_loss_usd": 16490178398.223787,
+        "loss_pct": 21.35,
+        "remaining_suppliers": 135,
+        "elasticity_used": 0.5
       },
       {
         "hs_code": "854239",
         "direct_loss_usd": 86650870974.0,
-        "substitution_capacity_usd": 23705216113.816166,
-        "substitution_usd": 23705216113.816166,
-        "net_loss_usd": 62945654860.18384,
-        "loss_pct": 18.05,
-        "remaining_suppliers": 191
-      },
-      {
-        "hs_code": "280461",
-        "direct_loss_usd": 115736932.5,
-        "substitution_capacity_usd": 20599021.177098572,
-        "substitution_usd": 20599021.177098572,
-        "net_loss_usd": 95137911.32290143,
-        "loss_pct": 16.09,
-        "remaining_suppliers": 32
+        "substitution_capacity_usd": 27656085466.118866,
+        "substitution_usd": 27656085466.118866,
+        "net_loss_usd": 58994785507.881134,
+        "loss_pct": 16.92,
+        "remaining_suppliers": 191,
+        "elasticity_used": 0.35
       },
       {
         "hs_code": "854233",
         "direct_loss_usd": 5332358118.5,
-        "substitution_capacity_usd": 2249153730.935313,
-        "substitution_usd": 2249153730.935313,
-        "net_loss_usd": 3083204387.564687,
-        "loss_pct": 10.58,
-        "remaining_suppliers": 123
+        "substitution_capacity_usd": 1874294775.779427,
+        "substitution_usd": 1874294775.779427,
+        "net_loss_usd": 3458063342.720573,
+        "loss_pct": 11.87,
+        "remaining_suppliers": 123,
+        "elasticity_used": 0.25
+      },
+      {
+        "hs_code": "280461",
+        "direct_loss_usd": 115736932.5,
+        "substitution_capacity_usd": 48064382.74656332,
+        "substitution_usd": 48064382.74656332,
+        "net_loss_usd": 67672549.75343668,
+        "loss_pct": 11.44,
+        "remaining_suppliers": 32,
+        "elasticity_used": 0.7
       },
       {
         "hs_code": "381800",
@@ -165,7 +179,8 @@
         "substitution_usd": 432367665.4766661,
         "net_loss_usd": 627246569.0233339,
         "loss_pct": 7.64,
-        "remaining_suppliers": 70
+        "remaining_suppliers": 70,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "848610",
@@ -174,7 +189,8 @@
         "substitution_usd": 34323172.401913725,
         "net_loss_usd": 65743454.598086275,
         "loss_pct": 5.73,
-        "remaining_suppliers": 35
+        "remaining_suppliers": 35,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "848620",
@@ -183,7 +199,8 @@
         "substitution_usd": 1381104000.3624737,
         "net_loss_usd": 923116241.1375263,
         "loss_pct": 3.32,
-        "remaining_suppliers": 72
+        "remaining_suppliers": 72,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "811292",
@@ -192,13 +209,14 @@
         "substitution_usd": 34278115.5,
         "net_loss_usd": 0.0,
         "loss_pct": 0.0,
-        "remaining_suppliers": 44
+        "remaining_suppliers": 44,
+        "elasticity_used": 0.3
       }
     ],
     "details": {
       "direct_loss_usd": 329293094579.5,
-      "substitution_usd": 86530443493.9614,
-      "net_loss_usd": 242762651085.53864,
+      "substitution_usd": 57180174505.10415,
+      "net_loss_usd": 272112920074.39587,
       "substitution_mode": "weighted",
       "substitution_elasticity": 0.3
     }
@@ -217,18 +235,19 @@
     ],
     "severity": 0.3,
     "original_supply": 1330303120304.0,
-    "disrupted_supply": 1117972586793.7634,
-    "supply_gap_pct": 15.96,
-    "substitution_absorbed_pct": 20.64,
+    "disrupted_supply": 1096073232545.4338,
+    "supply_gap_pct": 17.61,
+    "substitution_absorbed_pct": 12.45,
     "most_affected_hs": [
       {
         "hs_code": "854232",
         "direct_loss_usd": 22004430243.3,
-        "substitution_capacity_usd": 535573366.3883444,
-        "substitution_usd": 535573366.3883444,
-        "net_loss_usd": 21468856876.911655,
-        "loss_pct": 27.8,
-        "remaining_suppliers": 130
+        "substitution_capacity_usd": 892622277.3139077,
+        "substitution_usd": 892622277.3139077,
+        "net_loss_usd": 21111807965.98609,
+        "loss_pct": 27.33,
+        "remaining_suppliers": 130,
+        "elasticity_used": 0.5
       },
       {
         "hs_code": "848620",
@@ -237,7 +256,8 @@
         "substitution_usd": 318227510.5830871,
         "net_loss_usd": 6147927154.616913,
         "loss_pct": 22.14,
-        "remaining_suppliers": 67
+        "remaining_suppliers": 67,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "381800",
@@ -246,7 +266,8 @@
         "substitution_usd": 120386421.76850557,
         "net_loss_usd": 1807159870.6314943,
         "loss_pct": 22.0,
-        "remaining_suppliers": 65
+        "remaining_suppliers": 65,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "848610",
@@ -255,43 +276,48 @@
         "substitution_usd": 11755542.669567825,
         "net_loss_usd": 240673062.53043216,
         "loss_pct": 20.99,
-        "remaining_suppliers": 30
+        "remaining_suppliers": 30,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "854231",
         "direct_loss_usd": 163730239930.8,
-        "substitution_capacity_usd": 36947826389.38859,
-        "substitution_usd": 36947826389.38859,
-        "net_loss_usd": 126782413541.4114,
-        "loss_pct": 15.17,
-        "remaining_suppliers": 180
+        "substitution_capacity_usd": 12315942129.79621,
+        "substitution_usd": 12315942129.79621,
+        "net_loss_usd": 151414297801.00378,
+        "loss_pct": 18.12,
+        "remaining_suppliers": 180,
+        "elasticity_used": 0.1
       },
       {
         "hs_code": "854239",
         "direct_loss_usd": 68379000181.2,
-        "substitution_capacity_usd": 15659903029.780602,
-        "substitution_usd": 15659903029.780602,
-        "net_loss_usd": 52719097151.419395,
-        "loss_pct": 15.12,
-        "remaining_suppliers": 186
-      },
-      {
-        "hs_code": "280461",
-        "direct_loss_usd": 100098831.6,
-        "substitution_capacity_usd": 15823380.191840554,
-        "substitution_usd": 15823380.191840554,
-        "net_loss_usd": 84275451.40815943,
-        "loss_pct": 14.25,
-        "remaining_suppliers": 27
+        "substitution_capacity_usd": 18269886868.07737,
+        "substitution_usd": 18269886868.07737,
+        "net_loss_usd": 50109113313.12263,
+        "loss_pct": 14.37,
+        "remaining_suppliers": 186,
+        "elasticity_used": 0.35
       },
       {
         "hs_code": "854233",
         "direct_loss_usd": 4613733870.599999,
-        "substitution_capacity_usd": 1533603469.2929578,
-        "substitution_usd": 1533603469.2929578,
-        "net_loss_usd": 3080130401.3070416,
-        "loss_pct": 10.57,
-        "remaining_suppliers": 118
+        "substitution_capacity_usd": 1278002891.0774648,
+        "substitution_usd": 1278002891.0774648,
+        "net_loss_usd": 3335730979.5225344,
+        "loss_pct": 11.45,
+        "remaining_suppliers": 118,
+        "elasticity_used": 0.25
+      },
+      {
+        "hs_code": "280461",
+        "direct_loss_usd": 100098831.6,
+        "substitution_capacity_usd": 36921220.44762795,
+        "substitution_usd": 36921220.44762795,
+        "net_loss_usd": 63177611.15237205,
+        "loss_pct": 10.68,
+        "remaining_suppliers": 27,
+        "elasticity_used": 0.7
       },
       {
         "hs_code": "811292",
@@ -300,13 +326,14 @@
         "substitution_usd": 74851697.39999999,
         "net_loss_usd": 0.0,
         "loss_pct": 0.0,
-        "remaining_suppliers": 40
+        "remaining_suppliers": 40,
+        "elasticity_used": 0.3
       }
     ],
     "details": {
       "direct_loss_usd": 267548484317.69998,
-      "substitution_usd": 55217950807.4635,
-      "net_loss_usd": 212330533510.2365,
+      "substitution_usd": 33318596559.133743,
+      "net_loss_usd": 234229887758.56622,
       "substitution_mode": "weighted",
       "substitution_elasticity": 0.3
     }
@@ -325,18 +352,19 @@
     ],
     "severity": 0.7,
     "original_supply": 1330303120304.0,
-    "disrupted_supply": 761250443237.5956,
-    "supply_gap_pct": 42.78,
-    "substitution_absorbed_pct": 8.85,
+    "disrupted_supply": 739351088989.2657,
+    "supply_gap_pct": 44.42,
+    "substitution_absorbed_pct": 5.34,
     "most_affected_hs": [
       {
         "hs_code": "854232",
         "direct_loss_usd": 51343670567.7,
-        "substitution_capacity_usd": 535573366.3883444,
-        "substitution_usd": 535573366.3883444,
-        "net_loss_usd": 50808097201.31165,
-        "loss_pct": 65.78,
-        "remaining_suppliers": 130
+        "substitution_capacity_usd": 892622277.3139077,
+        "substitution_usd": 892622277.3139077,
+        "net_loss_usd": 50451048290.386086,
+        "loss_pct": 65.32,
+        "remaining_suppliers": 130,
+        "elasticity_used": 0.5
       },
       {
         "hs_code": "381800",
@@ -345,7 +373,8 @@
         "substitution_usd": 120386421.76850557,
         "net_loss_usd": 4377221593.831493,
         "loss_pct": 53.29,
-        "remaining_suppliers": 65
+        "remaining_suppliers": 65,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "848620",
@@ -354,7 +383,8 @@
         "substitution_usd": 318227510.5830871,
         "net_loss_usd": 14769466708.216911,
         "loss_pct": 53.19,
-        "remaining_suppliers": 67
+        "remaining_suppliers": 67,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "848610",
@@ -363,43 +393,48 @@
         "substitution_usd": 11755542.669567825,
         "net_loss_usd": 577244536.1304321,
         "loss_pct": 50.35,
-        "remaining_suppliers": 30
+        "remaining_suppliers": 30,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "854231",
         "direct_loss_usd": 382037226505.19995,
-        "substitution_capacity_usd": 36947826389.38859,
-        "substitution_usd": 36947826389.38859,
-        "net_loss_usd": 345089400115.81134,
-        "loss_pct": 41.3,
-        "remaining_suppliers": 180
+        "substitution_capacity_usd": 12315942129.79621,
+        "substitution_usd": 12315942129.79621,
+        "net_loss_usd": 369721284375.40375,
+        "loss_pct": 44.25,
+        "remaining_suppliers": 180,
+        "elasticity_used": 0.1
       },
       {
         "hs_code": "854239",
         "direct_loss_usd": 159551000422.8,
-        "substitution_capacity_usd": 15659903029.780602,
-        "substitution_usd": 15659903029.780602,
-        "net_loss_usd": 143891097393.01938,
-        "loss_pct": 41.26,
-        "remaining_suppliers": 186
+        "substitution_capacity_usd": 18269886868.07737,
+        "substitution_usd": 18269886868.07737,
+        "net_loss_usd": 141281113554.72263,
+        "loss_pct": 40.51,
+        "remaining_suppliers": 186,
+        "elasticity_used": 0.35
       },
       {
         "hs_code": "280461",
         "direct_loss_usd": 233563940.39999998,
-        "substitution_capacity_usd": 15823380.191840554,
-        "substitution_usd": 15823380.191840554,
-        "net_loss_usd": 217740560.20815942,
-        "loss_pct": 36.81,
-        "remaining_suppliers": 27
+        "substitution_capacity_usd": 36921220.44762795,
+        "substitution_usd": 36921220.44762795,
+        "net_loss_usd": 196642719.952372,
+        "loss_pct": 33.25,
+        "remaining_suppliers": 27,
+        "elasticity_used": 0.7
       },
       {
         "hs_code": "854233",
         "direct_loss_usd": 10765379031.4,
-        "substitution_capacity_usd": 1533603469.2929578,
-        "substitution_usd": 1533603469.2929578,
-        "net_loss_usd": 9231775562.107042,
-        "loss_pct": 31.69,
-        "remaining_suppliers": 118
+        "substitution_capacity_usd": 1278002891.0774648,
+        "substitution_usd": 1278002891.0774648,
+        "net_loss_usd": 9487376140.322535,
+        "loss_pct": 32.56,
+        "remaining_suppliers": 118,
+        "elasticity_used": 0.25
       },
       {
         "hs_code": "811292",
@@ -408,13 +443,14 @@
         "substitution_usd": 84020564.83188766,
         "net_loss_usd": 90633395.76811233,
         "loss_pct": 4.95,
-        "remaining_suppliers": 40
+        "remaining_suppliers": 40,
+        "elasticity_used": 0.3
       }
     ],
     "details": {
       "direct_loss_usd": 624279796741.2999,
-      "substitution_usd": 55227119674.895386,
-      "net_loss_usd": 569052677066.4044,
+      "substitution_usd": 33327765426.565628,
+      "net_loss_usd": 590952031314.7343,
       "substitution_mode": "weighted",
       "substitution_elasticity": 0.3
     }
@@ -426,9 +462,9 @@
     ],
     "severity": 1.0,
     "original_supply": 1330303120304.0,
-    "disrupted_supply": 1329919522726.9338,
-    "supply_gap_pct": 0.03,
-    "substitution_absorbed_pct": 99.4,
+    "disrupted_supply": 1327903890025.5154,
+    "supply_gap_pct": 0.18,
+    "substitution_absorbed_pct": 96.23,
     "most_affected_hs": [
       {
         "hs_code": "848610",
@@ -437,16 +473,8 @@
         "substitution_usd": 36148465.32180391,
         "net_loss_usd": 107443310.67819609,
         "loss_pct": 9.37,
-        "remaining_suppliers": 37
-      },
-      {
-        "hs_code": "280461",
-        "direct_loss_usd": 54517144.0,
-        "substitution_capacity_usd": 29845264.73037478,
-        "substitution_usd": 29845264.73037478,
-        "net_loss_usd": 24671879.26962522,
-        "loss_pct": 4.17,
-        "remaining_suppliers": 34
+        "remaining_suppliers": 37,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "811292",
@@ -455,7 +483,8 @@
         "substitution_usd": 89602606.28776707,
         "net_loss_usd": 40375686.71223293,
         "loss_pct": 2.2,
-        "remaining_suppliers": 46
+        "remaining_suppliers": 46,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "381800",
@@ -464,7 +493,8 @@
         "substitution_usd": 548571744.821432,
         "net_loss_usd": 134667511.178568,
         "loss_pct": 1.64,
-        "remaining_suppliers": 72
+        "remaining_suppliers": 72,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "848620",
@@ -473,49 +503,64 @@
         "substitution_usd": 1514219238.7725027,
         "net_loss_usd": 76439189.22749734,
         "loss_pct": 0.28,
-        "remaining_suppliers": 74
+        "remaining_suppliers": 74,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "854231",
         "direct_loss_usd": 35449401914.0,
-        "substitution_capacity_usd": 100227291999.93582,
-        "substitution_usd": 35449401914.0,
+        "substitution_capacity_usd": 33409097333.3119,
+        "substitution_usd": 33409097333.3119,
+        "net_loss_usd": 2040304580.688099,
+        "loss_pct": 0.24,
+        "remaining_suppliers": 187,
+        "elasticity_used": 0.1
+      },
+      {
+        "hs_code": "280461",
+        "direct_loss_usd": 54517144.0,
+        "substitution_capacity_usd": 69638951.03754117,
+        "substitution_usd": 54517144.0,
         "net_loss_usd": 0.0,
         "loss_pct": 0.0,
-        "remaining_suppliers": 187
+        "remaining_suppliers": 34,
+        "elasticity_used": 0.7
       },
       {
         "hs_code": "854232",
         "direct_loss_usd": 6628030364.0,
-        "substitution_capacity_usd": 9989705363.154478,
+        "substitution_capacity_usd": 16649508938.59081,
         "substitution_usd": 6628030364.0,
         "net_loss_usd": 0.0,
         "loss_pct": 0.0,
-        "remaining_suppliers": 137
+        "remaining_suppliers": 137,
+        "elasticity_used": 0.5
       },
       {
         "hs_code": "854233",
         "direct_loss_usd": 2025037842.0,
-        "substitution_capacity_usd": 3415829579.5336537,
+        "substitution_capacity_usd": 2846524649.611377,
         "substitution_usd": 2025037842.0,
         "net_loss_usd": 0.0,
         "loss_pct": 0.0,
-        "remaining_suppliers": 125
+        "remaining_suppliers": 125,
+        "elasticity_used": 0.25
       },
       {
         "hs_code": "854239",
         "direct_loss_usd": 16966652406.0,
-        "substitution_capacity_usd": 45806583307.288765,
+        "substitution_capacity_usd": 53441013858.50356,
         "substitution_usd": 16966652406.0,
         "net_loss_usd": 0.0,
         "loss_pct": 0.0,
-        "remaining_suppliers": 193
+        "remaining_suppliers": 193,
+        "elasticity_used": 0.35
       }
     ],
     "details": {
       "direct_loss_usd": 63671107423.0,
-      "substitution_usd": 63287509845.93388,
-      "net_loss_usd": 383597577.06611955,
+      "substitution_usd": 61271877144.5154,
+      "net_loss_usd": 2399230278.4845934,
       "substitution_mode": "weighted",
       "substitution_elasticity": 0.3
     }
@@ -527,36 +572,39 @@
     ],
     "severity": 0.8,
     "original_supply": 1330303120304.0,
-    "disrupted_supply": 1290407768869.6729,
-    "supply_gap_pct": 3.0,
-    "substitution_absorbed_pct": 73.35,
+    "disrupted_supply": 1273248219622.0928,
+    "supply_gap_pct": 4.29,
+    "substitution_absorbed_pct": 61.89,
     "most_affected_hs": [
       {
         "hs_code": "280461",
         "direct_loss_usd": 177498433.60000002,
-        "substitution_capacity_usd": 20756437.55777842,
-        "substitution_usd": 20756437.55777842,
-        "net_loss_usd": 156741996.0422216,
-        "loss_pct": 26.5,
-        "remaining_suppliers": 34
+        "substitution_capacity_usd": 48431687.634816304,
+        "substitution_usd": 48431687.634816304,
+        "net_loss_usd": 129066745.96518372,
+        "loss_pct": 21.82,
+        "remaining_suppliers": 34,
+        "elasticity_used": 0.7
       },
       {
         "hs_code": "854232",
         "direct_loss_usd": 22405670568.800003,
-        "substitution_capacity_usd": 7186357200.211008,
-        "substitution_usd": 7186357200.211008,
-        "net_loss_usd": 15219313368.588995,
-        "loss_pct": 19.7,
-        "remaining_suppliers": 137
+        "substitution_capacity_usd": 11977262000.351679,
+        "substitution_usd": 11977262000.351679,
+        "net_loss_usd": 10428408568.448324,
+        "loss_pct": 13.5,
+        "remaining_suppliers": 137,
+        "elasticity_used": 0.5
       },
       {
         "hs_code": "854239",
         "direct_loss_usd": 62144729813.600006,
-        "substitution_capacity_usd": 37924741773.01524,
-        "substitution_usd": 37924741773.01524,
-        "net_loss_usd": 24219988040.584763,
-        "loss_pct": 6.94,
-        "remaining_suppliers": 193
+        "substitution_capacity_usd": 44245532068.517784,
+        "substitution_usd": 44245532068.517784,
+        "net_loss_usd": 17899197745.082222,
+        "loss_pct": 5.13,
+        "remaining_suppliers": 193,
+        "elasticity_used": 0.35
       },
       {
         "hs_code": "381800",
@@ -565,7 +613,18 @@
         "substitution_usd": 514028155.6889215,
         "net_loss_usd": 299308029.11107856,
         "loss_pct": 3.64,
-        "remaining_suppliers": 72
+        "remaining_suppliers": 72,
+        "elasticity_used": 0.3
+      },
+      {
+        "hs_code": "854231",
+        "direct_loss_usd": 60656518357.600006,
+        "substitution_capacity_usd": 32357598764.2995,
+        "substitution_usd": 32357598764.2995,
+        "net_loss_usd": 28298919593.300507,
+        "loss_pct": 3.39,
+        "remaining_suppliers": 187,
+        "elasticity_used": 0.1
       },
       {
         "hs_code": "811292",
@@ -574,7 +633,8 @@
         "substitution_usd": 13906676.0,
         "net_loss_usd": 0.0,
         "loss_pct": 0.0,
-        "remaining_suppliers": 46
+        "remaining_suppliers": 46,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "848610",
@@ -583,7 +643,8 @@
         "substitution_usd": 28853280.0,
         "net_loss_usd": 0.0,
         "loss_pct": 0.0,
-        "remaining_suppliers": 37
+        "remaining_suppliers": 37,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "848620",
@@ -592,31 +653,24 @@
         "substitution_usd": 975824428.8000001,
         "net_loss_usd": 0.0,
         "loss_pct": 0.0,
-        "remaining_suppliers": 74
-      },
-      {
-        "hs_code": "854231",
-        "direct_loss_usd": 60656518357.600006,
-        "substitution_capacity_usd": 97072796292.89862,
-        "substitution_usd": 60656518357.600006,
-        "net_loss_usd": 0.0,
-        "loss_pct": 0.0,
-        "remaining_suppliers": 187
+        "remaining_suppliers": 74,
+        "elasticity_used": 0.3
       },
       {
         "hs_code": "854233",
         "direct_loss_usd": 2496422432.8,
-        "substitution_capacity_usd": 3321044849.3003864,
+        "substitution_capacity_usd": 2767537374.4169874,
         "substitution_usd": 2496422432.8,
         "net_loss_usd": 0.0,
         "loss_pct": 0.0,
-        "remaining_suppliers": 125
+        "remaining_suppliers": 125,
+        "elasticity_used": 0.25
       }
     ],
     "details": {
       "direct_loss_usd": 149712760176.0,
-      "substitution_usd": 109817408741.67296,
-      "net_loss_usd": 39895351434.32706,
+      "substitution_usd": 92657859494.09271,
+      "net_loss_usd": 57054900681.90732,
       "substitution_mode": "weighted",
       "substitution_elasticity": 0.3
     }
