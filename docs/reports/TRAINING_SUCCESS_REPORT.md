@@ -169,7 +169,7 @@ anomalies = detector.fit_predict(X)
 ### 1. 使用虚拟环境
 每次运行前激活环境：
 ```bash
-cd /Users/duanyihan/Desktop/rosie/NIW-Project/scram
+cd /Users/rosiepeng/Downloads/S-NSRT-Model
 source venv_arm64/bin/activate
 python scripts/training/train_baseline_models.py
 ```

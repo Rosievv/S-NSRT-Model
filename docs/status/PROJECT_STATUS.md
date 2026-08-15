@@ -223,7 +223,7 @@ python -c "import xgboost; import lightgbm; print('✓ Environment OK')"
 
 **步骤4**: 运行训练
 ```bash
-cd /Users/duanyihan/Desktop/rosie/NIW-Project/scram
+cd /Users/rosiepeng/Downloads/S-NSRT-Model
 python scripts/training/train_baseline_models.py
 ```
 

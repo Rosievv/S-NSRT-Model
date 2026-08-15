@@ -132,6 +132,11 @@ def generate_figure3(
     hist = backtest_df.copy()
     hist["event_date"] = hist["event"].map(event_dates)
     hist = hist.dropna(subset=["event_date"]).sort_values("event_date")
+    hist_train = hist.loc[hist["event_date"] <= pd.Timestamp("2019-12-31")].copy()
+    hist_test = hist.loc[
+        (hist["event_date"] >= pd.Timestamp("2020-01-01"))
+        & (hist["event_date"] <= pd.Timestamp("2024-12-31"))
+    ].copy()
 
     forecast = projection_df.copy()
     if not forecast.empty:
@@ -145,24 +150,306 @@ def generate_figure3(
             validation["quarter_end"] = pd.to_datetime(validation["quarter_end"])
             validation = validation.sort_values(["quarter_end", "scenario"])
 
-    fig, ax = plt.subplots(figsize=(15, 7))
+    fig, ax = plt.subplots(figsize=(16, 6))
 
-    ax.bar(
-        hist["event_date"],
-        hist["observed_supply_gap_pct"],
-        width=18,
-        alpha=0.45,
-        color="#4c78a8",
-        label="[Historical Actual] Observed Historical Gap",
+    unified_ready = (
+        not validation.empty
+        and {"quarter_end", "scenario", "predicted_gap_pct"}.issubset(validation.columns)
     )
-    ax.plot(
-        hist["event_date"],
-        hist["predicted_supply_gap_pct"],
-        linestyle="--",
-        marker="o",
-        color="#1f2d3d",
-        label="[Historical Model Fit] Backtest Fit",
-    )
+    if unified_ready:
+        unified = validation.copy()
+        unified["quarter_end"] = pd.to_datetime(unified["quarter_end"])
+        unified = unified.sort_values(["quarter_end", "scenario"]).reset_index(drop=True)
+
+        baseline = unified.loc[unified["scenario"] == "baseline_moderate"].copy()
+        top1 = unified.loc[unified["scenario"] == "top_1_supplier_failure"].copy()
+        top1_actual = pd.DataFrame()
+
+        if not baseline.empty:
+            ax.plot(
+                baseline["quarter_end"],
+                baseline["predicted_gap_pct"],
+                color="#f58518",
+                marker="o",
+                linewidth=2.3,
+                label="[Predicted] Baseline (2010-2026)",
+            )
+            baseline_actual = baseline.loc[baseline["actual_expected_gap_pct"].notna()].copy()
+            if not baseline_actual.empty:
+                ax.plot(
+                    baseline_actual["quarter_end"],
+                    baseline_actual["actual_expected_gap_pct"],
+                    color="#e45756",
+                    marker="x",
+                    markersize=8,
+                    linestyle=":",
+                    linewidth=2.0,
+                    label="[Actual] Baseline (2010-2025)",
+                )
+
+        if not top1.empty:
+            ax.plot(
+                top1["quarter_end"],
+                top1["predicted_gap_pct"],
+                color="#54a24b",
+                marker="o",
+                linewidth=2.3,
+                label="[Predicted] Top-1 Supplier Failure (2010-2026)",
+            )
+            top1_actual = top1.loc[top1["actual_expected_gap_pct"].notna()].copy()
+            if not top1_actual.empty:
+                ax.plot(
+                    top1_actual["quarter_end"],
+                    top1_actual["actual_expected_gap_pct"],
+                    color="#2e7d32",
+                    marker="x",
+                    markersize=8,
+                    linestyle=":",
+                    linewidth=2.0,
+                    label="[Actual] Top-1 Supplier Failure (2010-2025)",
+                )
+
+        if {"lower_gap_pct", "upper_gap_pct"}.issubset(unified.columns):
+            bounds = unified.groupby("quarter_end", as_index=False).agg(
+                lower_gap_pct=("lower_gap_pct", "min"),
+                upper_gap_pct=("upper_gap_pct", "max"),
+            )
+            bounds = bounds.sort_values("quarter_end")
+            if not bounds.empty:
+                ax.fill_between(
+                    bounds["quarter_end"],
+                    bounds["lower_gap_pct"],
+                    bounds["upper_gap_pct"],
+                    color="#76b7b2",
+                    alpha=0.16,
+                    label="[Predicted] Risk Bounds",
+                )
+
+        event_subset = hist.loc[
+            (hist["event_date"] >= pd.Timestamp("2010-01-01"))
+            & (hist["event_date"] <= pd.Timestamp("2021-12-31"))
+        ].copy()
+        if not event_subset.empty and not top1_actual.empty:
+            # Map event dates to quarter-end points on the actual top-1 line.
+            event_subset["event_quarter"] = event_subset["event_date"].dt.to_period("Q")
+            top1_actual_points = top1_actual.copy()
+            top1_actual_points["event_quarter"] = top1_actual_points["quarter_end"].dt.to_period("Q")
+            top1_actual_points = top1_actual_points[["event_quarter", "quarter_end", "actual_expected_gap_pct"]]
+
+            mapped_events = event_subset.merge(
+                top1_actual_points,
+                on="event_quarter",
+                how="left",
+            ).dropna(subset=["quarter_end", "actual_expected_gap_pct"])
+
+            if mapped_events.empty:
+                mapped_events = pd.DataFrame(columns=["quarter_end", "actual_expected_gap_pct", "event"])
+
+        else:
+            mapped_events = pd.DataFrame(columns=["quarter_end", "actual_expected_gap_pct", "event"])
+
+        if not mapped_events.empty:
+            ax.scatter(
+                mapped_events["quarter_end"],
+                mapped_events["actual_expected_gap_pct"],
+                marker="*",
+                s=120,
+                color="#f59e0b",
+                edgecolors="#7c2d12",
+                linewidths=0.8,
+                zorder=6,
+                label="[Event Backtest] 2010-2021 Highlights (on Actual Line)",
+            )
+
+            highlight_labels = {
+                "japan_earthquake_2011": "2011 Japan Earthquake",
+                "thai_flood_2011": "2011 Thailand Flood",
+                "japan_export_controls_2019": "2019 Export Controls",
+                "covid_q1_2020": "2020 COVID Shock",
+                "taiwan_drought_2021": "2021 Taiwan Drought",
+                "china_power_shortage_2021": "2021 Malaysia/Asia Shock",
+            }
+            for _, row in mapped_events.iterrows():
+                label = highlight_labels.get(row["event"], row["event"])
+                ax.annotate(
+                    label,
+                    xy=(row["quarter_end"], row["actual_expected_gap_pct"]),
+                    xytext=(0, 12),
+                    textcoords="offset points",
+                    ha="center",
+                    fontsize=9,
+                    arrowprops={"arrowstyle": "->", "lw": 0.7, "color": "#666"},
+                )
+
+        ax.axvline(pd.Timestamp("2024-12-31"), linestyle="--", color="#666666", linewidth=1.2)
+        ax.text(
+            pd.Timestamp("2024-12-31"),
+            0.8,
+            "2024 (Historical Actual End)",
+            rotation=90,
+            va="bottom",
+            ha="right",
+            fontsize=9,
+            color="#555555",
+        )
+        ax.axvline(pd.Timestamp("2025-12-31"), linestyle="--", color="#4b5563", linewidth=1.0)
+        ax.text(
+            pd.Timestamp("2025-12-31"),
+            0.8,
+            "2025 (Latest Actual End)",
+            rotation=90,
+            va="bottom",
+            ha="right",
+            fontsize=9,
+            color="#374151",
+        )
+
+        ax.axvline(pd.Timestamp("2019-12-31"), linestyle=":", color="#9ca3af", linewidth=0.8)
+        ax.text(
+            pd.Timestamp("2019-12-31"),
+            0.8,
+            "2019 marker (not a fixed train cutoff)",
+            rotation=90,
+            va="bottom",
+            ha="right",
+            fontsize=8,
+            color="#6b7280",
+        )
+
+        ax.axvspan(pd.Timestamp("2010-01-01"), pd.Timestamp("2019-12-31"), color="#e5e7eb", alpha=0.16)
+        ax.axvspan(pd.Timestamp("2020-01-01"), pd.Timestamp("2024-12-31"), color="#dbeafe", alpha=0.18)
+        ax.axvspan(pd.Timestamp("2025-01-01"), pd.Timestamp("2025-12-31"), color="#bbdefb", alpha=0.18)
+        ax.axvspan(pd.Timestamp("2026-01-01"), pd.Timestamp("2026-12-31"), color="#ffcc80", alpha=0.16)
+        ax.text(
+            pd.Timestamp("2015-06-30"),
+            0.55,
+            "2010-2019: Rolling OOS Predicted + Actual",
+            ha="center",
+            va="bottom",
+            fontsize=9,
+            color="#374151",
+            bbox={"boxstyle": "round,pad=0.2", "fc": "white", "ec": "#d1d5db", "alpha": 0.9},
+        )
+        ax.text(
+            pd.Timestamp("2022-07-01"),
+            0.55,
+            "2020-2024: Rolling OOS Predicted + Actual",
+            ha="center",
+            va="bottom",
+            fontsize=9,
+            color="#1d4ed8",
+            bbox={"boxstyle": "round,pad=0.2", "fc": "white", "ec": "#93c5fd", "alpha": 0.9},
+        )
+        ax.text(
+            pd.Timestamp("2025-07-01"),
+            0.55,
+            "2025: Trained-to-2024 Predicted + Actual",
+            ha="center",
+            va="bottom",
+            fontsize=9,
+            color="#0d47a1",
+            bbox={"boxstyle": "round,pad=0.2", "fc": "white", "ec": "#90caf9", "alpha": 0.9},
+        )
+        ax.text(
+            pd.Timestamp("2026-07-01"),
+            0.55,
+            "2026: Trained-to-2024 Predicted Only",
+            ha="center",
+            va="bottom",
+            fontsize=9,
+            color="#e65100",
+            bbox={"boxstyle": "round,pad=0.2", "fc": "white", "ec": "#ffcc80", "alpha": 0.9},
+        )
+
+        top1_has_actual = top1.loc[top1["actual_expected_gap_pct"].notna()].copy()
+        if not top1_has_actual.empty:
+            top1_has_actual["abs_error_pct"] = (
+                top1_has_actual["predicted_gap_pct"] - top1_has_actual["actual_expected_gap_pct"]
+            ).abs()
+            mae = float(top1_has_actual["abs_error_pct"].mean())
+            rmse = float(
+                (((top1_has_actual["predicted_gap_pct"] - top1_has_actual["actual_expected_gap_pct"]) ** 2).mean())
+                ** 0.5
+            )
+            ax.text(
+                0.84,
+                0.94,
+                f"Top-1 Validation (2010-2025)\nMAE={mae:.2f}% | RMSE={rmse:.2f}%",
+                fontsize=9,
+                va="top",
+                ha="left",
+                transform=ax.transAxes,
+                bbox={"boxstyle": "round,pad=0.25", "fc": "white", "ec": "#2e7d32", "alpha": 0.92},
+            )
+
+        ax.set_xlim(pd.Timestamp("2009-10-01"), pd.Timestamp("2026-12-31"))
+        ax.set_title("Module 1 Figure 3: Unified 2010-2026 Rolling-Train Predicted vs Actual")
+        ax.set_xlabel("Year")
+        ax.set_ylabel("Supply Gap (%) / Disruption Index")
+        ax.legend(loc="upper left", ncol=2)
+        ax.xaxis.set_major_locator(mdates.YearLocator())
+        ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
+        fig.autofmt_xdate()
+        fig.tight_layout(pad=1.1)
+        FIG_DIR.mkdir(parents=True, exist_ok=True)
+        fig.savefig(FIGURE3_PATH, dpi=300)
+        plt.close(fig)
+        return
+
+    if not hist_train.empty:
+        ax.plot(
+            hist_train["event_date"],
+            hist_train["predicted_supply_gap_pct"],
+            linestyle="--",
+            marker="o",
+            linewidth=2.0,
+            color="#111827",
+            label="[Train Predicted <=2019] Model Fit",
+        )
+        ax.plot(
+            hist_train["event_date"],
+            hist_train["observed_supply_gap_pct"],
+            linestyle=":",
+            marker="x",
+            markersize=8,
+            linewidth=2.0,
+            color="#6b7280",
+            label="[Train Actual <=2019] Observed Gap",
+        )
+
+    if not hist_test.empty:
+        ax.plot(
+            hist_test["event_date"],
+            hist_test["predicted_supply_gap_pct"],
+            linestyle="--",
+            marker="o",
+            linewidth=2.2,
+            color="#1d4ed8",
+            label="[Test Predicted 2020-2024] Model Fit",
+        )
+        ax.plot(
+            hist_test["event_date"],
+            hist_test["observed_supply_gap_pct"],
+            linestyle=":",
+            marker="x",
+            markersize=8,
+            linewidth=2.2,
+            color="#60a5fa",
+            label="[Test Actual 2020-2024] Observed Gap",
+        )
+
+    if not hist.empty:
+        ax.scatter(
+            hist["event_date"],
+            hist["observed_supply_gap_pct"],
+            marker="*",
+            s=110,
+            color="#f59e0b",
+            edgecolors="#7c2d12",
+            linewidths=0.8,
+            zorder=6,
+            label="[Event Backtest] Highlighted Events",
+        )
 
     for event_name, label in [
         ("japan_earthquake_2011", "2011 Japan Earthquake"),
@@ -183,11 +470,23 @@ def generate_figure3(
             arrowprops={"arrowstyle": "->", "lw": 0.8, "color": "#555"},
         )
 
+    ax.axvline(pd.Timestamp("2019-12-31"), linestyle="--", color="#6b7280", linewidth=1.1)
+    ax.text(
+        pd.Timestamp("2019-12-31"),
+        ax.get_ylim()[1] * 0.98 if ax.get_ylim()[1] > 0 else 1.0,
+        "2019 (Train End)",
+        rotation=90,
+        va="top",
+        ha="right",
+        fontsize=9,
+        color="#4b5563",
+    )
+
     ax.axvline(pd.Timestamp("2024-12-31"), linestyle="--", color="#666666", linewidth=1.3)
     ax.text(
         pd.Timestamp("2024-12-31"),
         ax.get_ylim()[1] * 0.98 if ax.get_ylim()[1] > 0 else 1.0,
-        "2024 (Data End)",
+        "2024 (Test End)",
         rotation=90,
         va="top",
         ha="right",
@@ -302,11 +601,31 @@ def generate_figure3(
                     bbox={"boxstyle": "round,pad=0.25", "fc": "white", "ec": "#2e7d32", "alpha": 0.92},
                 )
 
+    ax.axvspan(pd.Timestamp("2010-01-01"), pd.Timestamp("2019-12-31"), color="#e5e7eb", alpha=0.2)
+    ax.axvspan(pd.Timestamp("2020-01-01"), pd.Timestamp("2024-12-31"), color="#dbeafe", alpha=0.2)
     ax.axvspan(pd.Timestamp("2025-01-01"), pd.Timestamp("2025-12-31"), color="#90caf9", alpha=0.12)
     ax.axvspan(pd.Timestamp("2026-01-01"), pd.Timestamp("2026-12-31"), color="#ffcc80", alpha=0.12)
     ax.text(
+        pd.Timestamp("2015-06-30"),
+        0.65,
+        "Train Window",
+        fontsize=9,
+        ha="center",
+        va="bottom",
+        color="#374151",
+    )
+    ax.text(
+        pd.Timestamp("2022-06-30"),
+        0.65,
+        "Test Window",
+        fontsize=9,
+        ha="center",
+        va="bottom",
+        color="#1d4ed8",
+    )
+    ax.text(
         pd.Timestamp("2025-06-30"),
-        1.0,
+        0.65,
         "2025: Forecast + Actual Validation",
         fontsize=9,
         ha="center",
@@ -316,7 +635,7 @@ def generate_figure3(
     )
     ax.text(
         pd.Timestamp("2026-06-30"),
-        1.0,
+        0.65,
         "2026: Forecast Only",
         fontsize=9,
         ha="center",
@@ -324,7 +643,7 @@ def generate_figure3(
         color="#e65100",
         bbox={"boxstyle": "round,pad=0.2", "fc": "white", "ec": "#ffcc80", "alpha": 0.9},
     )
-    ax.set_title("Module 1 Figure 3: Historical Backtest and 2025-2026 Forward Forecast")
+    ax.set_title("Module 1 Figure 3: Unified Predicted vs Actual with Event Highlights")
     ax.set_xlabel("Year")
     ax.set_ylabel("Supply Gap (%) / Disruption Index")
     ax.legend(loc="upper left", ncol=2)

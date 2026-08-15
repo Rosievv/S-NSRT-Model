@@ -1,0 +1,45 @@
+{
+  "prediction_window": {
+    "start": "2010-01-01",
+    "end": "2026-12-31"
+  },
+  "actual_window": {
+    "start": "2010-01-01",
+    "end": "2025-12-31"
+  },
+  "calibration": {
+    "top_1_supplier_failure_severity": 0.5,
+    "method": "grid_search_on_2010_2025_top1_mae",
+    "candidates": [
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ]
+  },
+  "metrics": {
+    "overall": {
+      "overall_mae_pct": 1.4825,
+      "overall_rmse_pct": 2.2181,
+      "records": 126
+    },
+    "by_scenario": [
+      {
+        "scenario": "baseline_moderate",
+        "mae_pct": 1.04,
+        "rmse_pct": 1.6276402238863164,
+        "mean_predicted_gap_pct": 5.797777777777777,
+        "mean_actual_gap_pct": 5.805714285714285
+      },
+      {
+        "scenario": "top_1_supplier_failure",
+        "mae_pct": 1.9250793650793652,
+        "rmse_pct": 2.6815891995084997,
+        "mean_predicted_gap_pct": 9.13936507936508,
+        "mean_actual_gap_pct": 9.26952380952381
+      }
+    ]
+  }
+}
