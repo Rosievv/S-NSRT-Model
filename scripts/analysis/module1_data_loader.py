@@ -17,15 +17,21 @@ RAW_DIR = ROOT_DIR / "data" / "raw"
 
 
 def load_trade_data(raw_dir: Path | None = None) -> pd.DataFrame:
-    """Load and merge raw US Census parquet files."""
+    """Load and merge raw US Census parquet files, keeping the latest snapshot."""
     source_dir = raw_dir or RAW_DIR
     files = sorted(source_dir.glob("us_census_*.parquet"))
     if not files:
         raise FileNotFoundError(f"No us_census parquet files found in {source_dir}")
 
     dfs = [pd.read_parquet(file_path) for file_path in files]
-    df = pd.concat(dfs, ignore_index=True).drop_duplicates()
+    df = pd.concat(dfs, ignore_index=True)
     df["date"] = pd.to_datetime(df["date"])
+    df["collected_at"] = pd.to_datetime(df["collected_at"])
+    df = (
+        df.sort_values("collected_at", kind="stable")
+        .drop_duplicates(["date", "hs_code", "country"], keep="last")
+        .reset_index(drop=True)
+    )
     return df
 
 

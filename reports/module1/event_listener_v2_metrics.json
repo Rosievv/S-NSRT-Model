@@ -1,0 +1,21 @@
+{
+  "events_evaluated": 12,
+  "method": "development replay; title, source, URL metadata, and only time-available corroboration",
+  "event_type_match_rate_pct": 100.0,
+  "impact_target_match_rate_pct": 100.0,
+  "location_match_rate_pct": 100.0,
+  "object_top3_hit_rate_pct": 100.0,
+  "warning_or_critical_rate_pct": 100.0,
+  "negative_controls": 6,
+  "negative_control_false_alert_rate_pct": 0.0,
+  "confirmed_events": 10,
+  "baseline_early_warning_success_rate_pct": 41.67,
+  "listening_early_warning_success_rate_pct": 41.67,
+  "events_with_earlier_detection": 3,
+  "total_detection_days_gained": 18,
+  "leakage_control": {
+    "post_confirmation_support_excluded": true,
+    "historical_web_body_not_used": true,
+    "ground_truth_not_used_as_classifier_input": true
+  }
+}

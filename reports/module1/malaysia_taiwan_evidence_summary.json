@@ -1,0 +1,14 @@
+{
+  "evidence_records": 6,
+  "records_with_local_text": 5,
+  "countries": {
+    "Malaysia": 3,
+    "Taiwan": 3
+  },
+  "evidence_stages": {
+    "early_risk": 2,
+    "operational_restriction": 2,
+    "impact_confirmation": 2
+  },
+  "method_note": "Evidence dates are preserved; later impact confirmation is not backdated as an early warning signal."
+}

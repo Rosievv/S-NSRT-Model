@@ -1,0 +1,11 @@
+{
+  "events": 6,
+  "day0_critical_alarms": 6,
+  "government_data_lag_months": 1,
+  "government_data_lookback_months": 24,
+  "static_mae_pct_points_common_events": 8.45,
+  "news_triggered_mae_pct_points_common_events": 9.6,
+  "news_triggered_mae_pct_points_all_events": 9.05,
+  "magnitude_accuracy_improved_on_common_events": false,
+  "interpretation": "News integration provides a time-available dynamic stress scenario. Magnitude accuracy remains experimental and must be calibrated on a larger out-of-sample event set."
+}

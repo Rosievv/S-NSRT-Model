@@ -294,7 +294,7 @@ class StressTestRunner:
         slice_df["country_upper"] = slice_df["country"].str.upper()
         if hs_codes:
             slice_df = slice_df[slice_df["hs_code"].astype(str).isin(hs_codes)]
-        elif countries:
+        if countries:
             slice_df = slice_df[slice_df["country_upper"].isin(countries)]
 
         if slice_df.empty:

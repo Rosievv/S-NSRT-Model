@@ -1,0 +1,21 @@
+{
+  "events_evaluated": 6,
+  "customs_confirmed_events": 4,
+  "customs_confirmation_rate_pct": 66.67,
+  "impact_target_match_rate_pct": 100.0,
+  "event_type_match_rate_pct": 83.33,
+  "early_warning_success_rate_pct": 66.67,
+  "avg_lead_days_confirmed_only": 76.0,
+  "median_lead_days_confirmed_only": 80.0,
+  "customs_rule": {
+    "data_source": "US Census monthly imports",
+    "business_key": [
+      "date",
+      "hs_code",
+      "country"
+    ],
+    "threshold_yoy_pct": -20.0,
+    "post_event_window_months": 8,
+    "note": "Confirmation is the first affected trade month at or below the threshold, not its later Census publication date."
+  }
+}

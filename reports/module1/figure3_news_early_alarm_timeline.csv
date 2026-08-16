@@ -1,0 +1,7 @@
+event_key,event_label,source,title,news_identified_date,operational_event_date,operational_event,census_consequence_date,news_to_event_days,news_to_census_consequence_days,support_available_at_news,risk_score_at_news,alert_level_at_news,confirmation_status
+japan_earthquake_2011,Japan earthquake,BBC News,Japan earthquake: Tsunami hits north-east,2011-03-11,2011-03-11,Earthquake and tsunami,2011-04-01,0,21.0,1,0.894,critical,confirmed
+thai_flood_2011,Thailand floods,Bangkok Post,"North, Northeast inundated by effects of Nock-ten",2011-08-01,2011-08-01,Flood disruption reported,2011-10-01,0,61.0,0,0.823,critical,confirmed
+japan_export_controls_2019,Japan-Korea controls,METI Japan,Update of METI's licensing policies and procedures on exports of controlled items to the Republic of Korea,2019-07-01,2019-07-01,Export controls announced,2019-11-01,0,123.0,0,0.916,critical,confirmed
+covid_q1_2020,China COVID lockdown,BBC News,China coronavirus: Lockdown measures rise across Hubei province,2020-01-23,2020-01-23,Hubei lockdown,2020-05-01,0,99.0,1,0.894,critical,confirmed
+taiwan_drought_2021,Taiwan drought,Reuters,Taiwan tightens water use as drought threatens chip output,2021-03-24,2021-03-25,Science-park water cut,,1,,1,0.912,critical,not_confirmed
+malaysia_asia_shock_2021,Malaysia lockdown,New Straits Times,Malaysia goes under full lockdown again from Tuesday,2021-05-28,2021-06-01,Total lockdown began,,4,,1,0.857,critical,not_confirmed

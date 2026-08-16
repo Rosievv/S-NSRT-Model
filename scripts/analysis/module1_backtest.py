@@ -124,6 +124,10 @@ def generate_figure3(
     backtest_df: pd.DataFrame,
     projection_df: pd.DataFrame,
     validation_df: pd.DataFrame | None = None,
+    output_path: Path = FIGURE3_PATH,
+    integrated_event_df: pd.DataFrame | None = None,
+    integrated_model_label: str = "Integrated",
+    integrated_event_position: str = "predicted_gap",
 ) -> None:
     if backtest_df.empty:
         raise ValueError("Backtest dataframe is empty; cannot build Figure 3.")
@@ -225,59 +229,110 @@ def generate_figure3(
                     label="[Predicted] Risk Bounds",
                 )
 
-        event_subset = hist.loc[
-            (hist["event_date"] >= pd.Timestamp("2010-01-01"))
-            & (hist["event_date"] <= pd.Timestamp("2021-12-31"))
-        ].copy()
-        if not event_subset.empty and not top1_actual.empty:
-            # Map event dates to quarter-end points on the actual top-1 line.
-            event_subset["event_quarter"] = event_subset["event_date"].dt.to_period("Q")
-            top1_actual_points = top1_actual.copy()
-            top1_actual_points["event_quarter"] = top1_actual_points["quarter_end"].dt.to_period("Q")
-            top1_actual_points = top1_actual_points[["event_quarter", "quarter_end", "actual_expected_gap_pct"]]
-
-            mapped_events = event_subset.merge(
-                top1_actual_points,
-                on="event_quarter",
-                how="left",
-            ).dropna(subset=["quarter_end", "actual_expected_gap_pct"])
-
-            if mapped_events.empty:
-                mapped_events = pd.DataFrame(columns=["quarter_end", "actual_expected_gap_pct", "event"])
-
+        if integrated_event_df is not None and not integrated_event_df.empty:
+            mapped_events = integrated_event_df.copy()
+            mapped_events["event"] = mapped_events["event_key"]
+            compact_labels = {
+                "japan_earthquake_2011": "Japan earthquake",
+                "thai_flood_2011": "Thailand floods",
+                "japan_export_controls_2019": "Japan-Korea controls",
+                "covid_q1_2020": "China COVID",
+                "taiwan_drought_2021": "Taiwan drought",
+                "malaysia_asia_shock_2021": "Malaysia lockdown",
+            }
+            if integrated_event_position == "actual_line":
+                mapped_events["event_quarter"] = pd.to_datetime(mapped_events["news_date"]).dt.to_period("Q")
+                top1_actual_points = top1_actual.copy()
+                top1_actual_points["event_quarter"] = top1_actual_points["quarter_end"].dt.to_period("Q")
+                top1_actual_points = top1_actual_points[
+                    ["event_quarter", "quarter_end", "actual_expected_gap_pct"]
+                ]
+                mapped_events = mapped_events.merge(top1_actual_points, on="event_quarter", how="left").dropna(
+                    subset=["quarter_end", "actual_expected_gap_pct"]
+                )
+                mapped_events["event_value"] = mapped_events["actual_expected_gap_pct"]
+                mapped_events["event_text"] = mapped_events["event_key"].map(compact_labels) + "\nNews alert"
+                event_legend = f"[{integrated_model_label}] News Alerts (on Actual Top-1 Line)"
+            elif integrated_event_position == "predicted_gap":
+                mapped_events["quarter_end"] = pd.to_datetime(mapped_events["news_date"])
+                mapped_events["event_value"] = mapped_events["news_triggered_supply_gap_pct"]
+                mapped_events["event_text"] = mapped_events.apply(
+                    lambda row: f'{compact_labels[row["event_key"]]}\n{float(row["event_value"]):.2f}%',
+                    axis=1,
+                )
+                event_legend = f"[{integrated_model_label}] News-Triggered Day-0 Supply Gap"
+            else:
+                raise ValueError(
+                    "integrated_event_position must be 'actual_line' or 'predicted_gap'"
+                )
+            annotation_offsets = {
+                "japan_earthquake_2011": (-12, 18),
+                "thai_flood_2011": (12, 24),
+                "japan_export_controls_2019": (-38, 24),
+                "covid_q1_2020": (8, 72),
+                "taiwan_drought_2021": (58, 34),
+                "malaysia_asia_shock_2021": (38, 20),
+            }
+            mapped_events["annotation_offset"] = mapped_events["event"].map(annotation_offsets)
         else:
-            mapped_events = pd.DataFrame(columns=["quarter_end", "actual_expected_gap_pct", "event"])
+            event_subset = hist.loc[
+                (hist["event_date"] >= pd.Timestamp("2010-01-01"))
+                & (hist["event_date"] <= pd.Timestamp("2021-12-31"))
+            ].copy()
+            if not event_subset.empty and not top1_actual.empty:
+            # Map event dates to quarter-end points on the actual top-1 line.
+                event_subset["event_quarter"] = event_subset["event_date"].dt.to_period("Q")
+                top1_actual_points = top1_actual.copy()
+                top1_actual_points["event_quarter"] = top1_actual_points["quarter_end"].dt.to_period("Q")
+                top1_actual_points = top1_actual_points[["event_quarter", "quarter_end", "actual_expected_gap_pct"]]
+
+                mapped_events = event_subset.merge(
+                    top1_actual_points,
+                    on="event_quarter",
+                    how="left",
+                ).dropna(subset=["quarter_end", "actual_expected_gap_pct"])
+
+                if mapped_events.empty:
+                    mapped_events = pd.DataFrame(columns=["quarter_end", "event_value", "event", "event_text"])
+                else:
+                    mapped_events["event_value"] = mapped_events["actual_expected_gap_pct"]
+                    highlight_labels = {
+                        "japan_earthquake_2011": "2011 Japan Earthquake",
+                        "thai_flood_2011": "2011 Thailand Flood",
+                        "japan_export_controls_2019": "2019 Export Controls",
+                        "covid_q1_2020": "2020 COVID Shock",
+                        "taiwan_drought_2021": "2021 Taiwan Drought",
+                        "china_power_shortage_2021": "2021 China Power Shortage",
+                    }
+                    mapped_events["event_text"] = mapped_events["event"].map(highlight_labels).fillna(mapped_events["event"])
+            else:
+                mapped_events = pd.DataFrame(columns=["quarter_end", "actual_expected_gap_pct", "event"])
+            event_legend = "[Event Backtest] 2010-2021 Highlights (on Actual Line)"
 
         if not mapped_events.empty:
             ax.scatter(
                 mapped_events["quarter_end"],
-                mapped_events["actual_expected_gap_pct"],
+                mapped_events["event_value"],
                 marker="*",
                 s=120,
                 color="#f59e0b",
                 edgecolors="#7c2d12",
                 linewidths=0.8,
                 zorder=6,
-                label="[Event Backtest] 2010-2021 Highlights (on Actual Line)",
+                label=event_legend,
             )
 
-            highlight_labels = {
-                "japan_earthquake_2011": "2011 Japan Earthquake",
-                "thai_flood_2011": "2011 Thailand Flood",
-                "japan_export_controls_2019": "2019 Export Controls",
-                "covid_q1_2020": "2020 COVID Shock",
-                "taiwan_drought_2021": "2021 Taiwan Drought",
-                "china_power_shortage_2021": "2021 Malaysia/Asia Shock",
-            }
             for _, row in mapped_events.iterrows():
-                label = highlight_labels.get(row["event"], row["event"])
+                annotation_offset = row.get("annotation_offset", (0, 12))
+                if not isinstance(annotation_offset, tuple):
+                    annotation_offset = (0, 12)
                 ax.annotate(
-                    label,
-                    xy=(row["quarter_end"], row["actual_expected_gap_pct"]),
-                    xytext=(0, 12),
+                    row["event_text"],
+                    xy=(row["quarter_end"], row["event_value"]),
+                    xytext=annotation_offset,
                     textcoords="offset points",
                     ha="center",
-                    fontsize=9,
+                    fontsize=8 if integrated_event_df is not None else 9,
                     arrowprops={"arrowstyle": "->", "lw": 0.7, "color": "#666"},
                 )
 
@@ -383,7 +438,8 @@ def generate_figure3(
             )
 
         ax.set_xlim(pd.Timestamp("2009-10-01"), pd.Timestamp("2026-12-31"))
-        ax.set_title("Module 1 Figure 3: Unified 2010-2026 Rolling-Train Predicted vs Actual")
+        title_suffix = f" with {integrated_model_label} News Events" if integrated_event_df is not None else ""
+        ax.set_title(f"Module 1 Figure 3: Unified 2010-2026 Rolling-Train Predicted vs Actual{title_suffix}")
         ax.set_xlabel("Year")
         ax.set_ylabel("Supply Gap (%) / Disruption Index")
         ax.legend(loc="upper left", ncol=2)
@@ -392,7 +448,7 @@ def generate_figure3(
         fig.autofmt_xdate()
         fig.tight_layout(pad=1.1)
         FIG_DIR.mkdir(parents=True, exist_ok=True)
-        fig.savefig(FIGURE3_PATH, dpi=300)
+        fig.savefig(output_path, dpi=300)
         plt.close(fig)
         return
 

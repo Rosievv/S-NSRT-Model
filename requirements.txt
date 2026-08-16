@@ -10,6 +10,10 @@ python-dotenv>=1.0.0
 requests>=2.31.0
 beautifulsoup4>=4.12.0
 lxml>=4.9.0
+gdeltdoc>=1.12.0
+newspaper4k>=0.9.3
+lxml_html_clean>=0.4.0
+pypdf>=6.0.0
 
 # Data storage
 pyarrow>=13.0.0  # For Parquet format

@@ -1,0 +1,21 @@
+{
+  "events_in_replay": 12,
+  "saved_full_text_articles": 16,
+  "model_eligible_full_text_articles": 11,
+  "events_with_model_eligible_full_text": 6,
+  "event_coverage_rate_pct": 50.0,
+  "eligible_full_text_total_characters": 34346,
+  "earliest_body_event_type_match_rate_pct": 83.33,
+  "earliest_body_impact_target_match_rate_pct": 83.33,
+  "earliest_body_location_match_rate_pct": 100.0,
+  "earliest_body_object_top3_hit_rate_pct": 50.0,
+  "covered_events_strict_early_count": 3,
+  "full_replay_strict_early_rate_from_body_only_pct": 25.0,
+  "existing_listener_strict_early_rate_pct": 41.67,
+  "combined_listener_and_fulltext_strict_early_rate_pct": 41.67,
+  "events_where_fulltext_improved_detection_date": 1,
+  "malaysia_model_eligible_articles": 4,
+  "malaysia_first_article_date": "2021-08-24",
+  "malaysia_last_article_date": "2021-08-25",
+  "interpretation": "Full text is evaluated only from its publication date; post-consequence articles cannot improve historical warning time."
+}
