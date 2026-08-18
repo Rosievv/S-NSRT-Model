@@ -38,10 +38,12 @@ class QuantileForecaster:
         target_col: str = "value_usd",
         forecast_horizon: int = 1,
         xgb_params: Optional[Dict] = None,
+        backend: str = "auto",
     ):
         self.quantiles = quantiles or self.DEFAULT_QUANTILES
         self.target_col = target_col
         self.forecast_horizon = forecast_horizon
+        self.backend = backend
         self.xgb_params = xgb_params or {
             "n_estimators": 300,
             "max_depth": 6,
@@ -52,6 +54,25 @@ class QuantileForecaster:
         self.models: Dict[float, object] = {}
         self.feature_cols: List[str] = []
         self._fitted = False
+
+    def build_supervised_frame(
+        self,
+        df: pd.DataFrame,
+        group_cols: Optional[List[str]] = None,
+    ) -> pd.DataFrame:
+        """Attach the target observed exactly ``forecast_horizon`` months later."""
+        groups = group_cols or [
+            col for col in ("hs_code", "country") if col in df.columns
+        ]
+        if "date" not in df.columns or not groups:
+            raise ValueError("Future-target alignment requires date and grouping columns")
+
+        frame = df.copy()
+        frame["date"] = pd.to_datetime(frame["date"])
+        future = frame[groups + ["date", self.target_col]].copy()
+        future["date"] = future["date"] - pd.DateOffset(months=self.forecast_horizon)
+        future = future.rename(columns={self.target_col: "forecast_target"})
+        return frame.merge(future, on=groups + ["date"], how="inner", validate="one_to_one")
 
     # ------------------------------------------------------------------ #
     #  Training
@@ -78,21 +99,17 @@ class QuantileForecaster:
         dict
             ``{quantile: {"n_estimators": …, "best_iteration": …}}``
         """
-        try:
-            from xgboost import XGBRegressor
-        except ImportError:
-            raise ImportError("xgboost>=2.0 required: pip install xgboost")
-
-        df = train_df.dropna(subset=[self.target_col]).copy()
+        df = self.build_supervised_frame(train_df).dropna(subset=["forecast_target"]).copy()
         if feature_cols is None:
             feature_cols = [
                 c for c in df.select_dtypes(include=[np.number]).columns
-                if c != self.target_col
+                if c not in {self.target_col, "forecast_target"}
             ]
         self.feature_cols = feature_cols
+        df = df.dropna(subset=feature_cols)
 
         X = df[feature_cols].values
-        y = df[self.target_col].values
+        y = df["forecast_target"].values
 
         # Log-transform target for better quantile estimation on skewed data
         y_log = np.log1p(np.maximum(y, 0))
@@ -100,20 +117,44 @@ class QuantileForecaster:
         info: Dict[float, Dict] = {}
         for q in self.quantiles:
             logger.info("Training quantile=%.2f model …", q)
-            model = XGBRegressor(
-                objective="reg:quantileerror",
-                quantile_alpha=q,
-                tree_method="hist",
-                random_state=42,
-                **self.xgb_params,
-            )
-            model.fit(X, y_log, verbose=False)
+            model, backend = self._build_model(q)
+            model.fit(X, y_log)
             self.models[q] = model
-            info[q] = {"n_estimators": model.n_estimators}
+            info[q] = {"n_estimators": model.n_estimators, "backend": backend}
 
         self._fitted = True
         logger.info("Quantile forecaster fitted with %d quantiles", len(self.quantiles))
         return info
+
+    def _build_model(self, quantile: float) -> Tuple[object, str]:
+        """Build the requested quantile estimator, with a portable fallback."""
+        if self.backend in {"auto", "xgboost"}:
+            try:
+                from xgboost import XGBRegressor
+
+                model = XGBRegressor(
+                    objective="reg:quantileerror",
+                    quantile_alpha=quantile,
+                    tree_method="hist",
+                    random_state=42,
+                    **self.xgb_params,
+                )
+                return model, "xgboost"
+            except Exception as exc:
+                if self.backend == "xgboost":
+                    raise
+                logger.warning("XGBoost unavailable; using sklearn quantile boosting: %s", exc)
+
+        from sklearn.ensemble import GradientBoostingRegressor
+
+        params = {
+            "n_estimators": self.xgb_params.get("n_estimators", 300),
+            "max_depth": self.xgb_params.get("max_depth", 3),
+            "learning_rate": self.xgb_params.get("learning_rate", 0.05),
+            "subsample": self.xgb_params.get("subsample", 0.8),
+            "random_state": 42,
+        }
+        return GradientBoostingRegressor(loss="quantile", alpha=quantile, **params), "sklearn"
 
     # ------------------------------------------------------------------ #
     #  Prediction
@@ -201,6 +242,9 @@ class QuantileForecaster:
         state = {
             "quantiles": self.quantiles,
             "target_col": self.target_col,
+            "forecast_horizon": self.forecast_horizon,
+            "backend": self.backend,
+            "xgb_params": self.xgb_params,
             "feature_cols": self.feature_cols,
             "models": self.models,
         }
@@ -214,6 +258,9 @@ class QuantileForecaster:
             state = pickle.load(f)
         self.quantiles = state["quantiles"]
         self.target_col = state["target_col"]
+        self.forecast_horizon = state.get("forecast_horizon", 1)
+        self.backend = state.get("backend", "auto")
+        self.xgb_params = state.get("xgb_params", self.xgb_params)
         self.feature_cols = state["feature_cols"]
         self.models = state["models"]
         self._fitted = True

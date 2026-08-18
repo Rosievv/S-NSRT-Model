@@ -1,0 +1,797 @@
+{
+  "backend": "sklearn",
+  "demand_mode": "seasonal",
+  "selected_gate_threshold_pct": 2.0,
+  "threshold_selection_mode": "best_effort_multi_objective",
+  "threshold_objective": {
+    "min_coverage_floor": 0.7,
+    "min_recall_floor": 0.4,
+    "mae_horizon_weights": {
+      "1": 0.45,
+      "3": 0.35,
+      "6": 0.2
+    }
+  },
+  "target_interval_coverage_by_horizon": {
+    "1": 0.78,
+    "3": 0.84,
+    "6": 0.86
+  },
+  "target_interval_coverage": 0.8266666666666667,
+  "cqr_risk_strata_threshold_pct": 3.0,
+  "threshold_grid": [
+    {
+      "threshold_pct": 2.0,
+      "trigger_rate": 0.7985074626865671,
+      "mean_mae_delta_pct": -0.01231898328906387,
+      "mean_recall_delta": -0.0609919954259577,
+      "mean_coverage": 0.6380811662726557,
+      "mean_recall": 0.4371007922894716,
+      "mae_delta_pct_h1": -0.023934185269641528,
+      "mae_delta_pct_h3": -0.003134023857374885,
+      "mae_delta_pct_h6": -0.009888740740175197
+    },
+    {
+      "threshold_pct": 5.0,
+      "trigger_rate": 0.5373134328358209,
+      "mean_mae_delta_pct": -0.01231898328906387,
+      "mean_recall_delta": -0.0609919954259577,
+      "mean_coverage": 0.6380811662726557,
+      "mean_recall": 0.4371007922894716,
+      "mae_delta_pct_h1": -0.023934185269641528,
+      "mae_delta_pct_h3": -0.003134023857374885,
+      "mae_delta_pct_h6": -0.009888740740175197
+    },
+    {
+      "threshold_pct": 8.0,
+      "trigger_rate": 0.4701492537313433,
+      "mean_mae_delta_pct": -0.01231898328906387,
+      "mean_recall_delta": -0.0609919954259577,
+      "mean_coverage": 0.6380811662726557,
+      "mean_recall": 0.4371007922894716,
+      "mae_delta_pct_h1": -0.023934185269641528,
+      "mae_delta_pct_h3": -0.003134023857374885,
+      "mae_delta_pct_h6": -0.009888740740175197
+    }
+  ],
+  "elasticity_by_horizon": {
+    "1": 0.06,
+    "3": 0.22,
+    "6": 0.45
+  },
+  "cqr_diagnostics": {
+    "baseline": {
+      "1": {
+        "2021": {
+          "train_rows": 432,
+          "calibration_rows": 48,
+          "cqr_qhat": 0.0,
+          "cqr_qhat_by_stratum": {},
+          "calibration_rows_by_stratum": {}
+        },
+        "2022": {
+          "train_rows": 480,
+          "calibration_rows": 48,
+          "cqr_qhat": 1142825633.244069,
+          "cqr_qhat_by_stratum": {
+            "trigger_active": 1142825633.244069
+          },
+          "calibration_rows_by_stratum": {
+            "trigger_active": 44
+          }
+        },
+        "2023": {
+          "train_rows": 528,
+          "calibration_rows": 48,
+          "cqr_qhat": 229864264.09464836,
+          "cqr_qhat_by_stratum": {
+            "trigger_active": 229864264.09464836
+          },
+          "calibration_rows_by_stratum": {
+            "trigger_active": 44
+          }
+        },
+        "2024": {
+          "train_rows": 576,
+          "calibration_rows": 48,
+          "cqr_qhat": 90598478.88553339,
+          "cqr_qhat_by_stratum": {
+            "low_risk": 90598478.88553339,
+            "trigger_active": 518340282.7415714
+          },
+          "calibration_rows_by_stratum": {
+            "low_risk": 32,
+            "trigger_active": 12
+          }
+        }
+      },
+      "3": {
+        "2021": {
+          "train_rows": 432,
+          "calibration_rows": 48,
+          "cqr_qhat": 0.0,
+          "cqr_qhat_by_stratum": {},
+          "calibration_rows_by_stratum": {}
+        },
+        "2022": {
+          "train_rows": 480,
+          "calibration_rows": 48,
+          "cqr_qhat": 3084718023.920023,
+          "cqr_qhat_by_stratum": {
+            "trigger_active": 3084718023.920023
+          },
+          "calibration_rows_by_stratum": {
+            "trigger_active": 36
+          }
+        },
+        "2023": {
+          "train_rows": 528,
+          "calibration_rows": 48,
+          "cqr_qhat": 639658830.5384665,
+          "cqr_qhat_by_stratum": {
+            "trigger_active": 639658830.5384665
+          },
+          "calibration_rows_by_stratum": {
+            "trigger_active": 36
+          }
+        },
+        "2024": {
+          "train_rows": 576,
+          "calibration_rows": 48,
+          "cqr_qhat": 278697646.81639767,
+          "cqr_qhat_by_stratum": {
+            "low_risk": 278697646.81639767,
+            "trigger_active": 134125233.43453765
+          },
+          "calibration_rows_by_stratum": {
+            "low_risk": 24,
+            "trigger_active": 12
+          }
+        }
+      },
+      "6": {
+        "2021": {
+          "train_rows": 432,
+          "calibration_rows": 48,
+          "cqr_qhat": 0.0,
+          "cqr_qhat_by_stratum": {},
+          "calibration_rows_by_stratum": {}
+        },
+        "2022": {
+          "train_rows": 480,
+          "calibration_rows": 48,
+          "cqr_qhat": 2930552156.5978756,
+          "cqr_qhat_by_stratum": {
+            "trigger_active": 2930552156.5978756
+          },
+          "calibration_rows_by_stratum": {
+            "trigger_active": 24
+          }
+        },
+        "2023": {
+          "train_rows": 528,
+          "calibration_rows": 48,
+          "cqr_qhat": 1624477109.4452362,
+          "cqr_qhat_by_stratum": {
+            "trigger_active": 1624477109.4452362
+          },
+          "calibration_rows_by_stratum": {
+            "trigger_active": 24
+          }
+        },
+        "2024": {
+          "train_rows": 576,
+          "calibration_rows": 48,
+          "cqr_qhat": 1342566385.7671518,
+          "cqr_qhat_by_stratum": {
+            "low_risk": 2201406331.7330723,
+            "trigger_active": 360564450.11875534
+          },
+          "calibration_rows_by_stratum": {
+            "low_risk": 12,
+            "trigger_active": 12
+          }
+        }
+      }
+    },
+    "risk_feature": {
+      "1": {
+        "2021": {
+          "train_rows": 432,
+          "calibration_rows": 48,
+          "cqr_qhat": 0.0,
+          "cqr_qhat_by_stratum": {},
+          "calibration_rows_by_stratum": {}
+        },
+        "2022": {
+          "train_rows": 480,
+          "calibration_rows": 48,
+          "cqr_qhat": 1246798384.8543797,
+          "cqr_qhat_by_stratum": {
+            "trigger_active": 1246798384.8543797
+          },
+          "calibration_rows_by_stratum": {
+            "trigger_active": 44
+          }
+        },
+        "2023": {
+          "train_rows": 528,
+          "calibration_rows": 48,
+          "cqr_qhat": 374404947.27135396,
+          "cqr_qhat_by_stratum": {
+            "trigger_active": 374404947.27135396
+          },
+          "calibration_rows_by_stratum": {
+            "trigger_active": 44
+          }
+        },
+        "2024": {
+          "train_rows": 576,
+          "calibration_rows": 48,
+          "cqr_qhat": 283750691.8194189,
+          "cqr_qhat_by_stratum": {
+            "low_risk": 283750691.8194189,
+            "trigger_active": 352657455.1090441
+          },
+          "calibration_rows_by_stratum": {
+            "low_risk": 32,
+            "trigger_active": 12
+          }
+        }
+      },
+      "3": {
+        "2021": {
+          "train_rows": 432,
+          "calibration_rows": 48,
+          "cqr_qhat": 0.0,
+          "cqr_qhat_by_stratum": {},
+          "calibration_rows_by_stratum": {}
+        },
+        "2022": {
+          "train_rows": 480,
+          "calibration_rows": 48,
+          "cqr_qhat": 3548930119.630806,
+          "cqr_qhat_by_stratum": {
+            "trigger_active": 3548930119.630806
+          },
+          "calibration_rows_by_stratum": {
+            "trigger_active": 36
+          }
+        },
+        "2023": {
+          "train_rows": 528,
+          "calibration_rows": 48,
+          "cqr_qhat": 1131998446.4874983,
+          "cqr_qhat_by_stratum": {
+            "trigger_active": 1131998446.4874983
+          },
+          "calibration_rows_by_stratum": {
+            "trigger_active": 36
+          }
+        },
+        "2024": {
+          "train_rows": 576,
+          "calibration_rows": 48,
+          "cqr_qhat": 1099899395.5810566,
+          "cqr_qhat_by_stratum": {
+            "low_risk": 1099899395.5810566,
+            "trigger_active": 106309314.12822407
+          },
+          "calibration_rows_by_stratum": {
+            "low_risk": 24,
+            "trigger_active": 12
+          }
+        }
+      },
+      "6": {
+        "2021": {
+          "train_rows": 432,
+          "calibration_rows": 48,
+          "cqr_qhat": 0.0,
+          "cqr_qhat_by_stratum": {},
+          "calibration_rows_by_stratum": {}
+        },
+        "2022": {
+          "train_rows": 480,
+          "calibration_rows": 48,
+          "cqr_qhat": 3033427401.503788,
+          "cqr_qhat_by_stratum": {
+            "trigger_active": 3033427401.503788
+          },
+          "calibration_rows_by_stratum": {
+            "trigger_active": 24
+          }
+        },
+        "2023": {
+          "train_rows": 528,
+          "calibration_rows": 48,
+          "cqr_qhat": 1393507707.394638,
+          "cqr_qhat_by_stratum": {
+            "trigger_active": 1393507707.394638
+          },
+          "calibration_rows_by_stratum": {
+            "trigger_active": 24
+          }
+        },
+        "2024": {
+          "train_rows": 576,
+          "calibration_rows": 48,
+          "cqr_qhat": 444048258.16433907,
+          "cqr_qhat_by_stratum": {
+            "low_risk": 2351194013.6106243,
+            "trigger_active": 72450625.2679413
+          },
+          "calibration_rows_by_stratum": {
+            "low_risk": 12,
+            "trigger_active": 12
+          }
+        }
+      }
+    }
+  },
+  "feature_sets": {
+    "baseline": [
+      "hhi",
+      "hhi_change_mom",
+      "hhi_change_yoy",
+      "lag12_value",
+      "lag1_value",
+      "lag3_value",
+      "lag6_value",
+      "ma12_value",
+      "ma3_value",
+      "ma6_value",
+      "macro_deviation_6m",
+      "macro_mom",
+      "macro_total_lag1",
+      "macro_total_lag12",
+      "macro_total_lag3",
+      "macro_total_ma6",
+      "macro_yoy",
+      "month_cos",
+      "month_sin",
+      "n_suppliers",
+      "quantity",
+      "std6_value",
+      "top1_share",
+      "top3_share",
+      "top5_share"
+    ],
+    "risk_feature": [
+      "hhi",
+      "hhi_change_mom",
+      "hhi_change_yoy",
+      "hs_value_share_lag12",
+      "lag12_value",
+      "lag1_value",
+      "lag3_value",
+      "lag6_value",
+      "lower_gap_pct",
+      "ma12_value",
+      "ma3_value",
+      "ma6_value",
+      "macro_deviation_6m",
+      "macro_mom",
+      "macro_total_lag1",
+      "macro_total_lag12",
+      "macro_total_lag3",
+      "macro_total_ma6",
+      "macro_yoy",
+      "month_cos",
+      "month_sin",
+      "n_suppliers",
+      "predicted_gap_pct",
+      "quantity",
+      "risk_gap_hhi_interaction",
+      "risk_gap_hs_exposure",
+      "risk_gap_spread",
+      "risk_macro_interaction",
+      "std6_value",
+      "top1_share",
+      "top3_share",
+      "top5_share",
+      "upper_gap_pct"
+    ],
+    "module1_inputs": [
+      "predicted_gap_pct",
+      "lower_gap_pct",
+      "upper_gap_pct",
+      "risk_gap_spread",
+      "risk_macro_interaction",
+      "hs_value_share_lag12",
+      "risk_gap_hs_exposure",
+      "risk_gap_hhi_interaction"
+    ],
+    "macro_cycle_inputs": [
+      "macro_total_lag1",
+      "macro_total_lag3",
+      "macro_total_lag12",
+      "macro_total_ma6",
+      "macro_mom",
+      "macro_yoy",
+      "macro_deviation_6m"
+    ]
+  },
+  "track_metrics_all": {
+    "baseline": {
+      "1": {
+        "mae": 907905044.9578708,
+        "wape": 0.19290143611936408,
+        "coverage_q10_q90": 0.6276595744680851,
+        "pinball_q10": 207844832.5546315,
+        "pinball_q50": 453952522.4789354,
+        "pinball_q90": 388242415.3604182,
+        "shortage_precision": 0.8095238095238095,
+        "shortage_recall": 0.6071428571428571
+      },
+      "3": {
+        "mae": 1042652635.6703142,
+        "wape": 0.2214442727919853,
+        "coverage_q10_q90": 0.6166666666666667,
+        "pinball_q10": 211261031.22296557,
+        "pinball_q50": 521326317.8351571,
+        "pinball_q90": 518309507.7909084,
+        "shortage_precision": 0.6,
+        "shortage_recall": 0.39622641509433965
+      },
+      "6": {
+        "mae": 1104498880.050115,
+        "wape": 0.23572619826595495,
+        "coverage_q10_q90": 0.6785714285714286,
+        "pinball_q10": 221901651.57968494,
+        "pinball_q50": 552249440.0250576,
+        "pinball_q90": 519041281.69659513,
+        "shortage_precision": 0.7297297297297297,
+        "shortage_recall": 0.4909090909090909
+      }
+    },
+    "ungated_stress": {
+      "1": {
+        "mae": 1143142815.3896742,
+        "wape": 0.24288210755391676,
+        "coverage_q10_q90": 0.6117021276595744,
+        "pinball_q10": 221708953.69442162,
+        "pinball_q50": 571571407.6948371,
+        "pinball_q90": 540090844.8536518,
+        "shortage_precision": 0.6333333333333333,
+        "shortage_recall": 0.6785714285714286
+      },
+      "3": {
+        "mae": 1230254753.1550674,
+        "wape": 0.2612882371760966,
+        "coverage_q10_q90": 0.6055555555555555,
+        "pinball_q10": 221684932.67747837,
+        "pinball_q50": 615127376.5775337,
+        "pinball_q90": 632676261.4185369,
+        "shortage_precision": 0.5681818181818182,
+        "shortage_recall": 0.4716981132075472
+      },
+      "6": {
+        "mae": 1250326182.9975102,
+        "wape": 0.2668491956252709,
+        "coverage_q10_q90": 0.6726190476190477,
+        "pinball_q10": 235342050.72646776,
+        "pinball_q50": 625163091.4987551,
+        "pinball_q90": 585593686.8097247,
+        "shortage_precision": 0.6666666666666666,
+        "shortage_recall": 0.5454545454545454
+      }
+    },
+    "gated_stress": {
+      "1": {
+        "mae": 886175077.4046069,
+        "wape": 0.1882844974085033,
+        "coverage_q10_q90": 0.6170212765957447,
+        "pinball_q10": 246509889.79061028,
+        "pinball_q50": 443087538.70230347,
+        "pinball_q90": 289373738.2594869,
+        "shortage_precision": 0.8181818181818182,
+        "shortage_recall": 0.48214285714285715
+      },
+      "3": {
+        "mae": 1039384937.4351686,
+        "wape": 0.2207502611579762,
+        "coverage_q10_q90": 0.6722222222222223,
+        "pinball_q10": 277573656.8415324,
+        "pinball_q50": 519692468.7175843,
+        "pinball_q90": 468504229.849711,
+        "shortage_precision": 0.5517241379310345,
+        "shortage_recall": 0.3018867924528302
+      },
+      "6": {
+        "mae": 1093576776.9774857,
+        "wape": 0.2333951630056358,
+        "coverage_q10_q90": 0.625,
+        "pinball_q10": 320569545.8025109,
+        "pinball_q50": 546788388.4887428,
+        "pinball_q90": 453701638.2684317,
+        "shortage_precision": 0.8055555555555556,
+        "shortage_recall": 0.5272727272727272
+      }
+    }
+  },
+  "inventory_summary": [
+    {
+      "track": "baseline",
+      "horizon_months": 1,
+      "initial_inventory_months": 1.0,
+      "risk_stockout_rate": 0.0,
+      "risk_median_stockout_step": NaN,
+      "risk_mean_cumulative_shortfall_usd": 0.0,
+      "risk_mean_days_of_supply_remaining": 33.07132026171214,
+      "risk_mean_buffer_erosion_pct": 9.423756869666422
+    },
+    {
+      "track": "baseline",
+      "horizon_months": 1,
+      "initial_inventory_months": 2.0,
+      "risk_stockout_rate": 0.0,
+      "risk_median_stockout_step": NaN,
+      "risk_mean_cumulative_shortfall_usd": 0.0,
+      "risk_mean_days_of_supply_remaining": 63.07132026171214,
+      "risk_mean_buffer_erosion_pct": 4.711878434833211
+    },
+    {
+      "track": "baseline",
+      "horizon_months": 1,
+      "initial_inventory_months": 3.0,
+      "risk_stockout_rate": 0.0,
+      "risk_median_stockout_step": NaN,
+      "risk_mean_cumulative_shortfall_usd": 0.0,
+      "risk_mean_days_of_supply_remaining": 93.07132026171216,
+      "risk_mean_buffer_erosion_pct": 3.1412522898888087
+    },
+    {
+      "track": "baseline",
+      "horizon_months": 3,
+      "initial_inventory_months": 1.0,
+      "risk_stockout_rate": 0.06666666666666667,
+      "risk_median_stockout_step": 3.0,
+      "risk_mean_cumulative_shortfall_usd": 115728804.49694534,
+      "risk_mean_days_of_supply_remaining": 44.54712008208991,
+      "risk_mean_buffer_erosion_pct": 22.975467826447247
+    },
+    {
+      "track": "baseline",
+      "horizon_months": 3,
+      "initial_inventory_months": 2.0,
+      "risk_stockout_rate": 0.0,
+      "risk_median_stockout_step": NaN,
+      "risk_mean_cumulative_shortfall_usd": 0.0,
+      "risk_mean_days_of_supply_remaining": 74.2514737024403,
+      "risk_mean_buffer_erosion_pct": 11.980477879306314
+    },
+    {
+      "track": "baseline",
+      "horizon_months": 3,
+      "initial_inventory_months": 3.0,
+      "risk_stockout_rate": 0.0,
+      "risk_median_stockout_step": NaN,
+      "risk_mean_cumulative_shortfall_usd": 0.0,
+      "risk_mean_days_of_supply_remaining": 104.2514737024403,
+      "risk_mean_buffer_erosion_pct": 7.986985252870873
+    },
+    {
+      "track": "baseline",
+      "horizon_months": 6,
+      "initial_inventory_months": 1.0,
+      "risk_stockout_rate": 0.24404761904761904,
+      "risk_median_stockout_step": 4.0,
+      "risk_mean_cumulative_shortfall_usd": 1477141953.1562064,
+      "risk_mean_days_of_supply_remaining": 65.08255007904124,
+      "risk_mean_buffer_erosion_pct": 33.69764702432248
+    },
+    {
+      "track": "baseline",
+      "horizon_months": 6,
+      "initial_inventory_months": 2.0,
+      "risk_stockout_rate": 0.07738095238095238,
+      "risk_median_stockout_step": 5.0,
+      "risk_mean_cumulative_shortfall_usd": 270767640.02741235,
+      "risk_mean_days_of_supply_remaining": 89.97279423189775,
+      "risk_mean_buffer_erosion_pct": 25.365083257400393
+    },
+    {
+      "track": "baseline",
+      "horizon_months": 6,
+      "initial_inventory_months": 3.0,
+      "risk_stockout_rate": 0.011904761904761904,
+      "risk_median_stockout_step": 6.0,
+      "risk_mean_cumulative_shortfall_usd": 2315515.43022526,
+      "risk_mean_days_of_supply_remaining": 118.92224420967759,
+      "risk_mean_buffer_erosion_pct": 18.077333307400433
+    },
+    {
+      "track": "gated_stress",
+      "horizon_months": 1,
+      "initial_inventory_months": 1.0,
+      "risk_stockout_rate": 0.0,
+      "risk_median_stockout_step": NaN,
+      "risk_mean_cumulative_shortfall_usd": 0.0,
+      "risk_mean_days_of_supply_remaining": 37.83437049655135,
+      "risk_mean_buffer_erosion_pct": 7.624144871220691
+    },
+    {
+      "track": "gated_stress",
+      "horizon_months": 1,
+      "initial_inventory_months": 2.0,
+      "risk_stockout_rate": 0.0,
+      "risk_median_stockout_step": NaN,
+      "risk_mean_cumulative_shortfall_usd": 0.0,
+      "risk_mean_days_of_supply_remaining": 67.83437049655136,
+      "risk_mean_buffer_erosion_pct": 3.8120724356103457
+    },
+    {
+      "track": "gated_stress",
+      "horizon_months": 1,
+      "initial_inventory_months": 3.0,
+      "risk_stockout_rate": 0.0,
+      "risk_median_stockout_step": NaN,
+      "risk_mean_cumulative_shortfall_usd": 0.0,
+      "risk_mean_days_of_supply_remaining": 97.83437049655136,
+      "risk_mean_buffer_erosion_pct": 2.5413816237402305
+    },
+    {
+      "track": "gated_stress",
+      "horizon_months": 3,
+      "initial_inventory_months": 1.0,
+      "risk_stockout_rate": 0.027777777777777776,
+      "risk_median_stockout_step": 3.0,
+      "risk_mean_cumulative_shortfall_usd": 71966991.1370327,
+      "risk_mean_days_of_supply_remaining": 55.055994244452684,
+      "risk_mean_buffer_erosion_pct": 18.975183612489484
+    },
+    {
+      "track": "gated_stress",
+      "horizon_months": 3,
+      "initial_inventory_months": 2.0,
+      "risk_stockout_rate": 0.0,
+      "risk_median_stockout_step": NaN,
+      "risk_mean_cumulative_shortfall_usd": 0.0,
+      "risk_mean_days_of_supply_remaining": 84.88079315339927,
+      "risk_mean_buffer_erosion_pct": 9.779593624667122
+    },
+    {
+      "track": "gated_stress",
+      "horizon_months": 3,
+      "initial_inventory_months": 3.0,
+      "risk_stockout_rate": 0.0,
+      "risk_median_stockout_step": NaN,
+      "risk_mean_cumulative_shortfall_usd": 0.0,
+      "risk_mean_days_of_supply_remaining": 114.88079315339924,
+      "risk_mean_buffer_erosion_pct": 6.5197290831114145
+    },
+    {
+      "track": "gated_stress",
+      "horizon_months": 6,
+      "initial_inventory_months": 1.0,
+      "risk_stockout_rate": 0.24404761904761904,
+      "risk_median_stockout_step": 4.0,
+      "risk_mean_cumulative_shortfall_usd": 1375981725.95546,
+      "risk_mean_days_of_supply_remaining": 90.3894542227634,
+      "risk_mean_buffer_erosion_pct": 30.84005321742456
+    },
+    {
+      "track": "gated_stress",
+      "horizon_months": 6,
+      "initial_inventory_months": 2.0,
+      "risk_stockout_rate": 0.07142857142857142,
+      "risk_median_stockout_step": 5.5,
+      "risk_mean_cumulative_shortfall_usd": 232818612.04024896,
+      "risk_mean_days_of_supply_remaining": 115.85711753371308,
+      "risk_mean_buffer_erosion_pct": 22.97392109046281
+    },
+    {
+      "track": "gated_stress",
+      "horizon_months": 6,
+      "initial_inventory_months": 3.0,
+      "risk_stockout_rate": 0.011904761904761904,
+      "risk_median_stockout_step": 6.0,
+      "risk_mean_cumulative_shortfall_usd": 4303411.6494592745,
+      "risk_mean_days_of_supply_remaining": 144.7904296769552,
+      "risk_mean_buffer_erosion_pct": 16.501156123372862
+    },
+    {
+      "track": "ungated_stress",
+      "horizon_months": 1,
+      "initial_inventory_months": 1.0,
+      "risk_stockout_rate": 0.0,
+      "risk_median_stockout_step": NaN,
+      "risk_mean_cumulative_shortfall_usd": 0.0,
+      "risk_mean_days_of_supply_remaining": 30.001561636439806,
+      "risk_mean_buffer_erosion_pct": 12.337855764084056
+    },
+    {
+      "track": "ungated_stress",
+      "horizon_months": 1,
+      "initial_inventory_months": 2.0,
+      "risk_stockout_rate": 0.0,
+      "risk_median_stockout_step": NaN,
+      "risk_mean_cumulative_shortfall_usd": 0.0,
+      "risk_mean_days_of_supply_remaining": 60.00156163643982,
+      "risk_mean_buffer_erosion_pct": 6.168927882042026
+    },
+    {
+      "track": "ungated_stress",
+      "horizon_months": 1,
+      "initial_inventory_months": 3.0,
+      "risk_stockout_rate": 0.0,
+      "risk_median_stockout_step": NaN,
+      "risk_mean_cumulative_shortfall_usd": 0.0,
+      "risk_mean_days_of_supply_remaining": 90.00156163643982,
+      "risk_mean_buffer_erosion_pct": 4.112618588028019
+    },
+    {
+      "track": "ungated_stress",
+      "horizon_months": 3,
+      "initial_inventory_months": 1.0,
+      "risk_stockout_rate": 0.1111111111111111,
+      "risk_median_stockout_step": 3.0,
+      "risk_mean_cumulative_shortfall_usd": 253812768.6541144,
+      "risk_mean_days_of_supply_remaining": 36.72642712409782,
+      "risk_mean_buffer_erosion_pct": 29.288145059505364
+    },
+    {
+      "track": "ungated_stress",
+      "horizon_months": 3,
+      "initial_inventory_months": 2.0,
+      "risk_stockout_rate": 0.0,
+      "risk_median_stockout_step": NaN,
+      "risk_mean_cumulative_shortfall_usd": 0.0,
+      "risk_mean_days_of_supply_remaining": 66.08731228030851,
+      "risk_mean_buffer_erosion_pct": 15.709263936068192
+    },
+    {
+      "track": "ungated_stress",
+      "horizon_months": 3,
+      "initial_inventory_months": 3.0,
+      "risk_stockout_rate": 0.0,
+      "risk_median_stockout_step": NaN,
+      "risk_mean_cumulative_shortfall_usd": 0.0,
+      "risk_mean_days_of_supply_remaining": 96.08731228030851,
+      "risk_mean_buffer_erosion_pct": 10.47284262404546
+    },
+    {
+      "track": "ungated_stress",
+      "horizon_months": 6,
+      "initial_inventory_months": 1.0,
+      "risk_stockout_rate": 0.2857142857142857,
+      "risk_median_stockout_step": 4.0,
+      "risk_mean_cumulative_shortfall_usd": 1894812279.2667813,
+      "risk_mean_days_of_supply_remaining": 54.88407326912949,
+      "risk_mean_buffer_erosion_pct": 38.51485414058507
+    },
+    {
+      "track": "ungated_stress",
+      "horizon_months": 6,
+      "initial_inventory_months": 2.0,
+      "risk_stockout_rate": 0.10119047619047619,
+      "risk_median_stockout_step": 5.0,
+      "risk_mean_cumulative_shortfall_usd": 426785694.4327529,
+      "risk_mean_days_of_supply_remaining": 78.63832219527657,
+      "risk_mean_buffer_erosion_pct": 29.66701219338072
+    },
+    {
+      "track": "ungated_stress",
+      "horizon_months": 6,
+      "initial_inventory_months": 3.0,
+      "risk_stockout_rate": 0.017857142857142856,
+      "risk_median_stockout_step": 6.0,
+      "risk_mean_cumulative_shortfall_usd": 17227556.22109422,
+      "risk_mean_days_of_supply_remaining": 107.09932187126246,
+      "risk_mean_buffer_erosion_pct": 21.48800848893616
+    }
+  ],
+  "st_isp_staging": {
+    "S_monitor": "Module 1 risk signal aligned to origin quarter",
+    "T_trigger": "trigger_active when predicted_gap_pct >= 2.0%",
+    "I_simulate": "recursive monthly inventory balance with seasonal demand proxy",
+    "SP_policy": "baseline (expanding+CQR) / legacy multiplicative / risk-feature fusion"
+  },
+  "module1_bias_correction": {
+    "rolling_window_months": 12,
+    "clip_min": 0.85,
+    "clip_max": 1.25,
+    "method": "horizon-wise rolling median(actual/pred), shifted by one period"
+  }
+}
