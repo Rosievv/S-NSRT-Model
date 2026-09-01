@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-08-15T05:06:46.678078+00:00",
+  "events_total": 92,
+  "replay_total": 20,
+  "sources": {
+    "Google News RSS": 75,
+    "Federal Register": 17
+  },
+  "impact_target_counts": {
+    "supply_source": 72,
+    "transport_channel": 20
+  },
+  "event_type_counts": {
+    "semiconductor_policy": 32,
+    "other": 25,
+    "logistics_disruption": 20,
+    "export_control": 13,
+    "sanctions": 1,
+    "earthquake": 1
+  },
+  "figure3_replay_method": {
+    "source_records": "Traceable contemporaneous reports and official announcements",
+    "customs_data": "US Census monthly imports, deduplicated by date/HS/country",
+    "confirmation_threshold_yoy_pct": -20.0,
+    "confirmation_window_months": 8
+  }
+}

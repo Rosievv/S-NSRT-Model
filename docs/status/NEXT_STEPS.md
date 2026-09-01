@@ -65,7 +65,7 @@ python3 main.py --phase custom \
 
 **立即执行（测试）：**
 ```bash
-cd /Users/duanyihan/Desktop/rosie/NIW-Project/scram
+cd /Users/rosiepeng/Downloads/S-NSRT-Model
 
 # 测试采集2个月的Census数据
 python3 main.py --phase custom \

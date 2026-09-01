@@ -1,0 +1,12 @@
+metric,formula,value,unit,source
+demand_real_usd,state_panel_total_demand_usd,20000000000.000008,USD,module2_model_metrics.csv::state_panel_total_demand_usd
+demand_model_usd,selected_model.total_demand_usd,20000000000.000008,USD,module2_scenario_comparison.csv::total_demand_usd
+demand_gap_usd,demand_model_usd - demand_real_usd,0.0,USD,computed
+cost_real_annual_usd_m,Actual_Total_Transportation_Cost_USD_M (Year=2022),7753.53,USD million,annual_actual_transportation_costs.csv::Actual_Total_Transportation_Cost_USD_M
+cost_real_monthly_proxy_usd,cost_real_annual_usd_m * 1e6 / 12,646127500.0,USD,computed
+cost_model_monthly_usd,selected_model.total_logistics_cost_usd,742593070.7528944,USD,module2_scenario_comparison.csv::total_logistics_cost_usd
+cost_gap_usd,cost_model_monthly_usd - cost_real_monthly_proxy_usd,96465570.7528944,USD,computed
+cost_gap_pct,cost_gap_usd / cost_real_monthly_proxy_usd * 100,14.929804218655669,%,computed
+fill_rate_model,selected_model.fill_rate,0.7702799999999999,ratio,module2_scenario_comparison.csv::fill_rate
+delivered_model_usd,selected_model.delivered_usd,15405600000.000002,USD,module2_scenario_comparison.csv::delivered_usd
+unmet_model_usd,selected_model.unmet_usd,4594399999.999995,USD,module2_scenario_comparison.csv::unmet_usd

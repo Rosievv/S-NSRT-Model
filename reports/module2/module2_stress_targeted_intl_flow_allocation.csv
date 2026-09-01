@@ -1,0 +1,19 @@
+from_origin,to_port,mode,capacity,unit_cost,lead_time,is_air,flow_usd,strategy,scenario
+ORIGIN_ASIA,PORT_LA_LB,ocean,11051040000.000004,0.014,18.0,False,11051040000.000004,Targeted Allocation,targeted
+ORIGIN_ASIA,PORT_LA_LB,air,1393392000.0000002,0.095,2.0,True,0.0,Targeted Allocation,targeted
+ORIGIN_ASIA,PORT_HOU,ocean,3400320000.0000014,0.014,18.0,False,702239999.9999998,Targeted Allocation,targeted
+ORIGIN_ASIA,PORT_HOU,air,428736000.0000002,0.095,2.0,True,0.0,Targeted Allocation,targeted
+ORIGIN_ASIA,PORT_NY_NJ,ocean,2550240000.000001,0.014,18.0,False,2550240000.000001,Targeted Allocation,targeted
+ORIGIN_ASIA,PORT_NY_NJ,air,321552000.00000006,0.095,2.0,True,0.0,Targeted Allocation,targeted
+ORIGIN_EU,PORT_LA_LB,ocean,485760000.0000003,0.014,18.0,False,23119999.9999938,Targeted Allocation,targeted
+ORIGIN_EU,PORT_LA_LB,air,61248000.000000045,0.095,2.0,True,0.0,Targeted Allocation,targeted
+ORIGIN_EU,PORT_HOU,ocean,1214400000.0000007,0.014,18.0,False,1214400000.0000007,Targeted Allocation,targeted
+ORIGIN_EU,PORT_HOU,air,153120000.0000001,0.095,2.0,True,0.0,Targeted Allocation,targeted
+ORIGIN_EU,PORT_NY_NJ,ocean,3157440000.000002,0.014,18.0,False,858960000.0,Targeted Allocation,targeted
+ORIGIN_EU,PORT_NY_NJ,air,398112000.00000024,0.095,2.0,True,0.0,Targeted Allocation,targeted
+ORIGIN_AMERICAS,PORT_LA_LB,ocean,728640000.0000004,0.014,18.0,False,685439999.9999995,Targeted Allocation,targeted
+ORIGIN_AMERICAS,PORT_LA_LB,air,91872000.00000004,0.095,2.0,True,0.0,Targeted Allocation,targeted
+ORIGIN_AMERICAS,PORT_HOU,ocean,2003760000.000001,0.014,18.0,False,2003760000.000001,Targeted Allocation,targeted
+ORIGIN_AMERICAS,PORT_HOU,air,252648000.00000012,0.095,2.0,True,0.0,Targeted Allocation,targeted
+ORIGIN_AMERICAS,PORT_NY_NJ,ocean,910800000.0000004,0.014,18.0,False,910800000.0000004,Targeted Allocation,targeted
+ORIGIN_AMERICAS,PORT_NY_NJ,air,114840000.00000004,0.095,2.0,True,0.0,Targeted Allocation,targeted

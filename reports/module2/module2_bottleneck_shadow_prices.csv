@@ -1,0 +1,437 @@
+strategy,scenario,constraint,constraint_type,slack,shadow_price
+Cost-Minimizing,stress,lane_capacity::PORT_TO_DC::PORT_LA_LB->DC_WEST::rail,lane_capacity,0.0,0.013100000000000007
+Cost-Minimizing,stress,lane_capacity::PORT_TO_DC::PORT_HOU->DC_WEST::rail,lane_capacity,0.0,0.013100000000000007
+Cost-Minimizing,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_WEST::rail,lane_capacity,0.0,0.013100000000000007
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->TX::rail,lane_capacity,0.0,0.013100000000000004
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MN::rail,lane_capacity,0.0,0.013100000000000004
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IL::rail,lane_capacity,0.0,0.013100000000000004
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WI::rail,lane_capacity,0.0,0.013100000000000004
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MI::rail,lane_capacity,0.0,0.013100000000000004
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->OH::rail,lane_capacity,0.0,0.013100000000000004
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IA::rail,lane_capacity,0.0,0.013100000000000004
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MO::rail,lane_capacity,0.0,0.013100000000000004
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IN::rail,lane_capacity,0.0,0.013100000000000004
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->KS::rail,lane_capacity,0.0,0.013100000000000004
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->OK::rail,lane_capacity,0.0,0.013100000000000004
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NE::rail,lane_capacity,0.0,0.013100000000000004
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->SD::rail,lane_capacity,0.0,0.013100000000000004
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->ND::rail,lane_capacity,0.0,0.013100000000000004
+Cost-Minimizing,stress,lane_capacity::PORT_TO_DC::PORT_LA_LB->DC_EAST::rail,lane_capacity,0.0,0.012400000000000001
+Cost-Minimizing,stress,lane_capacity::PORT_TO_DC::PORT_HOU->DC_EAST::rail,lane_capacity,0.0,0.012400000000000001
+Cost-Minimizing,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_EAST::rail,lane_capacity,0.0,0.012400000000000001
+Cost-Minimizing,stress,lane_capacity::PORT_TO_DC::PORT_LA_LB->DC_WEST::truck,lane_capacity,0.0,0.006900000000000007
+Cost-Minimizing,stress,lane_capacity::PORT_TO_DC::PORT_HOU->DC_WEST::truck,lane_capacity,0.0,0.006900000000000007
+Cost-Minimizing,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_WEST::truck,lane_capacity,0.0,0.006900000000000007
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->TX::truck,lane_capacity,0.0,0.006900000000000003
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MN::truck,lane_capacity,0.0,0.006900000000000003
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IL::truck,lane_capacity,0.0,0.006900000000000003
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WI::truck,lane_capacity,0.0,0.006900000000000003
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MI::truck,lane_capacity,0.0,0.006900000000000003
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->OH::truck,lane_capacity,0.0,0.006900000000000003
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IA::truck,lane_capacity,0.0,0.006900000000000003
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MO::truck,lane_capacity,0.0,0.006900000000000003
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IN::truck,lane_capacity,0.0,0.006900000000000003
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->KS::truck,lane_capacity,0.0,0.006900000000000003
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->OK::truck,lane_capacity,0.0,0.006900000000000003
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NE::truck,lane_capacity,0.0,0.006900000000000003
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->SD::truck,lane_capacity,0.0,0.006900000000000003
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->ND::truck,lane_capacity,0.0,0.006900000000000003
+Cost-Minimizing,stress,lane_capacity::PORT_TO_DC::PORT_LA_LB->DC_CENTRAL::rail,lane_capacity,0.0,0.006200000000000004
+Cost-Minimizing,stress,lane_capacity::PORT_TO_DC::PORT_HOU->DC_CENTRAL::rail,lane_capacity,0.0,0.006200000000000004
+Cost-Minimizing,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_CENTRAL::rail,lane_capacity,0.0,0.006200000000000004
+Cost-Minimizing,stress,lane_capacity::PORT_TO_DC::PORT_LA_LB->DC_EAST::truck,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::PORT_TO_DC::PORT_HOU->DC_EAST::truck,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_EAST::truck,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_WEST->CA::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->CA::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_WEST->OR::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->OR::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->MA::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_WEST->AZ::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->AZ::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->NY::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->FL::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_WEST->CO::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->CO::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->NJ::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->NC::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->MD::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->PA::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_WEST->WA::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WA::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->VA::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->NH::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_WEST->UT::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->UT::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->GA::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->CT::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_WEST->ID::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->ID::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_WEST->NM::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NM::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->SC::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->AL::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->TN::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->KY::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->DE::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->ME::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_WEST->NV::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NV::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->LA::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->RI::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->VT::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->AR::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_WEST->MT::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MT::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->MS::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->DC::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_WEST->HI::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->HI::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->WV::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_WEST->WY::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WY::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_WEST->AK::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->AK::rail,lane_capacity,0.0,0.006200000000000001
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MA::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NY::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->FL::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NJ::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NC::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MD::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->PA::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->VA::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NH::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->GA::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->CT::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->SC::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->AL::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->TN::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->KY::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->DE::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->ME::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->LA::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->RI::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->VT::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->AR::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MS::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->DC::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WV::rail,lane_capacity,0.0,0.0054999999999999945
+Cost-Minimizing,stress,lane_capacity::PORT_TO_DC::PORT_HOU->DC_CENTRAL::truck,lane_capacity,0.0,3.469446951953614e-18
+Cost-Minimizing,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_CENTRAL::truck,lane_capacity,0.0,3.469446951953614e-18
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->CA::rail,lane_capacity,0.0,3.469446951953614e-18
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->AZ::rail,lane_capacity,0.0,3.469446951953614e-18
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->CO::rail,lane_capacity,0.0,3.469446951953614e-18
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->WA::rail,lane_capacity,0.0,3.469446951953614e-18
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->NM::rail,lane_capacity,0.0,3.469446951953614e-18
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->NV::rail,lane_capacity,0.0,3.469446951953614e-18
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->MT::rail,lane_capacity,0.0,3.469446951953614e-18
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->HI::rail,lane_capacity,0.0,3.469446951953614e-18
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_EAST->WY::rail,lane_capacity,0.0,3.469446951953614e-18
+Cost-Minimizing,stress,lane_capacity::INTL_TO_PORT::ORIGIN_EU->PORT_LA_LB::ocean,lane_capacity,0.0,0.0
+Cost-Minimizing,stress,lane_capacity::INTL_TO_PORT::ORIGIN_EU->PORT_NY_NJ::ocean,lane_capacity,0.0,0.0
+Cost-Minimizing,stress,lane_capacity::INTL_TO_PORT::ORIGIN_AMERICAS->PORT_LA_LB::ocean,lane_capacity,0.0,0.0
+Cost-Minimizing,stress,lane_capacity::INTL_TO_PORT::ORIGIN_AMERICAS->PORT_HOU::ocean,lane_capacity,0.0,0.0
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->CO::truck,lane_capacity,0.0,0.0
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->ID::truck,lane_capacity,0.0,0.0
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MT::truck,lane_capacity,0.0,0.0
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->HI::truck,lane_capacity,0.0,0.0
+Cost-Minimizing,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WY::truck,lane_capacity,0.0,0.0
+Resilience-First,stress,min_core_air_flow,node_capacity,0.0,0.0928
+Resilience-First,stress,lane_capacity::PORT_TO_DC::PORT_LA_LB->DC_WEST::rail,lane_capacity,0.0,0.007799999999999984
+Resilience-First,stress,lane_capacity::PORT_TO_DC::PORT_HOU->DC_WEST::rail,lane_capacity,0.0,0.007799999999999984
+Resilience-First,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_WEST::rail,lane_capacity,0.0,0.007799999999999984
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->MA::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->NY::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->FL::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MN::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IL::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->NJ::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->NC::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->MD::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->PA::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WI::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->OH::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->VA::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->NH::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IA::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MO::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->GA::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IN::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->CT::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->KS::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->SC::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->AL::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->TN::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->OK::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->KY::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->DE::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->ME::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NE::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->LA::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->RI::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->VT::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->AR::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->SD::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->MS::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->ND::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->DC::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->WV::rail,lane_capacity,0.0,0.004199999999999995
+Resilience-First,stress,lane_capacity::PORT_TO_DC::PORT_LA_LB->DC_WEST::truck,lane_capacity,0.0,0.0041999999999999885
+Resilience-First,stress,lane_capacity::PORT_TO_DC::PORT_HOU->DC_WEST::truck,lane_capacity,0.0,0.0041999999999999885
+Resilience-First,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_WEST::truck,lane_capacity,0.0,0.0041999999999999885
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_WEST->CA::rail,lane_capacity,0.0,0.003600000000000006
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->TX::rail,lane_capacity,0.0,0.003600000000000006
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_WEST->OR::rail,lane_capacity,0.0,0.003600000000000006
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_WEST->AZ::rail,lane_capacity,0.0,0.003600000000000006
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_WEST->CO::rail,lane_capacity,0.0,0.003600000000000006
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_WEST->WA::rail,lane_capacity,0.0,0.003600000000000006
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MI::rail,lane_capacity,0.0,0.003600000000000006
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_WEST->UT::rail,lane_capacity,0.0,0.003600000000000006
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_WEST->ID::rail,lane_capacity,0.0,0.003600000000000006
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_WEST->NM::rail,lane_capacity,0.0,0.003600000000000006
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_WEST->NV::rail,lane_capacity,0.0,0.003600000000000006
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_WEST->MT::rail,lane_capacity,0.0,0.003600000000000006
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_WEST->HI::rail,lane_capacity,0.0,0.003600000000000006
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_WEST->WY::rail,lane_capacity,0.0,0.003600000000000006
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_WEST->AK::rail,lane_capacity,0.0,0.003600000000000006
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->CA::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->CA::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->OR::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->OR::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->AZ::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->AZ::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->CO::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->CO::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WA::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->WA::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->UT::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->UT::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->ID::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->ID::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NM::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->NM::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NV::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->NV::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MT::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->MT::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->HI::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->HI::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WY::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->WY::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->AK::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->AK::rail,lane_capacity,0.0,0.003599999999999999
+Resilience-First,stress,lane_capacity::PORT_TO_DC::PORT_LA_LB->DC_CENTRAL::rail,lane_capacity,0.0,0.0035999999999999886
+Resilience-First,stress,lane_capacity::PORT_TO_DC::PORT_LA_LB->DC_EAST::rail,lane_capacity,0.0,0.0035999999999999886
+Resilience-First,stress,lane_capacity::PORT_TO_DC::PORT_HOU->DC_CENTRAL::rail,lane_capacity,0.0,0.0035999999999999886
+Resilience-First,stress,lane_capacity::PORT_TO_DC::PORT_HOU->DC_EAST::rail,lane_capacity,0.0,0.0035999999999999886
+Resilience-First,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_CENTRAL::rail,lane_capacity,0.0,0.0035999999999999886
+Resilience-First,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_EAST::rail,lane_capacity,0.0,0.0035999999999999886
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->MA::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->NY::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->FL::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MN::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IL::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->NJ::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->NC::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->MD::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->PA::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WI::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->OH::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->VA::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->NH::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IA::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MO::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->GA::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IN::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->CT::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->KS::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->SC::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->AL::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->TN::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->OK::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->KY::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->DE::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->ME::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NE::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->LA::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->RI::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->VT::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->AR::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->SD::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->MS::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->ND::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->DC::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_EAST->WV::truck,lane_capacity,0.0,0.0005999999999999929
+Resilience-First,stress,origin_capacity::ORIGIN_AMERICAS,node_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::INTL_TO_PORT::ORIGIN_ASIA->PORT_LA_LB::ocean,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::INTL_TO_PORT::ORIGIN_ASIA->PORT_NY_NJ::ocean,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::INTL_TO_PORT::ORIGIN_EU->PORT_HOU::ocean,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::INTL_TO_PORT::ORIGIN_AMERICAS->PORT_HOU::ocean,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::INTL_TO_PORT::ORIGIN_AMERICAS->PORT_NY_NJ::ocean,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::PORT_TO_DC::PORT_LA_LB->DC_EAST::truck,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::PORT_TO_DC::PORT_HOU->DC_EAST::truck,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_CENTRAL::truck,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_EAST::truck,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->OR::truck,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->AZ::truck,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->CO::truck,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WA::truck,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MI::air,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->UT::truck,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->ID::truck,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NM::truck,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NV::truck,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MT::truck,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->HI::truck,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WY::truck,lane_capacity,0.0,0.0
+Resilience-First,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->AK::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,min_core_air_flow,node_capacity,0.0,0.09340000000000002
+Targeted Allocation,stress,lane_capacity::PORT_TO_DC::PORT_LA_LB->DC_WEST::rail,lane_capacity,0.0,0.009400000000000006
+Targeted Allocation,stress,lane_capacity::PORT_TO_DC::PORT_HOU->DC_WEST::rail,lane_capacity,0.0,0.009400000000000006
+Targeted Allocation,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_WEST::rail,lane_capacity,0.0,0.009400000000000006
+Targeted Allocation,stress,lane_capacity::PORT_TO_DC::PORT_LA_LB->DC_EAST::rail,lane_capacity,0.0,0.0049999999999999906
+Targeted Allocation,stress,lane_capacity::PORT_TO_DC::PORT_HOU->DC_EAST::rail,lane_capacity,0.0,0.0049999999999999906
+Targeted Allocation,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_EAST::rail,lane_capacity,0.0,0.0049999999999999906
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->CA::rail,lane_capacity,0.0,0.004800000000000002
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->OR::rail,lane_capacity,0.0,0.004800000000000002
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->AZ::rail,lane_capacity,0.0,0.004800000000000002
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->CO::rail,lane_capacity,0.0,0.004800000000000002
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WA::rail,lane_capacity,0.0,0.004800000000000002
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->UT::rail,lane_capacity,0.0,0.004800000000000002
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->ID::rail,lane_capacity,0.0,0.004800000000000002
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NM::rail,lane_capacity,0.0,0.004800000000000002
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NV::rail,lane_capacity,0.0,0.004800000000000002
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MT::rail,lane_capacity,0.0,0.004800000000000002
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->HI::rail,lane_capacity,0.0,0.004800000000000002
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WY::rail,lane_capacity,0.0,0.004800000000000002
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->AK::rail,lane_capacity,0.0,0.004800000000000002
+Targeted Allocation,stress,lane_capacity::PORT_TO_DC::PORT_LA_LB->DC_CENTRAL::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::PORT_TO_DC::PORT_HOU->DC_CENTRAL::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_CENTRAL::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_WEST->CA::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->TX::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_WEST->OR::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->MA::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_WEST->AZ::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->NY::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->FL::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MN::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IL::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_WEST->CO::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->NJ::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->NC::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->MD::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->PA::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_WEST->WA::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WI::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MI::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->OH::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->VA::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->NH::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IA::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_WEST->UT::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MO::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->GA::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IN::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->CT::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_WEST->ID::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->KS::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_WEST->NM::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->SC::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->AL::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->TN::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->OK::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->KY::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->DE::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->ME::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NE::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_WEST->NV::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->LA::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->RI::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->VT::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->AR::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_WEST->MT::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->SD::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->MS::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->ND::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->DC::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_WEST->HI::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->WV::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_WEST->WY::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_WEST->AK::rail,lane_capacity,0.0,0.004799999999999999
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->CA::rail,lane_capacity,0.0,0.00460000000000001
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->OR::rail,lane_capacity,0.0,0.00460000000000001
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->AZ::rail,lane_capacity,0.0,0.00460000000000001
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->CO::rail,lane_capacity,0.0,0.00460000000000001
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->WA::rail,lane_capacity,0.0,0.00460000000000001
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->UT::rail,lane_capacity,0.0,0.00460000000000001
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->ID::rail,lane_capacity,0.0,0.00460000000000001
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->NM::rail,lane_capacity,0.0,0.00460000000000001
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->NV::rail,lane_capacity,0.0,0.00460000000000001
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->MT::rail,lane_capacity,0.0,0.00460000000000001
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->HI::rail,lane_capacity,0.0,0.00460000000000001
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->WY::rail,lane_capacity,0.0,0.00460000000000001
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->AK::rail,lane_capacity,0.0,0.00460000000000001
+Targeted Allocation,stress,lane_capacity::PORT_TO_DC::PORT_LA_LB->DC_WEST::truck,lane_capacity,0.0,0.004600000000000007
+Targeted Allocation,stress,lane_capacity::PORT_TO_DC::PORT_HOU->DC_WEST::truck,lane_capacity,0.0,0.004600000000000007
+Targeted Allocation,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_WEST::truck,lane_capacity,0.0,0.004600000000000007
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MA::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NY::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->FL::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NJ::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NC::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MD::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->PA::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->VA::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NH::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->GA::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->CT::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->SC::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->AL::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->TN::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->KY::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->DE::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->ME::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->LA::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->RI::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->VT::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->AR::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MS::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->DC::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WV::rail,lane_capacity,0.0,0.00039999999999998717
+Targeted Allocation,stress,lane_capacity::PORT_TO_DC::PORT_LA_LB->DC_EAST::truck,lane_capacity,0.0,0.00019999999999999185
+Targeted Allocation,stress,lane_capacity::PORT_TO_DC::PORT_HOU->DC_EAST::truck,lane_capacity,0.0,0.00019999999999999185
+Targeted Allocation,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_EAST::truck,lane_capacity,0.0,0.00019999999999999185
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MI::air,lane_capacity,0.0,1.3877787807814457e-17
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->MN::rail,lane_capacity,0.0,3.469446951953614e-18
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->MI::rail,lane_capacity,0.0,3.469446951953614e-18
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->OK::rail,lane_capacity,0.0,3.469446951953614e-18
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_EAST->ND::rail,lane_capacity,0.0,3.469446951953614e-18
+Targeted Allocation,stress,origin_capacity::ORIGIN_AMERICAS,node_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::INTL_TO_PORT::ORIGIN_ASIA->PORT_LA_LB::ocean,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::INTL_TO_PORT::ORIGIN_ASIA->PORT_NY_NJ::ocean,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::INTL_TO_PORT::ORIGIN_EU->PORT_HOU::ocean,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::INTL_TO_PORT::ORIGIN_AMERICAS->PORT_HOU::ocean,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::INTL_TO_PORT::ORIGIN_AMERICAS->PORT_NY_NJ::ocean,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_CENTRAL::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->OR::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->AZ::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IL::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->CO::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WA::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WI::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->OH::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IA::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->UT::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MO::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->IN::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->ID::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->KS::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NM::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NE::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->NV::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->MT::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->SD::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->HI::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->WY::truck,lane_capacity,0.0,0.0
+Targeted Allocation,stress,lane_capacity::DC_TO_STATE::DC_CENTRAL->AK::truck,lane_capacity,0.0,0.0

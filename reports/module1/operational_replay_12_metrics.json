@@ -1,0 +1,24 @@
+{
+  "events_evaluated": 12,
+  "channel_counts": {
+    "supply_source": 6,
+    "transport_channel": 6
+  },
+  "confirmed_events": 10,
+  "impact_target_match_rate_pct": 83.33,
+  "event_type_match_rate_pct": 75.0,
+  "location_match_rate_pct": 58.33,
+  "transport_object_type_match_rate_pct": 100.0,
+  "early_warning_success_rate_pct": 41.67,
+  "detected_before_consequence_count": 5,
+  "same_day_detection_count": 3,
+  "late_detection_count": 2,
+  "transport_lead_days_mean": -1.17,
+  "transport_lead_days_median": 0.0,
+  "rules": {
+    "supply_source": "First affected Census trade month within 8 months with YoY import value <= -20%; success requires >=14 lead days.",
+    "transport_channel": "First documented operational closure, restriction, or carrier pause; success requires detection before the consequence date.",
+    "zero_day_interpretation": "Same-day awareness, not early warning.",
+    "negative_day_interpretation": "The authoritative report was published after operations were already affected."
+  }
+}

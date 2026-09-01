@@ -1,0 +1,62 @@
+{
+  "target_year": 2022,
+  "real_annual_transport_cost_usd_m": 7753.53,
+  "real_breakdown_usd_m": {
+    "truck": 4652.12,
+    "air": 2326.06,
+    "rail": 775.35
+  },
+  "assumption": "Model monthly costs (2022-01) annualized by x12 for yearly comparison.",
+  "scale_factor_baseline_to_real": 1.1151696776873117,
+  "model_rows": [
+    {
+      "strategy": "Baseline",
+      "scenario": "baseline",
+      "fill_rate": 1.0,
+      "model_monthly_cost_usd": 579398375.8058844,
+      "model_annual_cost_usd_m": 6952.780509670612,
+      "gap_vs_real_usd_m": -800.7494903293873,
+      "gap_vs_real_pct": -10.327547456827887,
+      "calibrated_annual_cost_usd_m": 7753.53
+    },
+    {
+      "strategy": "Cost-Minimizing",
+      "scenario": "stress",
+      "fill_rate": 0.73752,
+      "model_monthly_cost_usd": 459484646.6817905,
+      "model_annual_cost_usd_m": 5513.815760181486,
+      "gap_vs_real_usd_m": -2239.7142398185133,
+      "gap_vs_real_pct": -28.88638129753175,
+      "calibrated_annual_cost_usd_m": 6148.840144108808
+    },
+    {
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "fill_rate": 0.78792,
+      "model_monthly_cost_usd": 575441607.0389653,
+      "model_annual_cost_usd_m": 6905.299284467585,
+      "gap_vs_real_usd_m": -848.2307155324152,
+      "gap_vs_real_pct": -10.939929497047347,
+      "calibrated_annual_cost_usd_m": 7700.580377394141
+    },
+    {
+      "strategy": "Targeted Allocation",
+      "scenario": "stress",
+      "fill_rate": 0.7702799999999999,
+      "model_monthly_cost_usd": 526914670.7528944,
+      "model_annual_cost_usd_m": 6322.976049034733,
+      "gap_vs_real_usd_m": -1430.5539509652672,
+      "gap_vs_real_pct": -18.450356817672304,
+      "calibrated_annual_cost_usd_m": 7051.191162626654
+    }
+  ],
+  "calibrated_tradeoff": {
+    "costmin_vs_resilience_saving_usd_m": 1551.7402332853326,
+    "targeted_vs_resilience_saving_usd_m": 649.3892147674869,
+    "fill_rate_costmin": 0.73752,
+    "fill_rate_resilience": 0.78792,
+    "fill_rate_targeted": 0.7702799999999999,
+    "fill_rate_gap_res_minus_cost_pct_point": 5.04,
+    "fill_rate_gap_res_minus_targeted_pct_point": 1.76400000000001
+  }
+}

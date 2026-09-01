@@ -1,0 +1,66 @@
+{
+  "month_used": "2022-01-01",
+  "real_baseline": {
+    "total_demand_usd": 20000000000.0,
+    "state_count": 51,
+    "lane_rows": 13249,
+    "unit_cost_wavg": 0.1700607386964214,
+    "transit_days_wavg": 1.0,
+    "reliability_wavg": 0.04196043674834313
+  },
+  "model_rows": [
+    {
+      "strategy": "Baseline",
+      "scenario": "baseline",
+      "total_demand_usd": 20000000000.000008,
+      "delivered_usd": 20000000000.000008,
+      "unmet_usd": 0.0,
+      "fill_rate": 1.0,
+      "total_logistics_cost_usd": 579398375.8058844,
+      "avg_lead_time_days": 7.798026785357205,
+      "air_express_share": 0.0
+    },
+    {
+      "strategy": "Cost-Minimizing",
+      "scenario": "stress",
+      "total_demand_usd": 20000000000.000008,
+      "delivered_usd": 14750400000.000004,
+      "unmet_usd": 5249599999.999993,
+      "fill_rate": 0.73752,
+      "total_logistics_cost_usd": 459484646.6817905,
+      "avg_lead_time_days": 7.76630102789011,
+      "air_express_share": 0.0
+    },
+    {
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "total_demand_usd": 20000000000.000008,
+      "delivered_usd": 15758400000.000006,
+      "unmet_usd": 4241599999.999996,
+      "fill_rate": 0.78792,
+      "total_logistics_cost_usd": 575441607.0389653,
+      "avg_lead_time_days": 7.381565235733938,
+      "air_express_share": 0.0235079409936994
+    },
+    {
+      "strategy": "Targeted Allocation",
+      "scenario": "stress",
+      "total_demand_usd": 20000000000.000008,
+      "delivered_usd": 15405600000.000002,
+      "unmet_usd": 4594399999.999995,
+      "fill_rate": 0.7702799999999999,
+      "total_logistics_cost_usd": 526914670.7528944,
+      "avg_lead_time_days": 7.90951903214199,
+      "air_express_share": 0.0137407375928275
+    }
+  ],
+  "mode_level_real_stats": [
+    {
+      "mode": "truck",
+      "capacity_weight": 437765.7999940523,
+      "unit_cost_wavg": 0.1700607386964214,
+      "transit_days_wavg": 1.0,
+      "reliability_wavg": 0.04196043674834313
+    }
+  ]
+}

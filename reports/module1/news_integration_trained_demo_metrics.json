@@ -1,0 +1,19 @@
+{
+  "status": "small_sample_demo_not_for_production",
+  "prediction_protocol": "leave_one_record_out_alert_and_leave_one_event_out_impact",
+  "event_identity_used_as_feature": false,
+  "alert_training_rows": 18,
+  "alert_positive_rows": 12,
+  "alert_negative_rows": 6,
+  "alert_loocv_roc_auc": 1.0,
+  "alert_loocv_brier_score": 0.005,
+  "impact_training_events": 6,
+  "impact_ridge_alpha": 0.1,
+  "rule_impact_mae_pct_points": 9.05,
+  "demo_impact_loeo_mae_pct_points": 8.77,
+  "common_event_count": 5,
+  "static_common_event_mae_pct_points": 8.45,
+  "rule_common_event_mae_pct_points": 9.6,
+  "demo_common_event_loeo_mae_pct_points": 10.52,
+  "caveat": "The alert classes are curated and easily separable, while impact calibration has only six events. Metrics demonstrate pipeline execution, not production generalization."
+}

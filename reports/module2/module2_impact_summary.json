@@ -1,0 +1,25 @@
+{
+  "route_optimization": {
+    "trunk_routes_total": 27,
+    "baseline_active_routes": 18,
+    "cost_min_active_routes": 24,
+    "resilience_active_routes": 24,
+    "targeted_active_routes": 24,
+    "route_delta_vs_baseline": {
+      "cost_min": 6,
+      "resilience": 6,
+      "targeted": 6
+    }
+  },
+  "efficiency_improvement": {
+    "fill_rate_gain_resilience_vs_cost_pct_point": 5.04,
+    "fill_rate_gain_targeted_vs_cost_pct_point": 3.276,
+    "lead_time_improve_resilience_vs_cost_pct": 1.493,
+    "lead_time_improve_targeted_vs_cost_pct": -0.556
+  },
+  "cost_savings": {
+    "save_cost_min_vs_resilience_usd": 130068960.36,
+    "save_targeted_vs_resilience_usd": 53466136.29,
+    "save_targeted_vs_resilience_musd": 53.466
+  }
+}

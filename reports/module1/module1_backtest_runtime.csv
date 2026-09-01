@@ -1,0 +1,8 @@
+event,description,predicted_supply_gap_pct,observed_supply_gap_pct,counterfactual_supply_usd,observed_supply_usd,supply_gap_diff_pct,abs_error_pct,predicted_substitution_absorbed_pct,severity_bin_predicted,severity_bin_observed,directional_hit,directional_accuracy_pct,pairwise_ranking_accuracy_pct
+covid_q1_2020,COVID-19 initial lockdowns,0.0,0.0,16195559595.43,76060731020.0,0.0,0.0,100.0,low,low,1,100.0,66.67
+japan_earthquake_2011,Tōhoku earthquake and tsunami,8.56,21.27,33973243444.85,26747803977.0,-12.71,12.71,54.09,high,high,1,100.0,66.67
+thai_flood_2011,Thailand flooding (HDD/memory supply),0.0,0.0,1913893050.09,1917745935.0,0.0,0.0,100.0,low,low,1,100.0,66.67
+japan_export_controls_2019,Japan-Korea export control tensions,0.0,0.0,20268192665.42,41747320749.0,0.0,0.0,100.0,low,low,1,100.0,66.67
+china_power_shortage_2021,China manufacturing power curtailments,11.93,26.4,137833862140.66,101448010412.0,-14.47,14.47,30.22,high,high,1,100.0,66.67
+taiwan_drought_2021,Taiwan drought affecting semiconductor fabs,0.0,1.02,115001665893.15,113831132141.0,-1.02,1.02,99.98,low,low,1,100.0,66.67
+red_sea_disruption_2024,Shipping rerouting disruptions via Red Sea,0.33,0.0,78455548012.53,81486361319.0,0.33,0.33,91.01,low,low,1,100.0,66.67

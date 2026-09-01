@@ -1,7 +1,39 @@
-scenario,shocked_nodes,severity,original_supply_B,disrupted_supply_B,supply_gap_pct,substitution_absorbed_pct,most_affected_hs
-top_1_supplier_failure,Malaysia,1.0,1330.3,1161.44,12.69,56.87,854231
-top_3_supplier_failure,"Malaysia, Taiwan, Korea, South",0.5,1330.3,1292.34,2.85,88.47,854232
-east_asia_moderate,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.3,1330.3,1324.75,0.42,97.92,854232
-east_asia_severe,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.7,1330.3,917.51,31.03,33.88,854232
-china_decoupling,China,1.0,1330.3,1330.3,0.0,100.0,280461
-taiwan_crisis,Taiwan,0.8,1330.3,1324.29,0.45,95.99,280461
+phase,scenario,shocked_nodes,severity,original_supply_B,disrupted_supply_B,supply_gap_pct,substitution_absorbed_pct,most_affected_hs,description,scenario_type,quarter,quarter_start,quarter_end,lower_gap_pct,expected_gap_pct,upper_gap_pct,projection_band_width_pct,scenario_status
+historical,top_1_supplier_failure,Malaysia,1.0,1330.3,1019.34,23.38,20.56,854231,,,,,,,,,,historical_backtest
+historical,top_3_supplier_failure,"Malaysia, Taiwan, Korea, South",0.5,1330.3,1058.19,20.45,17.36,854231,,,,,,,,,,historical_backtest
+historical,east_asia_moderate,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.3,1330.3,1096.07,17.61,12.45,854232,,,,,,,,,,historical_backtest
+historical,east_asia_severe,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.7,1330.3,739.35,44.42,5.34,854232,,,,,,,,,,historical_backtest
+historical,china_decoupling,China,1.0,1330.3,1327.9,0.18,96.23,848610,,,,,,,,,,historical_backtest
+historical,taiwan_crisis,Taiwan,0.8,1330.3,1273.25,4.29,61.89,280461,,,,,,,,,,historical_backtest
+forecast,baseline_moderate,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.15,44.68,42.26,5.42,42.35,854232,Moderate ongoing East Asia friction,regional,2025Q1,2025-01-01,2025-03-31,4.18,5.42,6.65,2.47,out_of_sample
+forecast,top_1_supplier_failure,Taiwan,1.0,44.68,37.89,15.2,38.06,854231,Top-1 supplier goes completely offline,top_supplier,2025Q1,2025-01-01,2025-03-31,12.13,15.2,15.2,3.07,out_of_sample
+forecast,top_3_supplier_failure,"Taiwan, Malaysia, Israel",0.5,44.68,35.22,21.18,22.74,854231,Top-3 suppliers lose 50 % capacity simultaneously,top_supplier,2025Q1,2025-01-01,2025-03-31,17.67,21.18,24.69,7.02,out_of_sample
+forecast,east_asia_severe,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.7,44.68,27.36,38.77,11.6,854232,Severe East Asian disruption (70 %),regional,2025Q1,2025-01-01,2025-03-31,32.16,38.77,45.39,13.23,out_of_sample
+forecast,baseline_moderate,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.15,49.99,47.43,5.13,43.35,854232,Moderate ongoing East Asia friction,regional,2025Q2,2025-04-01,2025-06-30,3.89,5.13,6.38,2.49,out_of_sample
+forecast,top_1_supplier_failure,Taiwan,1.0,49.99,41.55,16.88,33.51,854231,Top-1 supplier goes completely offline,top_supplier,2025Q2,2025-04-01,2025-06-30,13.55,16.88,16.88,3.33,out_of_sample
+forecast,top_3_supplier_failure,"Taiwan, Malaysia, Israel",0.5,49.99,38.97,22.05,20.15,854231,Top-3 suppliers lose 50 % capacity simultaneously,top_supplier,2025Q2,2025-04-01,2025-06-30,18.4,22.05,25.71,7.31,out_of_sample
+forecast,east_asia_severe,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.7,49.99,31.31,37.36,11.56,854232,Severe East Asian disruption (70 %),regional,2025Q2,2025-04-01,2025-06-30,30.98,37.36,43.75,12.77,out_of_sample
+forecast,baseline_moderate,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.15,54.62,51.62,5.5,39.25,854232,Moderate ongoing East Asia friction,regional,2025Q3,2025-07-01,2025-09-30,4.24,5.5,6.76,2.52,out_of_sample
+forecast,top_1_supplier_failure,Taiwan,1.0,54.62,43.12,21.06,26.91,854231,Top-1 supplier goes completely offline,top_supplier,2025Q3,2025-07-01,2025-09-30,17.11,21.06,21.06,3.95,out_of_sample
+forecast,top_3_supplier_failure,"Taiwan, Malaysia, Israel",0.5,54.62,41.51,24.0,16.84,854231,Top-3 suppliers lose 50 % capacity simultaneously,top_supplier,2025Q3,2025-07-01,2025-09-30,20.09,24.0,27.93,7.84,out_of_sample
+forecast,east_asia_severe,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.7,54.62,34.26,37.27,11.75,854232,Severe East Asian disruption (70 %),regional,2025Q3,2025-07-01,2025-09-30,30.9,37.27,43.66,12.76,out_of_sample
+forecast,baseline_moderate,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.15,61.16,57.93,5.27,40.02,854232,Moderate ongoing East Asia friction,regional,2025Q4,2025-10-01,2025-12-31,4.01,5.27,6.54,2.53,out_of_sample
+forecast,top_1_supplier_failure,Taiwan,1.0,61.16,46.62,23.77,22.75,854231,Top-1 supplier goes completely offline,top_supplier,2025Q4,2025-10-01,2025-12-31,19.47,23.77,23.78,4.31,out_of_sample
+forecast,top_3_supplier_failure,"Taiwan, Malaysia, Israel",0.5,61.16,45.2,26.09,13.83,854231,Top-3 suppliers lose 50 % capacity simultaneously,top_supplier,2025Q4,2025-10-01,2025-12-31,21.87,26.09,30.33,8.46,out_of_sample
+forecast,east_asia_severe,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.7,61.16,39.22,35.87,12.6,854232,Severe East Asian disruption (70 %),regional,2025Q4,2025-10-01,2025-12-31,29.71,35.87,42.05,12.34,out_of_sample
+forecast,baseline_moderate,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.15,48.76,45.89,5.89,35.3,854232,Moderate ongoing East Asia friction,regional,2026Q1,2026-01-01,2026-03-31,4.56,5.89,7.23,2.67,out_of_sample
+forecast,top_1_supplier_failure,Taiwan,1.0,48.76,38.5,21.06,24.31,854231,Top-1 supplier goes completely offline,top_supplier,2026Q1,2026-01-01,2026-03-31,17.26,21.06,21.06,3.8,out_of_sample
+forecast,top_3_supplier_failure,"Taiwan, Malaysia, Israel",0.5,48.76,36.19,25.78,12.75,854231,Top-3 suppliers lose 50 % capacity simultaneously,top_supplier,2026Q1,2026-01-01,2026-03-31,21.62,25.78,29.96,8.34,out_of_sample
+forecast,east_asia_severe,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.7,48.76,30.37,37.73,11.19,854232,Severe East Asian disruption (70 %),regional,2026Q1,2026-01-01,2026-03-31,31.6,37.73,44.03,12.43,out_of_sample
+forecast,baseline_moderate,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.15,55.32,52.25,5.55,36.82,854232,Moderate ongoing East Asia friction,regional,2026Q2,2026-04-01,2026-06-30,4.24,5.55,6.89,2.65,out_of_sample
+forecast,top_1_supplier_failure,Taiwan,1.0,55.32,43.06,22.17,21.85,854231,Top-1 supplier goes completely offline,top_supplier,2026Q2,2026-04-01,2026-06-30,18.14,22.17,22.19,4.05,out_of_sample
+forecast,top_3_supplier_failure,"Taiwan, Malaysia, Israel",0.5,55.32,40.87,26.12,11.5,854231,Top-3 suppliers lose 50 % capacity simultaneously,top_supplier,2026Q2,2026-04-01,2026-06-30,21.9,26.12,30.35,8.45,out_of_sample
+forecast,east_asia_severe,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.7,55.32,34.87,36.97,9.87,854232,Severe East Asian disruption (70 %),regional,2026Q2,2026-04-01,2026-06-30,30.9,36.97,43.03,12.13,out_of_sample
+forecast,baseline_moderate,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.15,61.45,57.8,5.94,33.35,854232,Moderate ongoing East Asia friction,regional,2026Q3,2026-07-01,2026-09-30,4.59,5.94,7.29,2.7,out_of_sample
+forecast,top_1_supplier_failure,Taiwan,1.0,61.45,45.37,26.17,17.66,854231,Top-1 supplier goes completely offline,top_supplier,2026Q3,2026-07-01,2026-09-30,21.54,26.17,26.19,4.65,out_of_sample
+forecast,top_3_supplier_failure,"Taiwan, Malaysia, Israel",0.5,61.45,44.42,27.72,9.72,854231,Top-3 suppliers lose 50 % capacity simultaneously,top_supplier,2026Q3,2026-07-01,2026-09-30,23.28,27.72,32.15,8.87,out_of_sample
+forecast,east_asia_severe,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.7,61.45,38.0,38.16,8.27,854232,Severe East Asian disruption (70 %),regional,2026Q3,2026-07-01,2026-09-30,31.95,38.16,44.37,12.42,out_of_sample
+forecast,baseline_moderate,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.15,70.25,66.31,5.61,35.83,854232,Moderate ongoing East Asia friction,regional,2026Q4,2026-10-01,2026-12-31,4.28,5.61,6.93,2.65,out_of_sample
+forecast,top_1_supplier_failure,Taiwan,1.0,70.25,50.38,28.29,15.79,854231,Top-1 supplier goes completely offline,top_supplier,2026Q4,2026-10-01,2026-12-31,23.4,28.29,28.3,4.9,out_of_sample
+forecast,top_3_supplier_failure,"Taiwan, Israel, Malaysia",0.5,70.25,49.75,29.18,8.83,854231,Top-3 suppliers lose 50 % capacity simultaneously,top_supplier,2026Q4,2026-10-01,2026-12-31,24.52,29.18,33.84,9.32,out_of_sample
+forecast,east_asia_severe,"China, Taiwan, Japan, Korea, South, Malaysia, Vietnam, Thailand, Singapore",0.7,70.25,44.08,37.26,8.61,854232,Severe East Asian disruption (70 %),regional,2026Q4,2026-10-01,2026-12-31,31.17,37.26,43.35,12.18,out_of_sample

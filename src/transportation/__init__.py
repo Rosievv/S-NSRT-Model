@@ -8,10 +8,12 @@ reinforcement-learning / LP-based re-routing optimisation.
 from .lane_network import LogisticsNetwork
 from .disruption_detector import DisruptionDetector
 from .rl_optimizer import ReRoutingOptimizer, LPReRouter
+from .weather_disruption import WeatherDisruptionDetector
 
 __all__ = [
     "LogisticsNetwork",
     "DisruptionDetector",
     "ReRoutingOptimizer",
     "LPReRouter",
+    "WeatherDisruptionDetector",
 ]

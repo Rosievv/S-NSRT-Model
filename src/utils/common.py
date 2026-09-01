@@ -244,46 +244,54 @@ def calculate_hash(data: Union[str, bytes, pd.DataFrame]) -> str:
 
 
 def retry_with_backoff(
-    func,
+    func=None,
+    *,
     max_attempts: int = 3,
     initial_delay: float = 1.0,
     backoff_factor: float = 2.0,
-    exceptions: tuple = (Exception,)
+    exceptions: tuple = (Exception,),
+    max_retries: Optional[int] = None,
+    base_delay: Optional[float] = None,
 ):
     """
-    Decorator for retrying functions with exponential backoff
-    
-    Args:
-        func: Function to retry
-        max_attempts: Maximum number of retry attempts
-        initial_delay: Initial delay in seconds
-        backoff_factor: Multiplication factor for delay
-        exceptions: Tuple of exceptions to catch
-        
-    Returns:
-        Wrapped function
+    Decorator for retrying functions with exponential backoff.
+
+    Supports both the modern signature and older keyword-based usage such as:
+    @retry_with_backoff(max_retries=3, base_delay=2.0)
     """
-    def wrapper(*args, **kwargs):
-        delay = initial_delay
-        last_exception = None
-        
-        for attempt in range(max_attempts):
-            try:
-                return func(*args, **kwargs)
-            except exceptions as e:
-                last_exception = e
-                if attempt < max_attempts - 1:
-                    logging.warning(
-                        f"Attempt {attempt + 1} failed: {e}. "
-                        f"Retrying in {delay} seconds..."
-                    )
-                    import time
-                    time.sleep(delay)
-                    delay *= backoff_factor
-        
-        raise last_exception
-    
-    return wrapper
+    if max_retries is not None:
+        max_attempts = max_retries
+    if base_delay is not None:
+        initial_delay = base_delay
+
+    def decorator(wrapped_func):
+        def wrapper(*args, **kwargs):
+            delay = initial_delay
+            last_exception = None
+
+            for attempt in range(max_attempts):
+                try:
+                    return wrapped_func(*args, **kwargs)
+                except exceptions as e:
+                    last_exception = e
+                    if attempt < max_attempts - 1:
+                        logging.warning(
+                            f"Attempt {attempt + 1} failed: {e}. "
+                            f"Retrying in {delay} seconds..."
+                        )
+                        import time
+
+                        time.sleep(delay)
+                        delay *= backoff_factor
+
+            raise last_exception
+
+        return wrapper
+
+    if func is None:
+        return decorator
+
+    return decorator(func)
 
 
 def chunk_list(lst: List[Any], chunk_size: int) -> List[List[Any]]:

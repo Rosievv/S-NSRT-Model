@@ -1,0 +1,313 @@
+{
+  "model": {
+    "type": "three-leg min-cost flow with multimodal rerouting",
+    "flow_conservation": "overseas->port, port->dc, and dc->state equality constraints",
+    "stress_design": "PORT_LA_LB shock plus overseas reroute and optional air scaling"
+  },
+  "inputs": {
+    "state_rows": 51,
+    "state_total_demand_usd": 20000000000.000008,
+    "lane_rows": 13249,
+    "node_rows": 17106
+  },
+  "baseline": {
+    "strategy_key": "baseline",
+    "strategy": "Baseline",
+    "scenario": "baseline",
+    "total_demand_usd": 20000000000.000008,
+    "delivered_usd": 20000000000.000008,
+    "unmet_usd": 0.0,
+    "fill_rate": 1.0,
+    "total_logistics_cost_usd": 859398375.8058844,
+    "avg_lead_time_days": 25.798026785357198,
+    "air_express_share": 0.0,
+    "objective_value": 1323762857.9423144,
+    "objective_mode": "strategy",
+    "service_weight": 0.5,
+    "min_fill_rate_constraint": null
+  },
+  "stress_cost_min": {
+    "strategy_key": "cost_min",
+    "strategy": "Cost-Minimizing",
+    "scenario": "stress",
+    "total_demand_usd": 20000000000.000008,
+    "delivered_usd": 20000000000.000008,
+    "unmet_usd": 0.0,
+    "fill_rate": 1.0,
+    "total_logistics_cost_usd": 859398375.8058844,
+    "avg_lead_time_days": 25.798026785357198,
+    "air_express_share": 0.0,
+    "objective_value": 1323762857.942314,
+    "objective_mode": "strategy",
+    "service_weight": 0.5,
+    "min_fill_rate_constraint": null
+  },
+  "stress_resilience_first": {
+    "strategy_key": "resilience_first",
+    "strategy": "Resilience-First",
+    "scenario": "stress",
+    "total_demand_usd": 20000000000.000008,
+    "delivered_usd": 20000000000.000008,
+    "unmet_usd": 0.0,
+    "fill_rate": 1.0,
+    "total_logistics_cost_usd": 867401014.1159921,
+    "avg_lead_time_days": 25.741921178332294,
+    "air_express_share": 0.018522376867755652,
+    "objective_value": 2011158972.0832667,
+    "objective_mode": "strategy",
+    "service_weight": 0.5,
+    "min_fill_rate_constraint": null
+  },
+  "stress_targeted": {
+    "strategy_key": "targeted",
+    "strategy": "Targeted Allocation",
+    "scenario": "stress",
+    "total_demand_usd": 20000000000.000008,
+    "delivered_usd": 20000000000.000008,
+    "unmet_usd": 0.0,
+    "fill_rate": 1.0,
+    "total_logistics_cost_usd": 859973020.1465933,
+    "avg_lead_time_days": 25.783897902873246,
+    "air_express_share": 0.01058421535300323,
+    "objective_value": 1691408282.2503393,
+    "objective_mode": "strategy",
+    "service_weight": 0.5,
+    "min_fill_rate_constraint": null
+  },
+  "custom_scenario": null,
+  "custom_scenario_error": null,
+  "top_state_shortfalls_resilience": [
+    {
+      "state_abbr": "CA",
+      "region": "WEST",
+      "demand_usd": 8526129617.243685,
+      "delivered_usd": 8526129617.243685,
+      "unmet_usd": 0.0,
+      "fill_rate": 1.0,
+      "shortfall_usd": 0.0,
+      "strategy": "Resilience-First",
+      "scenario": "stress"
+    },
+    {
+      "state_abbr": "LA",
+      "region": "EAST",
+      "demand_usd": 28987705.73755232,
+      "delivered_usd": 28987705.73755232,
+      "unmet_usd": 0.0,
+      "fill_rate": 1.0,
+      "shortfall_usd": 0.0,
+      "strategy": "Resilience-First",
+      "scenario": "stress"
+    },
+    {
+      "state_abbr": "NM",
+      "region": "WEST",
+      "demand_usd": 86232218.82821819,
+      "delivered_usd": 86232218.82821819,
+      "unmet_usd": 0.0,
+      "fill_rate": 1.0,
+      "shortfall_usd": 0.0,
+      "strategy": "Resilience-First",
+      "scenario": "stress"
+    },
+    {
+      "state_abbr": "SC",
+      "region": "EAST",
+      "demand_usd": 81150406.47603549,
+      "delivered_usd": 81150406.47603549,
+      "unmet_usd": 0.0,
+      "fill_rate": 1.0,
+      "shortfall_usd": 0.0,
+      "strategy": "Resilience-First",
+      "scenario": "stress"
+    },
+    {
+      "state_abbr": "AL",
+      "region": "EAST",
+      "demand_usd": 75468705.8271908,
+      "delivered_usd": 75468705.8271908,
+      "unmet_usd": 0.0,
+      "fill_rate": 1.0,
+      "shortfall_usd": 0.0,
+      "strategy": "Resilience-First",
+      "scenario": "stress"
+    },
+    {
+      "state_abbr": "TN",
+      "region": "EAST",
+      "demand_usd": 55603439.35956753,
+      "delivered_usd": 55603439.35956753,
+      "unmet_usd": 0.0,
+      "fill_rate": 1.0,
+      "shortfall_usd": 0.0,
+      "strategy": "Resilience-First",
+      "scenario": "stress"
+    },
+    {
+      "state_abbr": "OK",
+      "region": "CENTRAL",
+      "demand_usd": 44888193.2329842,
+      "delivered_usd": 44888193.2329842,
+      "unmet_usd": 0.0,
+      "fill_rate": 1.0,
+      "shortfall_usd": 0.0,
+      "strategy": "Resilience-First",
+      "scenario": "stress"
+    },
+    {
+      "state_abbr": "KY",
+      "region": "EAST",
+      "demand_usd": 42681707.54411248,
+      "delivered_usd": 42681707.54411248,
+      "unmet_usd": 0.0,
+      "fill_rate": 1.0,
+      "shortfall_usd": 0.0,
+      "strategy": "Resilience-First",
+      "scenario": "stress"
+    },
+    {
+      "state_abbr": "DE",
+      "region": "EAST",
+      "demand_usd": 40027029.44968868,
+      "delivered_usd": 40027029.44968868,
+      "unmet_usd": 0.0,
+      "fill_rate": 1.0,
+      "shortfall_usd": 0.0,
+      "strategy": "Resilience-First",
+      "scenario": "stress"
+    },
+    {
+      "state_abbr": "ME",
+      "region": "EAST",
+      "demand_usd": 34959007.63306143,
+      "delivered_usd": 34959007.63306143,
+      "unmet_usd": 0.0,
+      "fill_rate": 1.0,
+      "shortfall_usd": 0.0,
+      "strategy": "Resilience-First",
+      "scenario": "stress"
+    }
+  ],
+  "top_bottlenecks_resilience": [
+    {
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "constraint": "min_core_air_flow",
+      "constraint_type": "node_capacity",
+      "slack": 0.0,
+      "shadow_price": 0.0928
+    },
+    {
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "constraint": "lane_capacity::PORT_TO_DC::PORT_LA_LB->DC_WEST::rail",
+      "constraint_type": "lane_capacity",
+      "slack": 0.0,
+      "shadow_price": 0.007799999999999984
+    },
+    {
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "constraint": "lane_capacity::PORT_TO_DC::PORT_HOU->DC_WEST::rail",
+      "constraint_type": "lane_capacity",
+      "slack": 0.0,
+      "shadow_price": 0.007799999999999984
+    },
+    {
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "constraint": "lane_capacity::PORT_TO_DC::PORT_NY_NJ->DC_WEST::rail",
+      "constraint_type": "lane_capacity",
+      "slack": 0.0,
+      "shadow_price": 0.007799999999999984
+    },
+    {
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "constraint": "lane_capacity::DC_TO_STATE::DC_EAST->MA::rail",
+      "constraint_type": "lane_capacity",
+      "slack": 0.0,
+      "shadow_price": 0.004199999999999995
+    },
+    {
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "constraint": "lane_capacity::DC_TO_STATE::DC_EAST->NY::rail",
+      "constraint_type": "lane_capacity",
+      "slack": 0.0,
+      "shadow_price": 0.004199999999999995
+    },
+    {
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "constraint": "lane_capacity::DC_TO_STATE::DC_EAST->FL::rail",
+      "constraint_type": "lane_capacity",
+      "slack": 0.0,
+      "shadow_price": 0.004199999999999995
+    },
+    {
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "constraint": "lane_capacity::DC_TO_STATE::DC_CENTRAL->MN::rail",
+      "constraint_type": "lane_capacity",
+      "slack": 0.0,
+      "shadow_price": 0.004199999999999995
+    },
+    {
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "constraint": "lane_capacity::DC_TO_STATE::DC_CENTRAL->IL::rail",
+      "constraint_type": "lane_capacity",
+      "slack": 0.0,
+      "shadow_price": 0.004199999999999995
+    },
+    {
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "constraint": "lane_capacity::DC_TO_STATE::DC_EAST->NJ::rail",
+      "constraint_type": "lane_capacity",
+      "slack": 0.0,
+      "shadow_price": 0.004199999999999995
+    },
+    {
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "constraint": "lane_capacity::DC_TO_STATE::DC_EAST->NC::rail",
+      "constraint_type": "lane_capacity",
+      "slack": 0.0,
+      "shadow_price": 0.004199999999999995
+    },
+    {
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "constraint": "lane_capacity::DC_TO_STATE::DC_EAST->MD::rail",
+      "constraint_type": "lane_capacity",
+      "slack": 0.0,
+      "shadow_price": 0.004199999999999995
+    },
+    {
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "constraint": "lane_capacity::DC_TO_STATE::DC_EAST->PA::rail",
+      "constraint_type": "lane_capacity",
+      "slack": 0.0,
+      "shadow_price": 0.004199999999999995
+    },
+    {
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "constraint": "lane_capacity::DC_TO_STATE::DC_CENTRAL->WI::rail",
+      "constraint_type": "lane_capacity",
+      "slack": 0.0,
+      "shadow_price": 0.004199999999999995
+    },
+    {
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "constraint": "lane_capacity::DC_TO_STATE::DC_CENTRAL->OH::rail",
+      "constraint_type": "lane_capacity",
+      "slack": 0.0,
+      "shadow_price": 0.004199999999999995
+    }
+  ]
+}
