@@ -1,0 +1,23 @@
+{
+  "method": "FRED_A34SVS_plus_CFS_proxy",
+  "fred_series": "A34SVS",
+  "bea_direct_fetch": "failed",
+  "bea_error": "BEA URL did not return an Excel file (content-type=text/html).",
+  "freight_rate_assumptions": {
+    "2018": 0.015,
+    "2019": 0.014,
+    "2020": 0.016,
+    "2021": 0.024,
+    "2022": 0.022,
+    "2023": 0.015,
+    "2024": 0.015,
+    "2025": 0.015,
+    "2026": 0.015
+  },
+  "mode_split_assumptions": {
+    "truck": 0.6,
+    "air": 0.3,
+    "rail": 0.1
+  },
+  "output_csv": "reports/module2/annual_actual_transportation_costs.csv"
+}

@@ -1,0 +1,43 @@
+{
+  "comparison_mode": "module2_hs854231_real_vs_model",
+  "hs_code": "854231",
+  "raw_2022_total_demand_usd": 20000000000.0,
+  "model_2022_total_demand_usd": 20000000000.0,
+  "selected_model": {
+    "strategy_key": "targeted",
+    "strategy": "Targeted Allocation",
+    "scenario": "stress",
+    "fill_rate": 0.7702799999999999,
+    "total_demand_usd": 20000000000.0,
+    "delivered_usd": 15405600000.000002,
+    "unmet_usd": 4594399999.999995,
+    "total_logistics_cost_usd": 742593070.7528944,
+    "avg_lead_time_days": 25.909519032141997,
+    "air_express_share": 0.0137407375928275
+  },
+  "real_baseline": {
+    "raw_2022_hs854231_total_demand_usd": 20000000000.0,
+    "raw_2022_row_count": 51,
+    "processed_2022_hs854231_total_demand_usd": 20000000000.0,
+    "processed_2022_row_count": 51,
+    "transport_cost_annual_2022_usd_m": 7753.53,
+    "transport_cost_monthly_proxy_usd": 646127500.0,
+    "transport_mode_cost_share_2022": {
+      "truck": 0.6000002579470254,
+      "air": 0.3000001289735127,
+      "rail": 0.09999961307946188
+    }
+  },
+  "gaps": {
+    "hs854231_demand_gap_usd": 0.0,
+    "hs854231_demand_gap_pct": 0.0,
+    "monthly_cost_gap_usd": 96465570.7528944,
+    "monthly_cost_gap_pct": 14.929804218655669
+  },
+  "notes": [
+    "This report focuses only on HS 854231.",
+    "The real baseline uses the raw 2022 Module2 HS 854231 demand total.",
+    "The model-side demand uses the processed 2022 HS 854231 total feeding the optimizer.",
+    "Monthly model cost is compared against the monthlyized 2022 real transportation cost proxy."
+  ]
+}

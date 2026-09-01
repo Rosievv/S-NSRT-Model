@@ -1,0 +1,99 @@
+{
+  "target_month": "2022-01-01",
+  "cass_real": {
+    "source_file": "data/raw/Module2/Cass Indexes Historical Data.xlsx",
+    "expenditures": {
+      "month": "2022-01-01",
+      "index_value": 4.027,
+      "yoy": 0.31172638436482103,
+      "zscore": 2.4473576085597086
+    },
+    "linehaul": {
+      "month": "2022-01-01",
+      "index_value": 158.0,
+      "yoy": 0.127765881513205,
+      "zscore": 2.8035940317041295
+    }
+  },
+  "model": {
+    "baseline": {
+      "strategy_key": "baseline",
+      "strategy": "Baseline",
+      "scenario": "baseline",
+      "total_demand_usd": 20000000000.000008,
+      "delivered_usd": 20000000000.000008,
+      "unmet_usd": 0.0,
+      "fill_rate": 1.0,
+      "total_logistics_cost_usd": 579398375.8058844,
+      "avg_lead_time_days": 7.798026785357205,
+      "air_express_share": 0.0,
+      "objective_value": 719762857.942313,
+      "objective_mode": "strategy",
+      "service_weight": 0.5,
+      "min_fill_rate_constraint": NaN
+    },
+    "cost_minimizing": {
+      "strategy_key": "cost_min",
+      "strategy": "Cost-Minimizing",
+      "scenario": "stress",
+      "total_demand_usd": 20000000000.000008,
+      "delivered_usd": 14750400000.000004,
+      "unmet_usd": 5249599999.999993,
+      "fill_rate": 0.73752,
+      "total_logistics_cost_usd": 459484646.6817905,
+      "avg_lead_time_days": 7.76630102789011,
+      "air_express_share": 0.0,
+      "objective_value": 7928153088.695395,
+      "objective_mode": "strategy",
+      "service_weight": 0.5,
+      "min_fill_rate_constraint": NaN
+    },
+    "resilience_first": {
+      "strategy_key": "resilience_first",
+      "strategy": "Resilience-First",
+      "scenario": "stress",
+      "total_demand_usd": 20000000000.000008,
+      "delivered_usd": 15758400000.000006,
+      "unmet_usd": 4241599999.999996,
+      "fill_rate": 0.78792,
+      "total_logistics_cost_usd": 575441607.0389653,
+      "avg_lead_time_days": 7.381565235733938,
+      "air_express_share": 0.0235079409936994,
+      "objective_value": 17951190679.90332,
+      "objective_mode": "strategy",
+      "service_weight": 0.5,
+      "min_fill_rate_constraint": NaN
+    },
+    "targeted_allocation": {
+      "strategy_key": "targeted",
+      "strategy": "Targeted Allocation",
+      "scenario": "stress",
+      "total_demand_usd": 20000000000.000008,
+      "delivered_usd": 15405600000.000002,
+      "unmet_usd": 4594399999.999995,
+      "fill_rate": 0.7702799999999999,
+      "total_logistics_cost_usd": 526914670.7528944,
+      "avg_lead_time_days": 7.90951903214199,
+      "air_express_share": 0.0137407375928275,
+      "objective_value": 10267866618.20718,
+      "objective_mode": "strategy",
+      "service_weight": 0.5,
+      "min_fill_rate_constraint": NaN
+    },
+    "cost_min_vs_resilience": {
+      "saving_usd": 115956960.35717487,
+      "saving_pct_vs_resilience": 20.1509517106091,
+      "fill_rate_loss_pp": 5.04
+    }
+  },
+  "gap_summary": {
+    "directly_comparable": [
+      "Direction of cost pressure (high/low month) using Cass index vs model strategy cost ranking",
+      "Relative cost trade-off magnitude in percentage terms"
+    ],
+    "not_directly_comparable": [
+      "Cass index level (dimensionless index) vs model absolute USD cost",
+      "Cass macro index vs model fill_rate (Cass has no direct fulfillment numerator/denominator)"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+mode,flow_usd,leg,strategy,scenario,share,share_pct
+air,0.0,port_to_dc,Baseline,baseline,0.0,0.0
+rail,13200000000.000006,port_to_dc,Baseline,baseline,0.6600000000000003,66.00000000000003
+truck,6799999999.999996,port_to_dc,Baseline,baseline,0.3399999999999998,33.99999999999998
+air,0.0,dc_to_state,Baseline,baseline,0.0,0.0
+rail,12618241921.849035,dc_to_state,Baseline,baseline,0.6309120960924518,63.09120960924518
+truck,7381758078.150963,dc_to_state,Baseline,baseline,0.36908790390754814,36.90879039075482
+air,0.0,port_to_dc,Cost-Minimizing,stress,0.0,0.0
+rail,13200000000.000006,port_to_dc,Cost-Minimizing,stress,0.6600000000000003,66.00000000000003
+truck,6799999999.999994,port_to_dc,Cost-Minimizing,stress,0.3399999999999997,33.99999999999997
+air,0.0,dc_to_state,Cost-Minimizing,stress,0.0,0.0
+rail,12618241921.849035,dc_to_state,Cost-Minimizing,stress,0.6309120960924518,63.09120960924518
+truck,7381758078.150963,dc_to_state,Cost-Minimizing,stress,0.36908790390754814,36.90879039075482
+air,0.0,port_to_dc,Resilience-First,stress,0.0,0.0
+rail,13200000000.000006,port_to_dc,Resilience-First,stress,0.6600000000000003,66.00000000000003
+truck,6799999999.999993,port_to_dc,Resilience-First,stress,0.3399999999999997,33.99999999999997
+air,370447537.3551132,dc_to_state,Resilience-First,stress,0.01852237686775566,1.8522376867755659
+rail,12391318168.341066,dc_to_state,Resilience-First,stress,0.6195659084170533,61.95659084170533
+truck,7238234294.303819,dc_to_state,Resilience-First,stress,0.36191171471519096,36.1911714715191
+air,0.0,port_to_dc,Targeted Allocation,stress,0.0,0.0
+rail,13200000000.000006,port_to_dc,Targeted Allocation,stress,0.6600000000000003,66.00000000000003
+truck,6799999999.999994,port_to_dc,Targeted Allocation,stress,0.3399999999999997,33.99999999999997
+air,211684307.06006467,dc_to_state,Targeted Allocation,stress,0.010584215353003234,1.0584215353003235
+rail,12618241921.849037,dc_to_state,Targeted Allocation,stress,0.6309120960924519,63.09120960924519
+truck,7170073771.090898,dc_to_state,Targeted Allocation,stress,0.3585036885545449,35.85036885545449

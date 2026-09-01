@@ -1,0 +1,33 @@
+{
+  "target_month": "2022-01-01",
+  "requested_ids_status": {
+    "NO34SVS": "not_found_404",
+    "UO34SVS": "not_found_404"
+  },
+  "fred_valid_series": {
+    "A34SNO": {
+      "label": "Manufacturers' New Orders: Computers and Electronic Products (SA)",
+      "month": "2022-01-01",
+      "value": 24951.0,
+      "zscore_to_history": 0.039104930867828964
+    },
+    "A34SUO": {
+      "label": "Manufacturers' Unfilled Orders: Computers and Electronic Products (SA)",
+      "month": "2022-01-01",
+      "value": 140152.0,
+      "zscore_to_history": 1.9507217624220705
+    },
+    "A34SUS": {
+      "label": "Manufacturers' Unfilled Orders to Shipments Ratio: Computers and Electronic Products (SA)",
+      "month": "2022-01-01",
+      "value": 6.19,
+      "zscore_to_history": 1.275568134752315
+    }
+  },
+  "model_tradeoff": {
+    "costmin_vs_resilience_cost_saving_usd": 115956960.35717487,
+    "costmin_vs_resilience_fill_rate_delta_pct_point": -5.04,
+    "targeted_fill_rate": 0.7702799999999999
+  },
+  "note": "FRED macro series are real observations; model metrics remain optimization outputs. This gives real-macro-anchored comparison, not post-deployment realized accounting."
+}

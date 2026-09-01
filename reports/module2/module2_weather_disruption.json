@@ -1,0 +1,30 @@
+{
+  "enabled": true,
+  "active_storms": [
+    {
+      "name": "Dolly",
+      "classification": "TS",
+      "lat": 13.7,
+      "lon": -40.7
+    },
+    {
+      "name": "Karina",
+      "classification": "TS",
+      "lat": 11.1,
+      "lon": -111.9
+    },
+    {
+      "name": "Lowell",
+      "classification": "TS",
+      "lat": 11.3,
+      "lon": -133.8
+    },
+    {
+      "name": "Lala",
+      "classification": "TS",
+      "lat": 37.5,
+      "lon": -178.9
+    }
+  ],
+  "port_impacts": []
+}
