@@ -159,7 +159,41 @@ class ConfigManager:
     def get_validation_rules(self) -> Dict[str, Any]:
         """Get data validation rules"""
         return self.get('validation', {})
-    
+
+    # ------------------------------------------------------------------ #
+    #  Secret redaction
+    # ------------------------------------------------------------------ #
+
+    _SECRET_KEY_SUFFIXES = ('_key', '_token', '_secret', '_password')
+
+    @classmethod
+    def _redact(cls, value: Any) -> Any:
+        """Recursively mask dict values whose key looks like a secret."""
+        if isinstance(value, dict):
+            redacted = {}
+            for k, v in value.items():
+                if isinstance(k, str) and k.lower().endswith(cls._SECRET_KEY_SUFFIXES) and v:
+                    redacted[k] = '***REDACTED***'
+                else:
+                    redacted[k] = cls._redact(v)
+            return redacted
+        if isinstance(value, list):
+            return [cls._redact(v) for v in value]
+        return value
+
+    def get_redacted(self) -> Dict[str, Any]:
+        """Return a deep copy of the config with secret-like values masked.
+
+        Use this instead of accessing ``_config`` directly whenever the
+        configuration needs to be logged, printed, or serialised to a
+        report/artifact file, so API keys and similar secrets are never
+        written out in plain text.
+        """
+        return self._redact(self._config or {})
+
+    def __repr__(self) -> str:
+        return f"ConfigManager({self.get_redacted()!r})"
+
     @property
     def project_root(self) -> Path:
         """Get project root directory"""
