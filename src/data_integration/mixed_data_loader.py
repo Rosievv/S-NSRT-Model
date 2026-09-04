@@ -144,8 +144,8 @@ class MixedDataLoader:
             elif source_name.startswith("fred_") or source_name == "nyfed_gscpi":
                 from ..collectors.fred_collector import FREDCollector
                 return FREDCollector()
-        except Exception:
-            pass
+        except Exception as e:
+            logger.warning("Could not instantiate collector for '%s': %s", source_name, e)
         return None
 
     # ------------------------------------------------------------------ #

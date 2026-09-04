@@ -154,7 +154,8 @@ class SupplyChainNetwork:
         betweenness = nx.betweenness_centrality(G, weight="weight")
         try:
             eigenvector = nx.eigenvector_centrality_numpy(G, weight="weight")
-        except Exception:
+        except Exception as e:
+            logger.warning("Eigenvector centrality failed, defaulting to 0: %s", e)
             eigenvector = {n: 0 for n in G.nodes()}
 
         for node in G.nodes():

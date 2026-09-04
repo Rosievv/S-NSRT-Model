@@ -100,8 +100,8 @@ class DataQualityChecker:
             try:
                 latest = pd.to_datetime(df["date"]).max()
                 freshness_days = (pd.Timestamp.now() - latest).days
-            except Exception:
-                pass
+            except Exception as e:
+                logger.warning("Could not compute freshness for '%s': %s", source_name, e)
 
         # Schema
         schema_errors: List[str] = []
