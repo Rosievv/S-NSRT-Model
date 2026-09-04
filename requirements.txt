@@ -47,8 +47,7 @@ lightgbm>=4.0.0
 
 # Graph / Network Analysis
 networkx>=3.1
-geopandas>=1.0.0
-pyogrio>=0.11.0
+pyogrio>=0.11.0  # used directly for FAF geodatabase reads; geopandas not required
 
 # Reinforcement Learning (lightweight)
 gymnasium>=0.29.0
