@@ -1,0 +1,23 @@
+{
+  "event_key": "panama_canal_drought_2023",
+  "discovery_provider": "gdelt_doc_api",
+  "discovery_query": "near15:\"Panama Canal drought\" ",
+  "title": "Panama Canal drought hits new crisis level amid severe El Nino",
+  "source": "cnbc.com",
+  "published_at": "20231103T130000Z",
+  "url": "https://www.cnbc.com/2023/11/03/panama-canal-drought-hits-new-crisis-level-amid-severe-el-nino.html",
+  "scraped_at_utc": "2026-08-16T16:50:06.060738+00:00",
+  "status": "saved",
+  "resolved_url": "https://www.cnbc.com/2023/11/03/panama-canal-drought-hits-new-crisis-level-amid-severe-el-nino.html",
+  "parsed_title": "Panama Canal drought hits new crisis level with nearly half of vessel traffic targeted for cuts",
+  "parsed_publish_date": "2023-11-03T00:00:00",
+  "body_char_count": 4841,
+  "validation": "validated_full_text",
+  "source_tier": "mainstream",
+  "eligible_for_model": true,
+  "raw_html_path": "data/raw/disruption_news/panama_canal_drought_2023/panama-canal-drought-hits-new-crisis-level-with-nearly-half-of-vessel-traffic-targeted-for.html",
+  "full_text_path": "data/raw/disruption_news/panama_canal_drought_2023/panama-canal-drought-hits-new-crisis-level-with-nearly-half-of-vessel-traffic-targeted-for.txt",
+  "metadata_path": "data/raw/disruption_news/panama_canal_drought_2023/panama-canal-drought-hits-new-crisis-level-with-nearly-half-of-vessel-traffic-targeted-for.json",
+  "raw_html_sha256": "da2f3ded52a761e96c6e9c9553159504597eb74ba94f1ff7f18b7483ed4de5fd",
+  "full_text_sha256": "c9258b1d1fafc43be1fdc0facf28065f8cbb95eaae9597308a1f600e140f32c5"
+}

@@ -1,0 +1,21 @@
+{
+  "event_key": "malaysia_asia_shock_2021",
+  "discovery_provider": "gdelt_doc_api",
+  "discovery_query": "near15:\"Malaysia semiconductor\" ",
+  "title": "Covid Surge in Malaysia Worsens Chip Shortages",
+  "source": "tomshardware.com",
+  "published_at": "20210825T173000Z",
+  "url": "https://www.tomshardware.com/news/malaysia-covid-19-surge-chip-shortage",
+  "scraped_at_utc": "2026-08-16T16:41:30.536650+00:00",
+  "status": "saved",
+  "resolved_url": "https://www.tomshardware.com/news/malaysia-covid-19-surge-chip-shortage",
+  "parsed_title": "Covid Surge in Malaysia Worsens Chip Shortages",
+  "parsed_publish_date": "2021-08-24T11:48:54+00:00",
+  "body_char_count": 2176,
+  "validation": "validated_full_text",
+  "raw_html_path": "data/raw/disruption_news/malaysia_asia_shock_2021/covid-surge-in-malaysia-worsens-chip-shortages.html",
+  "full_text_path": "data/raw/disruption_news/malaysia_asia_shock_2021/covid-surge-in-malaysia-worsens-chip-shortages.txt",
+  "metadata_path": "data/raw/disruption_news/malaysia_asia_shock_2021/covid-surge-in-malaysia-worsens-chip-shortages.json",
+  "raw_html_sha256": "71eb526aeec036b13d70c6bc9a9c29312b3d2a707843203de9ee03c3242ec0cc",
+  "full_text_sha256": "cdb31bd71690750822a5c0a90e68e157343098bbaacbb5816a6fa32930e015d1"
+}

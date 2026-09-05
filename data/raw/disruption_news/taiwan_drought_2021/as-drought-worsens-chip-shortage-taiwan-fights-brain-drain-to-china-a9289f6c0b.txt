@@ -1,0 +1,23 @@
+Taiwan’s labor ministry has ordered online job boards to remove all listings by Chinese employers attempting to recruit Taiwanese engineers to their semiconductor firms, an escalation in an intensifying technology standoff as the world looks to Taiwan to alleviate a global chip shortage.
+
+The move comes as Taiwan continues to withstand a historic drought that has threatened the speed of chip production, which requires lots of water.
+
+In an official notice, the Ministry of Labor said it would increase the enforcement of existing laws that prevent Taiwanese job sites from listing advertisements from Chinese firms.
+
+The ministry, in the notice, accused China of stealing Taiwan’s chipmaking technology and poaching its talent, according to the job recruiting website 104 Job Bank.
+
+104 Job Bank told Nikkei Asia it was asking clients individually to close their job vacancies in China. The platform said job listings in China had already fallen by half by Thursday night, from 3,774 listings to 1,872, Nikkei Asia reported.
+
+Taiwan’s semiconductor supply chain manufactures the chips used in iPhones, cars and laptops, and the world is heavily dependent on Taiwanese chip production.
+
+Beijing has long sought to break Taiwan’s industry dominance. Chinese firms have hired more than 100 employees from Taiwan Semiconductor Manufacturing Co. (TSMC), the world’s largest chipmaker. Other firms have poached talent from Taiwanese chipmaker MediaTek and the technology giant Foxconn, often doubling or tripling the salaries of veteran engineers.
+
+The issue is receiving renewed attention as Taiwan faces continued pressure to end a chip shortage that has drastically slowed global car production.
+
+Taiwan Minister of Economic Affairs Wang Mei-hua told NPR this week that, although TSMC and other chipmakers are taking more orders from automakers, demand from other sectors will likely ensure the global shortage will not ease in the near future.
+
+“Taiwanese foundries have begun to readjust their capacity and production since the beginning of this year,” Wang told NPR in an interview.
+
+Wang also said water supply has returned to “normal” for Taiwan’s semiconductor industry as it faces the island’s worst drought in 60 years. On April 27, Taiwan President Tsai Ing-wen called for the island to conserve more water, especially in the semiconductor hub of Taichung.
+
+Taiwan has ensured that water keeps flowing to its chipmakers during its drought. TSMC has used large water trucks to help store water, and the company is building a plant that would treat industrial water for reuse.

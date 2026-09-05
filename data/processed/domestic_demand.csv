@@ -1,0 +1,2 @@
+month,demand_zone,hs_code,demand_value_usd,source,confidence
+2022-01,USA_TOTAL,8542,8433333333.33,bea_2022_u.value_added_by_industry_observed,high

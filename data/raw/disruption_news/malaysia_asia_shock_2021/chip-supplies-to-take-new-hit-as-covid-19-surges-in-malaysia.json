@@ -1,0 +1,21 @@
+{
+  "event_key": "malaysia_asia_shock_2021",
+  "discovery_provider": "gdelt_doc_api",
+  "discovery_query": "near15:\"Malaysia semiconductor\" ",
+  "title": "Chip supplies to take new hit as COVID - 19 surges in Malaysia",
+  "source": "japantimes.co.jp",
+  "published_at": "20210824T044500Z",
+  "url": "https://www.japantimes.co.jp/news/2021/08/24/business/malaysia-chipmakers-coronavirus/",
+  "scraped_at_utc": "2026-08-16T16:41:51.404643+00:00",
+  "status": "saved",
+  "resolved_url": "https://www.japantimes.co.jp/news/2021/08/24/business/malaysia-chipmakers-coronavirus/",
+  "parsed_title": "Chip supplies to take new hit as COVID-19 surges in Malaysia",
+  "parsed_publish_date": "2021-08-24T00:00:00",
+  "body_char_count": 787,
+  "validation": "validated_full_text",
+  "raw_html_path": "data/raw/disruption_news/malaysia_asia_shock_2021/chip-supplies-to-take-new-hit-as-covid-19-surges-in-malaysia.html",
+  "full_text_path": "data/raw/disruption_news/malaysia_asia_shock_2021/chip-supplies-to-take-new-hit-as-covid-19-surges-in-malaysia.txt",
+  "metadata_path": "data/raw/disruption_news/malaysia_asia_shock_2021/chip-supplies-to-take-new-hit-as-covid-19-surges-in-malaysia.json",
+  "raw_html_sha256": "dd4548528b891f34d782a5844164708d8a5ee57fba1faf836a862553b937e2c8",
+  "full_text_sha256": "4c3703c2b678f8cb19918e0a500a5f04e0001cb3bff6f878380741e82d32fe82"
+}

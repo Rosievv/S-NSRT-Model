@@ -1,0 +1,23 @@
+{
+  "event_key": "japan_earthquake_2011",
+  "discovery_provider": "verified_seed",
+  "discovery_query": "existing_replay_evidence",
+  "url": "https://www.bbc.com/news/world-asia-pacific-12709598",
+  "title": "Japan earthquake: Tsunami hits north-east",
+  "source": "BBC News",
+  "published_at": "2011-03-11",
+  "scraped_at_utc": "2026-08-16T16:48:17.544810+00:00",
+  "status": "saved",
+  "resolved_url": "https://www.bbc.com/news/world-asia-pacific-12709598",
+  "parsed_title": "Japan earthquake: Tsunami hits north-east",
+  "parsed_publish_date": "2011-03-11T06:14:49+00:00",
+  "body_char_count": 2483,
+  "validation": "validated_full_text",
+  "source_tier": "mainstream",
+  "eligible_for_model": true,
+  "raw_html_path": "data/raw/disruption_news/japan_earthquake_2011/japan-earthquake-tsunami-hits-north-east.html",
+  "full_text_path": "data/raw/disruption_news/japan_earthquake_2011/japan-earthquake-tsunami-hits-north-east.txt",
+  "metadata_path": "data/raw/disruption_news/japan_earthquake_2011/japan-earthquake-tsunami-hits-north-east.json",
+  "raw_html_sha256": "a900440fffb9cd4e461cb086640be68c726a7e6b015f701491ba086d1dafb2f7",
+  "full_text_sha256": "e502bf921e7bab99530948c632b425febcabf0b44b558298804023ea39d4fb41"
+}

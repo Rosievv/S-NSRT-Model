@@ -1,0 +1,23 @@
+{
+  "event_key": "baltimore_bridge_collapse_2024",
+  "discovery_provider": "gdelt_doc_api",
+  "discovery_query": "near15:\"Baltimore bridge collapse\" ",
+  "title": "Ground News - Baltimore port to open deeper channel , enabling some cargo ships to pass after bridge collapse",
+  "source": "ground.news",
+  "published_at": "20240424T074500Z",
+  "url": "https://ground.news/article/baltimore-port-to-open-deeper-channel-enabling-some-ships-to-pass-after-bridge-collapse_001420",
+  "scraped_at_utc": "2026-08-16T16:46:58.909821+00:00",
+  "status": "saved",
+  "resolved_url": "https://ground.news/article/baltimore-port-to-open-deeper-channel-enabling-some-ships-to-pass-after-bridge-collapse_001420",
+  "parsed_title": "Baltimore port to open deeper channel, enabling some cargo ships to pass after bridge collapse",
+  "parsed_publish_date": "2024-04-24T03:13:00+00:00",
+  "body_char_count": 2169,
+  "validation": "validated_full_text",
+  "source_tier": "other",
+  "eligible_for_model": false,
+  "raw_html_path": "data/raw/disruption_news/baltimore_bridge_collapse_2024/baltimore-port-to-open-deeper-channel-enabling-some-cargo-ships-to-pass-after-bridge-colla.html",
+  "full_text_path": "data/raw/disruption_news/baltimore_bridge_collapse_2024/baltimore-port-to-open-deeper-channel-enabling-some-cargo-ships-to-pass-after-bridge-colla.txt",
+  "metadata_path": "data/raw/disruption_news/baltimore_bridge_collapse_2024/baltimore-port-to-open-deeper-channel-enabling-some-cargo-ships-to-pass-after-bridge-colla.json",
+  "raw_html_sha256": "2f4eb878f3234624588c5d029b51790956b65232e957d9ad2c1d5eba025eb373",
+  "full_text_sha256": "868060a17e6a04079aa8dbd33b8fbb7869c3cbc864336a024fb69e4c185be51c"
+}

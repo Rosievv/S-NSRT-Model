@@ -1,0 +1,21 @@
+{
+  "event_key": "malaysia_asia_shock_2021",
+  "discovery_provider": "gdelt_doc_api",
+  "discovery_query": "near15:\"Malaysia semiconductor\" ",
+  "title": "Global car production slows down as Malaysia pandemic situation worsens chip shortage",
+  "source": "soyacincau.com",
+  "published_at": "20210825T080000Z",
+  "url": "https://soyacincau.com/2021/08/25/global-car-manufacturers-slow-down-pandemic-in-malaysia/",
+  "scraped_at_utc": "2026-08-16T16:41:32.549825+00:00",
+  "status": "saved",
+  "resolved_url": "https://soyacincau.com/2021/08/25/global-car-manufacturers-slow-down-pandemic-in-malaysia/",
+  "parsed_title": "Global car production slows down as Malaysia\u2019s pandemic situation worsens chip shortage",
+  "parsed_publish_date": "2021-08-25T00:00:00",
+  "body_char_count": 2674,
+  "validation": "validated_full_text",
+  "raw_html_path": "data/raw/disruption_news/malaysia_asia_shock_2021/global-car-production-slows-down-as-malaysia-s-pandemic-situation-worsens-chip-shortage.html",
+  "full_text_path": "data/raw/disruption_news/malaysia_asia_shock_2021/global-car-production-slows-down-as-malaysia-s-pandemic-situation-worsens-chip-shortage.txt",
+  "metadata_path": "data/raw/disruption_news/malaysia_asia_shock_2021/global-car-production-slows-down-as-malaysia-s-pandemic-situation-worsens-chip-shortage.json",
+  "raw_html_sha256": "b2605e983d3ca0bb0fc43973d1fbb489729576d022550de3fedb41b44cecd326",
+  "full_text_sha256": "7e278e134a875a59eeed1610a1c068b0346ed14838a324ecbae41953fd888dc2"
+}

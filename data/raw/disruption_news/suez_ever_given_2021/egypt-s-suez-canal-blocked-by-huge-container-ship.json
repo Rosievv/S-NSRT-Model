@@ -1,0 +1,23 @@
+{
+  "event_key": "suez_ever_given_2021",
+  "discovery_provider": "gdelt_doc_api",
+  "discovery_query": "near15:\"Suez Canal blocked\" ",
+  "title": "Egypt Suez Canal blocked by large container ship",
+  "source": "bbc.com",
+  "published_at": "20210324T003000Z",
+  "url": "https://www.bbc.com/news/world-middle-east-56505413",
+  "scraped_at_utc": "2026-08-16T16:51:03.580121+00:00",
+  "status": "saved",
+  "resolved_url": "https://www.bbc.com/news/world-middle-east-56505413",
+  "parsed_title": "Egypt's Suez Canal blocked by huge container ship",
+  "parsed_publish_date": "2021-03-23T23:15:36+00:00",
+  "body_char_count": 3625,
+  "validation": "validated_full_text",
+  "source_tier": "mainstream",
+  "eligible_for_model": true,
+  "raw_html_path": "data/raw/disruption_news/suez_ever_given_2021/egypt-s-suez-canal-blocked-by-huge-container-ship.html",
+  "full_text_path": "data/raw/disruption_news/suez_ever_given_2021/egypt-s-suez-canal-blocked-by-huge-container-ship.txt",
+  "metadata_path": "data/raw/disruption_news/suez_ever_given_2021/egypt-s-suez-canal-blocked-by-huge-container-ship.json",
+  "raw_html_sha256": "1da15e32cb13e12a2f107b43c3ff25dd92d86b27d3399ca6d97f86b3fb0238b7",
+  "full_text_sha256": "b22b73636809ca18f73ed507d07829c3492d530d4c7394936a1bd42892a2658b"
+}

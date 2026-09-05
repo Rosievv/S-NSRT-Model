@@ -1,0 +1,91 @@
+Sign up now: Get insights on the biggest stories in Malaysia
+
+KUALA LUMPUR (BLOOMBERG) - The number of Covid-19 infections is surging in Malaysia, threatening to aggravate shortages of semiconductors and other components that have hammered automakers for months.
+
+The South-east Asian country has not historically had the kind of importance to technology supply chains that Taiwan, South Korea or Japan do.
+
+But in recent years, Malaysia emerged as a major centre for chip testing and packaging, with Infineon Technologies AG, NXP Semiconductors NV and STMicroelectronics NV among the key suppliers operating plants there.
+
+Now Covid-19 infections are soaring in the country, jeopardising plans to lift lockdowns and restore full production capacity.
+
+The seven-day average for reported daily infections has pushed past 20,000, up from just over 5,000 in late June.
+
+Ford Motor Co said last week it would temporarily suspend production of its popular F-150 pickup truck at one United States plant because of "a semiconductor-related part shortage as a result of the Covid-19 pandemic in Malaysia".
+
+The country's authorities are racing to address the outbreak and has granted exemptions to certain manufacturers in an effort to keep the economy on track.
+
+Companies were allowed to keep operating with 60 per cent of their workforces during June lockdowns and they will be able to move back to 100 per cent when more than 80 per cent of their workers are fully vaccinated.
+
+On Monday (Aug 23), the number of reported infections dropped to 17,672.
+
+But the situation on the ground remains volatile. Factories have to shut down completely for as long as two weeks for sanitisation if more than three workers contract Covid-19 under unofficial guidelines.
+
+The Delta variant is proving particularly infectious and difficult to stop.
+
+"This could be very disruptive for Infineon and other companies that have plants of a few thousand workers," said Mr Samuel Tan, a semiconductor analyst with Kenanga Investment Bank in Kuala Lumpur.
+
+Local firms are reporting such closures through exchange filings. STMicro and Infineon, both key auto suppliers, had to close facilities.
+
+The situation could aggravate semiconductor shortages, already at crisis levels.
+
+Chip lead times, the gap between ordering a semiconductor and taking delivery, increased by more than eight days to 20.2 weeks in July from the previous month, according to research by Susquehanna Financial Group.
+
+That gap was already the longest wait time since the firm began tracking the data in 2017.
+
+Automakers have lost sales after a series of unexpected blows in the past year, including a cold snap in Texas that hobbled factories there and a fire in Japan at a critical auto chip plant.
+
+Toyota Motor Corp said last week it would suspend production at 14 plants because suppliers, particularly in South-east Asia, have been hit by new Covid-19 infections and lockdowns.
+
+It has partners clustered in Thailand, Vietnam and Malaysia. Thailand and Vietnam are also seeing sharp increases in reported infections, as the Delta variant spreads.
+
+Malaysia's position as a prime base for testing and packaging chips is critical because those are the last steps of semiconductor production.
+
+Electronics and electrical products account for 39 per cent of the country's total exports, according to data from the Ministry of Trade and Industry.
+
+"Malaysia is a key player in the global semiconductor trade," Mr Wong Siew Hai, president of the Malaysia Semiconductor Industry Association, said in an interview. "Thus, any disruption anywhere along the supply chain will have knock-on effects elsewhere in the ecosystem."
+
+Vaccinations are critical to ensuring the country can play its part in the technology supply chain, he said.
+
+About 57 per cent of the total population has received at least one dose, according to the health ministry.
+
+The government has plowed ahead with its battle against the outbreak through a transition in prime minister.
+
+Officials are working with large companies to prioritise the vaccination of entire staffs as soon as possible.
+
+And because this is the third major lockdown in Malaysia, companies in the country are maintaining certain emergency inventory to cushion the impact of factory shutdowns, Mr Tan said.
+
+Still, Infineon said in an earnings call in August that manufacturing bottlenecks in Malaysia are likely to continue to weigh on sales in the current quarter.
+
+Chief Executive Officer Reinhard Ploss told analysts the total impact from the shutdown was in the "high double-digit" millions of euros, though the company expects that the plants in the South-east Asian country should be running at normal capacity later this month.
+
+STMicro recently suspended its assembly plant in Muar due to the pandemic, and resumed operations after 11 days, CEO Jean-Marc Chery said in an earnings call in late July.
+
+The incident will diminish the company's ability to serve customers, according to Chief Financial Officer Lorenzo Grandi, with both sales and gross margin affected in the third quarter.
+
+European peer NXP did not mention anything about Malaysia in the latest earnings call in early August, but the company also runs a chip assembly and testing site there.
+
+The auto sector's Malaysia-related supply issues are not limited to chips. The country is also a key production base for multilayer ceramic capacitors, or MLCCs, a component required by an array of products from smartphones to cars.
+
+Research firm TrendForce said in July that Malaysia's policy to restrict personnel movement will squeeze MLCC supply.
+
+In recent weeks, Nissan Motor Co and General Motors Co both warned the component shortage is exacerbating due to the lockdowns in Malaysia, with the Japanese carmaker shutting the production lines at its Smyrna, Tennessee, facility for two weeks in August.
+
+Before the disruptions in Malaysia and other parts of South-east Asia, it was already forecast that the chip shortage will cost car firms more than US$100 billion (S$135.62 billion) in lost production this year alone.
+
+The extent of the damage may ultimately be determined by how effective governments like Malaysia's are able fight against further outbreaks.
+
+IHS analysts Mark Fulthorpe and Mr Phil Amsrud said that packaging and testing operations are particularly vulnerable to the virus because they need more people than chip manufacturing, a largely automated process.
+
+"As this is more labour-intensive than the wafer-fabrication processes, activity is more easily affected by public health measures that impact workforce participation," they wrote in a recent report.
+
+See more on
+
+Malaysia
+
+Manufacturing
+
+Covid-19
+
+Coronavirus
+
+Semiconductors

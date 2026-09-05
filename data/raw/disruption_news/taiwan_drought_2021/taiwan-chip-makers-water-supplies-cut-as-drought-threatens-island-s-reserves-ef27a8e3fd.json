@@ -1,0 +1,23 @@
+{
+  "event_key": "taiwan_drought_2021",
+  "discovery_provider": "gdelt_doc_api",
+  "discovery_query": "near20:\"Taiwan drought\" ",
+  "title": "Taiwan chip maker water supplies cut as drought threatens island reserves",
+  "source": "scmp.com",
+  "published_at": "20210325T063000Z",
+  "url": "https://www.scmp.com/news/china/politics/article/3126888/taiwan-chip-makers-water-supplies-cut-drought-threatens-islands",
+  "scraped_at_utc": "2026-08-16T16:58:18.952525+00:00",
+  "status": "saved",
+  "resolved_url": "https://www.scmp.com/news/china/politics/article/3126888/taiwan-chip-makers-water-supplies-cut-drought-threatens-islands",
+  "parsed_title": "Taiwan chip makers\u2019 water supplies cut as drought threatens island\u2019s reserves",
+  "parsed_publish_date": "2021-03-25T12:30:33+08:00",
+  "body_char_count": 1037,
+  "validation": "validated_full_text",
+  "source_tier": "other",
+  "eligible_for_model": false,
+  "raw_html_path": "data/raw/disruption_news/taiwan_drought_2021/taiwan-chip-makers-water-supplies-cut-as-drought-threatens-island-s-reserves-ef27a8e3fd.html",
+  "full_text_path": "data/raw/disruption_news/taiwan_drought_2021/taiwan-chip-makers-water-supplies-cut-as-drought-threatens-island-s-reserves-ef27a8e3fd.txt",
+  "metadata_path": "data/raw/disruption_news/taiwan_drought_2021/taiwan-chip-makers-water-supplies-cut-as-drought-threatens-island-s-reserves-ef27a8e3fd.json",
+  "raw_html_sha256": "4c69b9a7908a59d854e2068e78fa2d8ed58462fe7d645e96db72168663f9c639",
+  "full_text_sha256": "db365282e5b3004e72af84106e60c855639afba2455fbbdf6791f4fcf93fa1dc"
+}

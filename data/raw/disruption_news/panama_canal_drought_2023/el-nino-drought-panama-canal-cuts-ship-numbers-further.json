@@ -1,0 +1,23 @@
+{
+  "event_key": "panama_canal_drought_2023",
+  "discovery_provider": "gdelt_doc_api",
+  "discovery_query": "near15:\"Panama Canal drought\" ",
+  "title": "El Nino drought : Panama Canal cuts ship numbers further",
+  "source": "bbc.co.uk",
+  "published_at": "20231101T061500Z",
+  "url": "https://www.bbc.co.uk/news/business-67281776",
+  "scraped_at_utc": "2026-08-16T16:50:04.103789+00:00",
+  "status": "saved",
+  "resolved_url": "https://www.bbc.co.uk/news/business-67281776",
+  "parsed_title": "El Nino drought: Panama Canal cuts ship numbers further",
+  "parsed_publish_date": "2023-11-01T04:52:00+00:00",
+  "body_char_count": 1946,
+  "validation": "validated_full_text",
+  "source_tier": "other",
+  "eligible_for_model": false,
+  "raw_html_path": "data/raw/disruption_news/panama_canal_drought_2023/el-nino-drought-panama-canal-cuts-ship-numbers-further.html",
+  "full_text_path": "data/raw/disruption_news/panama_canal_drought_2023/el-nino-drought-panama-canal-cuts-ship-numbers-further.txt",
+  "metadata_path": "data/raw/disruption_news/panama_canal_drought_2023/el-nino-drought-panama-canal-cuts-ship-numbers-further.json",
+  "raw_html_sha256": "bba8669f4b0d86a8963d8e7a39678c3c0ef28ec1f6eb3da3df4d172d97b7ed1f",
+  "full_text_sha256": "dfb4e1936de57e04086d58a9db2081257e36f956091b69230e4582f935730b39"
+}

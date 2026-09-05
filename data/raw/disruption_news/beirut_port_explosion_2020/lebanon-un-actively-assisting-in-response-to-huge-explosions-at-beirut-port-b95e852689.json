@@ -1,0 +1,23 @@
+{
+  "event_key": "beirut_port_explosion_2020",
+  "discovery_provider": "verified_seed",
+  "discovery_query": "existing_replay_evidence",
+  "url": "https://news.un.org/en/story/2020/08/1069542",
+  "title": "Lebanon: UN actively assisting in response to huge explosions at Beirut port",
+  "source": "UN News",
+  "published_at": "2020-08-04",
+  "scraped_at_utc": "2026-08-16T16:53:47.804194+00:00",
+  "status": "saved",
+  "resolved_url": "https://news.un.org/en/story/2020/08/1069542",
+  "parsed_title": "Lebanon: UN \u2018actively assisting\u2019 in response to huge explosions at Beirut port",
+  "parsed_publish_date": "2020-08-04T19:51:18-04:00",
+  "body_char_count": 1816,
+  "validation": "validated_full_text",
+  "source_tier": "other",
+  "eligible_for_model": false,
+  "raw_html_path": "data/raw/disruption_news/beirut_port_explosion_2020/lebanon-un-actively-assisting-in-response-to-huge-explosions-at-beirut-port-b95e852689.html",
+  "full_text_path": "data/raw/disruption_news/beirut_port_explosion_2020/lebanon-un-actively-assisting-in-response-to-huge-explosions-at-beirut-port-b95e852689.txt",
+  "metadata_path": "data/raw/disruption_news/beirut_port_explosion_2020/lebanon-un-actively-assisting-in-response-to-huge-explosions-at-beirut-port-b95e852689.json",
+  "raw_html_sha256": "29f02f4b74c7f342f7428cf4219c74bceb844393ee392e36cadbdbe36c53e979",
+  "full_text_sha256": "cf4359662319992b402181c08e76afdd69efefda08a924ecf5ddeda52ee7b796"
+}
