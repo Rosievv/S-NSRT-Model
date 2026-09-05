@@ -1,0 +1,23 @@
+{
+  "event_key": "taiwan_drought_2021",
+  "discovery_provider": "gdelt_doc_api",
+  "discovery_query": "near20:\"Taiwan drought\" ",
+  "title": "Taiwan drought : Man retrieves phone dropped in lake a year ago",
+  "source": "bbc.com",
+  "published_at": "20210412T210000Z",
+  "url": "https://www.bbc.com/news/world-asia-56685406",
+  "scraped_at_utc": "2026-08-16T16:58:23.596868+00:00",
+  "status": "saved",
+  "resolved_url": "https://www.bbc.com/news/world-asia-56685406",
+  "parsed_title": "Taiwan drought: Man retrieves phone dropped in lake a year ago",
+  "parsed_publish_date": "2021-04-09T05:04:35+00:00",
+  "body_char_count": 2165,
+  "validation": "validated_full_text",
+  "source_tier": "mainstream",
+  "eligible_for_model": true,
+  "raw_html_path": "data/raw/disruption_news/taiwan_drought_2021/taiwan-drought-man-retrieves-phone-dropped-in-lake-a-year-ago-c7969f143f.html",
+  "full_text_path": "data/raw/disruption_news/taiwan_drought_2021/taiwan-drought-man-retrieves-phone-dropped-in-lake-a-year-ago-c7969f143f.txt",
+  "metadata_path": "data/raw/disruption_news/taiwan_drought_2021/taiwan-drought-man-retrieves-phone-dropped-in-lake-a-year-ago-c7969f143f.json",
+  "raw_html_sha256": "dc4e0c1363f5a4307798be7139d996f520dfd2b5dd641612bb09caf37e044817",
+  "full_text_sha256": "fe62d9efb27704659228c4618309922b3493e1dd938cb482cea49935417f0936"
+}

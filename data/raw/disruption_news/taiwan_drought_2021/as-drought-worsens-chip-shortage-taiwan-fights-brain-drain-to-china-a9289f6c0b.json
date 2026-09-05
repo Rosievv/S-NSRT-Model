@@ -1,0 +1,23 @@
+{
+  "event_key": "taiwan_drought_2021",
+  "discovery_provider": "gdelt_doc_api",
+  "discovery_query": "near20:\"Taiwan drought\" ",
+  "title": "As Drought Worsens Chip Shortage , Taiwan Fights Brain Drain to China",
+  "source": "thediplomat.com",
+  "published_at": "20210430T204500Z",
+  "url": "https://thediplomat.com/2021/05/as-drought-worsens-chip-shortage-taiwan-fights-brain-drain-to-china/",
+  "scraped_at_utc": "2026-08-16T16:58:29.516619+00:00",
+  "status": "saved",
+  "resolved_url": "https://thediplomat.com/2021/05/as-drought-worsens-chip-shortage-taiwan-fights-brain-drain-to-china/",
+  "parsed_title": "As Drought Worsens Chip Shortage, Taiwan Fights Brain Drain to China",
+  "parsed_publish_date": "2021-05-01T04:05:00+00:00",
+  "body_char_count": 2584,
+  "validation": "validated_full_text",
+  "source_tier": "other",
+  "eligible_for_model": false,
+  "raw_html_path": "data/raw/disruption_news/taiwan_drought_2021/as-drought-worsens-chip-shortage-taiwan-fights-brain-drain-to-china-a9289f6c0b.html",
+  "full_text_path": "data/raw/disruption_news/taiwan_drought_2021/as-drought-worsens-chip-shortage-taiwan-fights-brain-drain-to-china-a9289f6c0b.txt",
+  "metadata_path": "data/raw/disruption_news/taiwan_drought_2021/as-drought-worsens-chip-shortage-taiwan-fights-brain-drain-to-china-a9289f6c0b.json",
+  "raw_html_sha256": "9c989d610f9bf35d17f208fa5ab1883a06a590805d7527e913e571daa5e32f20",
+  "full_text_sha256": "a625ce26f56558995b1b604eab059a5d73e71d072e2b6071087c61ad9b544b88"
+}

@@ -1,0 +1,21 @@
+{
+  "generated_at_utc": "2026-08-16T17:00:17.990151+00:00",
+  "events_collected": 12,
+  "saved_articles": 16,
+  "model_eligible_articles": 11,
+  "corpus_index_path": "data/raw/disruption_news/full_text_corpus_index.csv",
+  "event_manifests": [
+    "data/raw/disruption_news/baltimore_bridge_collapse_2024/manifest.json",
+    "data/raw/disruption_news/beirut_port_explosion_2020/manifest.json",
+    "data/raw/disruption_news/covid_q1_2020/manifest.json",
+    "data/raw/disruption_news/japan_earthquake_2011/manifest.json",
+    "data/raw/disruption_news/japan_export_controls_2019/manifest.json",
+    "data/raw/disruption_news/malaysia_asia_shock_2021/manifest.json",
+    "data/raw/disruption_news/panama_canal_drought_2023/manifest.json",
+    "data/raw/disruption_news/red_sea_rerouting_2023/manifest.json",
+    "data/raw/disruption_news/suez_ever_given_2021/manifest.json",
+    "data/raw/disruption_news/taiwan_drought_2021/manifest.json",
+    "data/raw/disruption_news/thai_flood_2011/manifest.json",
+    "data/raw/disruption_news/yantian_port_covid_2021/manifest.json"
+  ]
+}

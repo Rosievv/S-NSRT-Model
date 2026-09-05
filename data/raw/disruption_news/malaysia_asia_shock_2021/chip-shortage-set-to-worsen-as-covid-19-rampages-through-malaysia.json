@@ -1,0 +1,21 @@
+{
+  "event_key": "malaysia_asia_shock_2021",
+  "discovery_provider": "gdelt_doc_api",
+  "discovery_query": "near15:\"Malaysia semiconductor\" ",
+  "title": "Chip shortage set to worsen as Covid - 19 rampages through Malaysia",
+  "source": "straitstimes.com",
+  "published_at": "20210824T003000Z",
+  "url": "https://www.straitstimes.com/asia/se-asia/chip-shortage-set-to-worsen-as-covid-19-rampages-through-malaysia",
+  "scraped_at_utc": "2026-08-16T16:41:48.642062+00:00",
+  "status": "saved",
+  "resolved_url": "https://www.straitstimes.com/asia/se-asia/chip-shortage-set-to-worsen-as-covid-19-rampages-through-malaysia",
+  "parsed_title": "Chip shortage set to worsen as Covid-19 rampages through Malaysia",
+  "parsed_publish_date": "2021-08-24T07:24:03+08:00",
+  "body_char_count": 6722,
+  "validation": "validated_full_text",
+  "raw_html_path": "data/raw/disruption_news/malaysia_asia_shock_2021/chip-shortage-set-to-worsen-as-covid-19-rampages-through-malaysia.html",
+  "full_text_path": "data/raw/disruption_news/malaysia_asia_shock_2021/chip-shortage-set-to-worsen-as-covid-19-rampages-through-malaysia.txt",
+  "metadata_path": "data/raw/disruption_news/malaysia_asia_shock_2021/chip-shortage-set-to-worsen-as-covid-19-rampages-through-malaysia.json",
+  "raw_html_sha256": "4a0d701f295f8338ba78ef0fde800f3429f21c562a2a7158412d3c47d473a217",
+  "full_text_sha256": "ede1175b2264ac418c63da5b78f1670b95c3602e79dd3b0a6d8255fdb9a49c19"
+}

@@ -1,0 +1,23 @@
+{
+  "event_key": "covid_q1_2020",
+  "discovery_provider": "verified_seed",
+  "discovery_query": "existing_replay_evidence",
+  "url": "https://www.bbc.com/news/world-asia-china-51217455",
+  "title": "China coronavirus: Lockdown measures rise across Hubei province",
+  "source": "BBC News",
+  "published_at": "2020-01-23",
+  "scraped_at_utc": "2026-08-16T16:47:50.935194+00:00",
+  "status": "saved",
+  "resolved_url": "https://www.bbc.com/news/world-asia-china-51217455",
+  "parsed_title": "China coronavirus: Lockdown measures rise across Hubei province",
+  "parsed_publish_date": "2020-01-23T07:08:40+00:00",
+  "body_char_count": 5806,
+  "validation": "validated_full_text",
+  "source_tier": "mainstream",
+  "eligible_for_model": true,
+  "raw_html_path": "data/raw/disruption_news/covid_q1_2020/china-coronavirus-lockdown-measures-rise-across-hubei-province.html",
+  "full_text_path": "data/raw/disruption_news/covid_q1_2020/china-coronavirus-lockdown-measures-rise-across-hubei-province.txt",
+  "metadata_path": "data/raw/disruption_news/covid_q1_2020/china-coronavirus-lockdown-measures-rise-across-hubei-province.json",
+  "raw_html_sha256": "318875939479583a66a0b669eebd28efdca37e478c319ead5fd08ef4a070c15f",
+  "full_text_sha256": "cdaff2ec44317dd001169db9309a9a9d3dfb324978184a9c282f9b234097d731"
+}

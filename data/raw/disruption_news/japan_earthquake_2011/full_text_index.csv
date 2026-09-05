@@ -1,0 +1,2 @@
+event_key,source,source_tier,eligible_for_model,title,parsed_title,published_at,parsed_publish_date,resolved_url,body_char_count,full_text_path,full_text_sha256,duplicate_body
+japan_earthquake_2011,BBC News,mainstream,True,Japan earthquake: Tsunami hits north-east,Japan earthquake: Tsunami hits north-east,2011-03-11,2011-03-11T06:14:49+00:00,https://www.bbc.com/news/world-asia-pacific-12709598,2483,data/raw/disruption_news/japan_earthquake_2011/japan-earthquake-tsunami-hits-north-east.txt,e502bf921e7bab99530948c632b425febcabf0b44b558298804023ea39d4fb41,False

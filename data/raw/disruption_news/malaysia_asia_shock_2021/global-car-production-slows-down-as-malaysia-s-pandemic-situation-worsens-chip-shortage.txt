@@ -1,0 +1,19 @@
+As Malaysia suffers from the ongoing COVID-19 pandemic, so is the automobile industry around the world. Countries like Taiwan or South Korea come up a lot during discussions about the chip shortage, but Malaysia plays a huge role in the semiconductor production process.
+
+A lot of chip testing and packaging happens in Malaysia, from suppliers such as Infineon Technologies AG, NXP Semiconductors NV, and STMicroelectronics NV. These companies have plants in Malaysia that supply parts to Ford, Toyota, Nissan, and more, causing production to slow down or even stop. According to the Ministry of Trade and Industry, electronics and electrical products account for 39% of Malaysia’s total exports.
+
+Just last week, Ford Motor Company had to suspend F-150 production in one U.S. plant temporarily because of “a semiconductor-related part shortage as a result of the COVID-19 pandemic in Malaysia.”
+
+Toyota is also suspending production in 14 of their plants because of lockdowns in Malaysia and other nations in South East Asia, affecting dozens of vehicle models.
+
+Chip lead time is the time between ordering a chip and delivering it to the manufacturer. According to data from Susquehanna Financial Group, the chip lead time has skyrocketed in the last few months to 20.2 weeks. This is an all time high for the semiconductor industry, leading many automakers to lose sales.
+
+Wong Siew Hai, president of the Malaysia Semiconductor Industry Association, said that Malaysia is a key player in the global superconductor industry, stating that “any disruption anywhere along the supply chain will have knock-on effects elsewhere in the ecosystem.”
+
+The CEO Reinhard Ploss of Infineon Technologies, one of the companies affected by Malaysia’s situation, said that the shutdown has cost “high double-digit” millions of euros. Afterwards however, he told analysts that he expects Malaysian plants to run to normal capacity by the end of the month.
+
+STMicroelectronics also had to shut down an assembly plant in Johor, but opened it back up 11 days later. CEO Lorenzo Grandi said that this will affect their sales and gross margin in the third quarter.
+
+When it comes to the smartphone market, “everybody but Apple” seems to be affected by the chip shortage, according to Wave7 Research. Even though Apple says they expect supply constraints to impact the iPhone and iPad, they managed to get their supply of the chipsets ahead of time. This left them virtually untouched compared to companies like Samsung and OnePlus who were hit hard by the shortage.
+
+As the pandemic continues, so will the shortage, costing both the automobile and smartphone industries millions in the process.

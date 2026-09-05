@@ -1,0 +1,85 @@
+{
+  "real_only_mode": false,
+  "modeled_fill_enabled": true,
+  "domestic_nodes": {
+    "rows": 17106,
+    "columns": [
+      "month",
+      "hs_code",
+      "source",
+      "confidence",
+      "node_id",
+      "node_type",
+      "state",
+      "handling_capacity",
+      "storage_capacity"
+    ],
+    "duplicate_key_rows": 0,
+    "month_min": "2011-01",
+    "month_max": "2025-12",
+    "null_rates": {}
+  },
+  "domestic_lanes": {
+    "rows": 13249,
+    "columns": [
+      "month",
+      "link_id",
+      "lane_direction",
+      "from_node",
+      "to_node",
+      "mode",
+      "source",
+      "confidence",
+      "faf_state",
+      "faf_zone",
+      "border_state_1",
+      "border_state_2",
+      "faf_country",
+      "faf_stfips",
+      "faf_county_name",
+      "capacity",
+      "unit_cost",
+      "transit_days",
+      "reliability"
+    ],
+    "duplicate_key_rows": 0,
+    "month_min": "2022-01",
+    "month_max": "2022-01",
+    "null_rates": {}
+  },
+  "domestic_demand": {
+    "rows": 1,
+    "columns": [
+      "month",
+      "demand_zone",
+      "hs_code",
+      "demand_value_usd",
+      "source",
+      "confidence"
+    ],
+    "duplicate_key_rows": 0,
+    "month_min": "2022-01",
+    "month_max": "2022-01",
+    "null_rates": {}
+  },
+  "domestic_demand_state_assumption": {
+    "rows": 51,
+    "columns": [
+      "month",
+      "demand_zone",
+      "hs_code",
+      "demand_value_usd",
+      "geo_fips",
+      "value_added",
+      "state_share",
+      "source",
+      "confidence",
+      "assumption_flag",
+      "assumption_basis"
+    ],
+    "duplicate_key_rows": 0,
+    "month_min": "2022-01",
+    "month_max": "2022-01",
+    "null_rates": {}
+  }
+}

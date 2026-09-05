@@ -1,0 +1,21 @@
+{
+  "event_key": "malaysia_asia_shock_2021",
+  "discovery_provider": "gdelt_doc_api",
+  "discovery_query": "near15:\"Malaysia semiconductor\" ",
+  "title": "Covid - 19 Surge in Malaysia Threatens to Prolong Global Chip Shortage Southeast Asia country is cited as auto makers cut production , highlighting little - known but critical link in semiconductor supply chain by Feliz Solomon",
+  "source": "ruthfullyyours.com",
+  "published_at": "20210830T091500Z",
+  "url": "http://www.ruthfullyyours.com/2021/08/30/covid-19-surge-in-malaysia-threatens-to-prolong-global-chip-shortage-southeast-asia-country-is-cited-as-auto-makers-cut-production-highlighting-little-known-but-critical-link-in-semiconductor-supply/",
+  "scraped_at_utc": "2026-08-16T16:41:18.993735+00:00",
+  "status": "saved",
+  "resolved_url": "http://www.ruthfullyyours.com/2021/08/30/covid-19-surge-in-malaysia-threatens-to-prolong-global-chip-shortage-southeast-asia-country-is-cited-as-auto-makers-cut-production-highlighting-little-known-but-critical-link-in-semiconductor-supply/",
+  "parsed_title": "Covid-19 Surge in Malaysia Threatens to Prolong Global Chip Shortage Southeast Asia country is cited as auto makers cut production, highlighting little-known but critical link in semiconductor supply ",
+  "parsed_publish_date": "2021-08-30T00:00:00",
+  "body_char_count": 8327,
+  "validation": "validated_full_text",
+  "raw_html_path": "data/raw/disruption_news/malaysia_asia_shock_2021/covid-19-surge-in-malaysia-threatens-to-prolong-global-chip-shortage-southeast-asia-countr.html",
+  "full_text_path": "data/raw/disruption_news/malaysia_asia_shock_2021/covid-19-surge-in-malaysia-threatens-to-prolong-global-chip-shortage-southeast-asia-countr.txt",
+  "metadata_path": "data/raw/disruption_news/malaysia_asia_shock_2021/covid-19-surge-in-malaysia-threatens-to-prolong-global-chip-shortage-southeast-asia-countr.json",
+  "raw_html_sha256": "27e2da84ce8d275dcb18b59c568d0c70b902298fb87a5c1424f8ee7bd96de36a",
+  "full_text_sha256": "73780cceecf8e30eb60dbc9f2618409843a52e09f98e204c5b7b924b52ee3a5a"
+}

@@ -64,9 +64,12 @@ venv.bak/
 # Project specific
 logs/*.log
 data/raw/*
-data/processed/*
 !data/raw/.gitkeep
-!data/processed/.gitkeep
+!data/raw/disruption_news/
+!data/raw/official_event_sources/
+!data/raw/2025 data/
+# Exclude large FAF5 raw datasets (multi-GB, exceeds GitHub file size limits)
+data/raw/Module2/
 
 # Temporary files
 *.tmp
