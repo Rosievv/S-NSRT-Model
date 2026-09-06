@@ -68,6 +68,8 @@ data/raw/*
 !data/raw/disruption_news/
 !data/raw/official_event_sources/
 !data/raw/2025 data/
+!data/raw/us_census_*.parquet
+!data/raw/macro_indicators_*.parquet
 # Exclude large FAF5 raw datasets (multi-GB, exceeds GitHub file size limits)
 data/raw/Module2/
 

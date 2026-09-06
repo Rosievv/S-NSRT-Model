@@ -1,0 +1,259 @@
+{
+  "event_tested": "panama_canal_drought_2023",
+  "event_date": "2023-10-31",
+  "hs_code_validated": "9403",
+  "hs_code_calibration": "854231",
+  "data_sources": {
+    "hs9403": "data/raw/us_census_district_9403_2010_2025_20260905_221251.parquet",
+    "hs854231": "data/raw/us_census_district_854231_2010_2025_20260905_221251.parquet"
+  },
+  "step1_calibration_mode_split_sanity_check": [
+    {
+      "label": "HS9403 furniture",
+      "vessel_share_pct": 72.3,
+      "air_share_pct": 1.9,
+      "containerized_share_pct": 71.8
+    },
+    {
+      "label": "HS854231 semiconductors",
+      "vessel_share_pct": 0.9,
+      "air_share_pct": 94.8,
+      "containerized_share_pct": 0.9
+    }
+  ],
+  "step1_calibration_placebo_check": {
+    "method": "HS854231 (semiconductors, 94.8% air-freight by value) East-Coast-district vessel_value, all countries combined -- a placebo test. Semiconductors should NOT show a Panama-Canal-specific vessel disruption, since they barely move by ocean vessel at all.",
+    "result": {
+      "status": "confirmed",
+      "confirmation_month": "2024-05-01",
+      "yoy_pct_at_confirmation": -21.0,
+      "min_yoy_pct_in_window": -21.0
+    },
+    "placebo_negative_as_expected": false,
+    "interpretation": "Unexpectedly, semiconductor East-Coast vessel value ALSO shows a confirmed decline in this window -- this weakens confidence that a 9403 finding is Panama-Canal-specific rather than a broader East-Coast-wide effect unrelated to the canal (e.g. a different shared shock)."
+  },
+  "step2_validation_country_coast_confirmation_value_general": {
+    "China": {
+      "east": {
+        "status": "confirmed",
+        "confirmation_month": "2023-11-01",
+        "yoy_pct_at_confirmation": -25.69,
+        "min_yoy_pct_in_window": -25.69
+      },
+      "west": {
+        "status": "not_confirmed",
+        "confirmation_month": null,
+        "min_yoy_pct_in_window": -11.91
+      }
+    },
+    "Vietnam": {
+      "east": {
+        "status": "confirmed",
+        "confirmation_month": "2024-01-01",
+        "yoy_pct_at_confirmation": -26.05,
+        "min_yoy_pct_in_window": -26.05
+      },
+      "west": {
+        "status": "confirmed",
+        "confirmation_month": "2023-10-01",
+        "yoy_pct_at_confirmation": -28.03,
+        "min_yoy_pct_in_window": -28.03
+      }
+    },
+    "Malaysia": {
+      "east": {
+        "status": "confirmed",
+        "confirmation_month": "2023-10-01",
+        "yoy_pct_at_confirmation": -33.71,
+        "min_yoy_pct_in_window": -33.71
+      },
+      "west": {
+        "status": "confirmed",
+        "confirmation_month": "2023-10-01",
+        "yoy_pct_at_confirmation": -39.65,
+        "min_yoy_pct_in_window": -39.65
+      }
+    },
+    "Taiwan": {
+      "east": {
+        "status": "not_confirmed",
+        "confirmation_month": null,
+        "min_yoy_pct_in_window": -11.5
+      },
+      "west": {
+        "status": "confirmed",
+        "confirmation_month": "2024-05-01",
+        "yoy_pct_at_confirmation": -31.23,
+        "min_yoy_pct_in_window": -31.23
+      }
+    },
+    "Indonesia": {
+      "east": {
+        "status": "confirmed",
+        "confirmation_month": "2023-10-01",
+        "yoy_pct_at_confirmation": -41.35,
+        "min_yoy_pct_in_window": -43.25
+      },
+      "west": {
+        "status": "confirmed",
+        "confirmation_month": "2023-10-01",
+        "yoy_pct_at_confirmation": -41.13,
+        "min_yoy_pct_in_window": -41.13
+      }
+    },
+    "India": {
+      "east": {
+        "status": "confirmed",
+        "confirmation_month": "2023-11-01",
+        "yoy_pct_at_confirmation": -33.53,
+        "min_yoy_pct_in_window": -33.53
+      },
+      "west": {
+        "status": "confirmed",
+        "confirmation_month": "2023-10-01",
+        "yoy_pct_at_confirmation": -30.63,
+        "min_yoy_pct_in_window": -30.63
+      }
+    }
+  },
+  "step2_validation_country_coast_confirmation_containerized_value": {
+    "China": {
+      "east": {
+        "status": "confirmed",
+        "confirmation_month": "2023-11-01",
+        "yoy_pct_at_confirmation": -26.34,
+        "min_yoy_pct_in_window": -26.34
+      },
+      "west": {
+        "status": "not_confirmed",
+        "confirmation_month": null,
+        "min_yoy_pct_in_window": -11.91
+      }
+    },
+    "Vietnam": {
+      "east": {
+        "status": "confirmed",
+        "confirmation_month": "2024-01-01",
+        "yoy_pct_at_confirmation": -25.79,
+        "min_yoy_pct_in_window": -25.79
+      },
+      "west": {
+        "status": "confirmed",
+        "confirmation_month": "2023-10-01",
+        "yoy_pct_at_confirmation": -27.93,
+        "min_yoy_pct_in_window": -27.93
+      }
+    },
+    "Malaysia": {
+      "east": {
+        "status": "confirmed",
+        "confirmation_month": "2023-10-01",
+        "yoy_pct_at_confirmation": -32.47,
+        "min_yoy_pct_in_window": -33.04
+      },
+      "west": {
+        "status": "confirmed",
+        "confirmation_month": "2023-10-01",
+        "yoy_pct_at_confirmation": -40.62,
+        "min_yoy_pct_in_window": -40.62
+      }
+    },
+    "Taiwan": {
+      "east": {
+        "status": "not_confirmed",
+        "confirmation_month": null,
+        "min_yoy_pct_in_window": -14.69
+      },
+      "west": {
+        "status": "confirmed",
+        "confirmation_month": "2024-05-01",
+        "yoy_pct_at_confirmation": -32.36,
+        "min_yoy_pct_in_window": -32.36
+      }
+    },
+    "Indonesia": {
+      "east": {
+        "status": "confirmed",
+        "confirmation_month": "2023-10-01",
+        "yoy_pct_at_confirmation": -41.16,
+        "min_yoy_pct_in_window": -43.48
+      },
+      "west": {
+        "status": "confirmed",
+        "confirmation_month": "2023-10-01",
+        "yoy_pct_at_confirmation": -41.71,
+        "min_yoy_pct_in_window": -41.71
+      }
+    },
+    "India": {
+      "east": {
+        "status": "confirmed",
+        "confirmation_month": "2023-11-01",
+        "yoy_pct_at_confirmation": -33.73,
+        "min_yoy_pct_in_window": -33.73
+      },
+      "west": {
+        "status": "confirmed",
+        "confirmation_month": "2023-10-01",
+        "yoy_pct_at_confirmation": -31.09,
+        "min_yoy_pct_in_window": -31.09
+      }
+    }
+  },
+  "priority_table": [
+    {
+      "country": "China",
+      "east_status": "confirmed",
+      "east_confirmation_month": "2023-11-01",
+      "west_status": "not_confirmed",
+      "west_confirmation_month": null,
+      "pattern": "east_coast_specific_disruption",
+      "transport_port_priority": true
+    },
+    {
+      "country": "Vietnam",
+      "east_status": "confirmed",
+      "east_confirmation_month": "2024-01-01",
+      "west_status": "confirmed",
+      "west_confirmation_month": "2023-10-01",
+      "pattern": "both_coasts_declined",
+      "transport_port_priority": true
+    },
+    {
+      "country": "Malaysia",
+      "east_status": "confirmed",
+      "east_confirmation_month": "2023-10-01",
+      "west_status": "confirmed",
+      "west_confirmation_month": "2023-10-01",
+      "pattern": "both_coasts_declined",
+      "transport_port_priority": true
+    },
+    {
+      "country": "Taiwan",
+      "east_status": "not_confirmed",
+      "east_confirmation_month": null,
+      "west_status": "confirmed",
+      "west_confirmation_month": "2024-05-01",
+      "pattern": "west_coast_specific_decline_not_panama_related",
+      "transport_port_priority": false
+    },
+    {
+      "country": "Indonesia",
+      "east_status": "confirmed",
+      "east_confirmation_month": "2023-10-01",
+      "west_status": "confirmed",
+      "west_confirmation_month": "2023-10-01",
+      "pattern": "both_coasts_declined",
+      "transport_port_priority": true
+    },
+    {
+      "country": "India",
+      "east_status": "confirmed",
+      "east_confirmation_month": "2023-11-01",
+      "west_status": "confirmed",
+      "west_confirmation_month": "2023-10-01",
+      "pattern": "both_coasts_declined",
+      "transport_port_priority": true
+    }
+  ]
+}

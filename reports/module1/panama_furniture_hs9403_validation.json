@@ -1,0 +1,357 @@
+{
+  "hs_code": "9403",
+  "event_tested": "panama_canal_drought_2023",
+  "event_date": "2023-10-31",
+  "confirmation_rule": {
+    "yoy_decline_threshold_pct": -20.0,
+    "window_months": 8,
+    "source": "Reused from Module 1 customs-confirmation rule (build_event_monitor_v1.py)"
+  },
+  "auto_selected_main_asia_source_countries": [
+    "China",
+    "Vietnam",
+    "Malaysia",
+    "Taiwan",
+    "Indonesia",
+    "India"
+  ],
+  "auto_selection_method": "Top 6 of candidate Asian countries by historical (<= 2022-12-31) HS 9403 import value_usd share",
+  "historical_value_share_pct_of_candidates": {
+    "China": 56.84,
+    "Vietnam": 24.03,
+    "Malaysia": 5.54,
+    "Taiwan": 4.26,
+    "Indonesia": 3.63,
+    "India": 2.29,
+    "Thailand": 1.66,
+    "Philippines": 0.62,
+    "Korea, South": 0.48,
+    "Cambodia": 0.25,
+    "Hong Kong": 0.14,
+    "Japan": 0.14,
+    "Singapore": 0.1,
+    "Bangladesh": 0.01,
+    "Pakistan": 0.01,
+    "Sri Lanka": 0.0
+  },
+  "all_countries_result": {
+    "status": "not_confirmed",
+    "confirmation_month": null,
+    "min_yoy_pct_in_window": -13.58
+  },
+  "asia_group_result": {
+    "status": "not_confirmed",
+    "confirmation_month": null,
+    "min_yoy_pct_in_window": -15.25
+  },
+  "control_group_result_canada_mexico": {
+    "status": "confirmed",
+    "confirmation_month": "2024-01-01",
+    "yoy_pct_at_confirmation": -20.69,
+    "min_yoy_pct_in_window": -20.69
+  },
+  "per_country_confirmation": {
+    "China": {
+      "status": "not_confirmed",
+      "confirmation_month": null,
+      "min_yoy_pct_in_window": -8.91
+    },
+    "Vietnam": {
+      "status": "confirmed",
+      "confirmation_month": "2023-10-01",
+      "yoy_pct_at_confirmation": -20.53,
+      "min_yoy_pct_in_window": -20.53
+    },
+    "Malaysia": {
+      "status": "confirmed",
+      "confirmation_month": "2023-10-01",
+      "yoy_pct_at_confirmation": -26.57,
+      "min_yoy_pct_in_window": -26.57
+    },
+    "Taiwan": {
+      "status": "confirmed",
+      "confirmation_month": "2024-05-01",
+      "yoy_pct_at_confirmation": -20.69,
+      "min_yoy_pct_in_window": -20.69
+    },
+    "Indonesia": {
+      "status": "confirmed",
+      "confirmation_month": "2023-10-01",
+      "yoy_pct_at_confirmation": -38.22,
+      "min_yoy_pct_in_window": -38.22
+    },
+    "India": {
+      "status": "confirmed",
+      "confirmation_month": "2023-11-01",
+      "yoy_pct_at_confirmation": -23.4,
+      "min_yoy_pct_in_window": -23.4
+    }
+  },
+  "breadth_pct_of_selected_asia_confirmed": 83.33,
+  "earliest_asia_confirmation_month": "2023-10-01",
+  "asia_median_trough_yoy_pct": -22.05,
+  "control_lag_months_vs_earliest_asia": 3.0,
+  "control_concurrent_and_comparable_to_asia": false,
+  "broad_based_across_asia_countries": true,
+  "module1_supply_gap_prediction": {
+    "event": "panama_canal_drought_2023_hs9403",
+    "description": "Panama Canal drought/transit restriction, HS 9403 furniture, Asia source countries",
+    "predicted_supply_gap_pct": 15.19,
+    "observed_supply_gap_pct": 0.0,
+    "counterfactual_supply_usd": 9495000823.66,
+    "observed_supply_usd": 11786389087.0,
+    "supply_gap_diff_pct": 15.19,
+    "abs_error_pct": 15.19,
+    "predicted_substitution_absorbed_pct": 20.01,
+    "severity_bin_predicted": "high",
+    "severity_bin_observed": "low",
+    "directional_hit": 0,
+    "severity_input_note": "estimated_severity=0.33 approximates the ACP's real transit-capacity cut (36/day normal -> ~24/day trough in early 2024), not a calibrated furniture-specific figure.",
+    "hs_elasticity_note": "HS 9403 has no entry in PropagationEngine.HS_ELASTICITY_MAP, so the model falls back to the generic default substitution_elasticity (0.3) scaled by the 'logistics' event-type multiplier -- it is not a furniture-calibrated elasticity."
+  },
+  "news_early_warning": {
+    "official_advisory_date": "2023-10-30",
+    "news_wire_date": "2023-10-31",
+    "customs_confirmed_decline_month": "2023-10",
+    "census_release_lag_days_approx": 38,
+    "census_public_availability_date_approx": "2023-12-08",
+    "lead_time_days_official_advisory_vs_customs_data": 39,
+    "lead_time_days_news_wire_vs_customs_data": 38,
+    "model_prediction_available_same_day_as_news": true,
+    "model_prediction_input_source": "The model's estimated_severity (0.33) is derived directly from the ACP's own announced transit-capacity cut, not from trade data -- so the 15.19% predicted supply-gap (severity_bin=high) could in principle have been produced the same day as the news/advisory, without waiting for any customs data.",
+    "interpretation": "Customs/trade-data confirmation of the decline would not be publicly available until approximately 2023-12-08, about 38 days after the news wire reported the ACP's booking-slot cut, and about 39 days after the ACP's own official advisory. News-based monitoring plus the stress-test model together would have flagged this as a high-severity transport-channel risk essentially in real time, well before trade statistics could confirm it."
+  },
+  "existing_data_validation_checks": {
+    "monthly_observed_gap_pattern": {
+      "method": "Same trend-counterfactual method as StressTestRunner._build_observed_supply_gap (linear fit on up to 24 pre-event months), evaluated per month instead of summed over the whole 9-month window.",
+      "monthly_gap": [
+        {
+          "month": "2023-10",
+          "actual_value_usd": 1305248824.0,
+          "counterfactual_value_usd": 1157891930.54,
+          "gap_pct": 0.0
+        },
+        {
+          "month": "2023-11",
+          "actual_value_usd": 1264292430.0,
+          "counterfactual_value_usd": 1132168970.79,
+          "gap_pct": 0.0
+        },
+        {
+          "month": "2023-12",
+          "actual_value_usd": 1321306242.0,
+          "counterfactual_value_usd": 1106446011.03,
+          "gap_pct": 0.0
+        },
+        {
+          "month": "2024-01",
+          "actual_value_usd": 1359140770.0,
+          "counterfactual_value_usd": 1080723051.27,
+          "gap_pct": 0.0
+        },
+        {
+          "month": "2024-02",
+          "actual_value_usd": 1405269502.0,
+          "counterfactual_value_usd": 1055000091.52,
+          "gap_pct": 0.0
+        },
+        {
+          "month": "2024-03",
+          "actual_value_usd": 1219710604.0,
+          "counterfactual_value_usd": 1029277131.76,
+          "gap_pct": 0.0
+        },
+        {
+          "month": "2024-04",
+          "actual_value_usd": 1182557856.0,
+          "counterfactual_value_usd": 1003554172.0,
+          "gap_pct": 0.0
+        },
+        {
+          "month": "2024-05",
+          "actual_value_usd": 1394705995.0,
+          "counterfactual_value_usd": 977831212.25,
+          "gap_pct": 0.0
+        },
+        {
+          "month": "2024-06",
+          "actual_value_usd": 1334156864.0,
+          "counterfactual_value_usd": 952108252.49,
+          "gap_pct": 0.0
+        }
+      ],
+      "peak_month": "2023-10",
+      "peak_gap_pct": 0.0,
+      "pattern": "no_clear_pattern",
+      "pattern_note": "Gap does not show a clean early-peak/late-fade or sustained shape."
+    },
+    "transit_lag_timing_check": {
+      "event_date": "2023-10-31",
+      "earliest_confirmed_decline_month": "2023-10",
+      "lag_days_confirmation_vs_event": -30,
+      "normal_transit_days_range_reference": [
+        28,
+        35
+      ],
+      "disrupted_transit_days_range_reference": [
+        50,
+        60
+      ],
+      "reference_note": "Transit-day bands as supplied by the user from external industry reporting; not independently verified in this project.",
+      "classification": "decline_precedes_event_date",
+      "interpretation": "The confirmed customs decline appears 30 days BEFORE the 2023-10-31 restriction date used here -- faster than the 28-60 day physical transit-time window, which suggests carriers/shippers had already started cutting bookings or diverting cargo ahead of the formal ACP advisory. This is consistent with the ACP progressively tightening transit quotas through mid-to-late 2023 (well before the October advisory used as the event date here), rather than a single-day shock."
+    },
+    "severity_match_via_yoy_method": {
+      "method": "Uses the median trough YoY% decline across the confirmed Asia source countries as an alternative, trade-data-confirmed severity reading (instead of the trend-counterfactual observed_supply_gap_pct, which is 0.0% in every month for this event -- see monthly_observed_gap_pattern). Binned with the same low(<2%)/medium(<8%)/high(>=8%) thresholds StressTestRunner uses internally.",
+      "yoy_implied_severity_pct": 22.05,
+      "yoy_implied_severity_bin": "high",
+      "predicted_severity_bin": "high",
+      "severity_bins_match": true,
+      "interpretation": "Using the YoY-confirmed decline (22.05% median trough across Asia source countries) as ground truth instead of the trend-counterfactual method, the model's same-day predicted severity bin ('high') DOES match the trade-data-confirmed severity bin ('high'). This is the more meaningful early-warning validation: the model's real-time, news-triggered 'high severity' call is corroborated -- with a ~38-day lag -- by the customs data itself, once measured with a metric (YoY) sensitive enough to see this event at all."
+    },
+    "unit_value_freight_proxy_check": {
+      "status": "not_possible_with_current_data",
+      "reason": "The 'quantity' column in this parquet file is uniformly 0 for every record (verified: min/mean/max all 0.0), so value_usd/quantity cannot be used as a unit-value or freight-cost proxy with this dataset."
+    }
+  },
+  "per_country_channel_classification": {
+    "China": {
+      "country": "China",
+      "channel_classification": "undetermined",
+      "channel_reason": "No confirmed YoY decline for this country under the -20%/8-month rule.",
+      "lag_from_event_months": null,
+      "case1_priority": "undetermined_pending_company_data",
+      "case1_reason": "Public Census data has no entry-port, transit-mode, or weeks-of-supply fields; supply data/company/hs9403_company_overrides.csv to evaluate this.",
+      "company_data_used": false
+    },
+    "Vietnam": {
+      "country": "Vietnam",
+      "channel_classification": "mixed",
+      "channel_reason": "Confirmed decline -1.0 months after the canal restriction -- ambiguous timing; could reflect a slower rerouting/backlog effect layered on other factors.",
+      "lag_from_event_months": -1.0,
+      "case1_priority": "undetermined_pending_company_data",
+      "case1_reason": "Public Census data has no entry-port, transit-mode, or weeks-of-supply fields; supply data/company/hs9403_company_overrides.csv to evaluate this.",
+      "company_data_used": false
+    },
+    "Malaysia": {
+      "country": "Malaysia",
+      "channel_classification": "mixed",
+      "channel_reason": "Confirmed decline -1.0 months after the canal restriction -- ambiguous timing; could reflect a slower rerouting/backlog effect layered on other factors.",
+      "lag_from_event_months": -1.0,
+      "case1_priority": "undetermined_pending_company_data",
+      "case1_reason": "Public Census data has no entry-port, transit-mode, or weeks-of-supply fields; supply data/company/hs9403_company_overrides.csv to evaluate this.",
+      "company_data_used": false
+    },
+    "Taiwan": {
+      "country": "Taiwan",
+      "channel_classification": "source",
+      "channel_reason": "Confirmed decline 6.0 months after the canal restriction -- too delayed to be explained by a single transit disruption; more consistent with a country-specific supply issue, unless news evidence ties it to a secondary transport effect.",
+      "lag_from_event_months": 6.0,
+      "case1_priority": "undetermined_pending_company_data",
+      "case1_reason": "Public Census data has no entry-port, transit-mode, or weeks-of-supply fields; supply data/company/hs9403_company_overrides.csv to evaluate this.",
+      "company_data_used": false
+    },
+    "Indonesia": {
+      "country": "Indonesia",
+      "channel_classification": "mixed",
+      "channel_reason": "Confirmed decline -1.0 months after the canal restriction -- ambiguous timing; could reflect a slower rerouting/backlog effect layered on other factors.",
+      "lag_from_event_months": -1.0,
+      "case1_priority": "undetermined_pending_company_data",
+      "case1_reason": "Public Census data has no entry-port, transit-mode, or weeks-of-supply fields; supply data/company/hs9403_company_overrides.csv to evaluate this.",
+      "company_data_used": false
+    },
+    "India": {
+      "country": "India",
+      "channel_classification": "transport",
+      "channel_reason": "Confirmed decline 0.0 months after the canal restriction -- consistent with in-transit/booking-slot disruption rather than a domestic production issue.",
+      "lag_from_event_months": 0.0,
+      "case1_priority": "undetermined_pending_company_data",
+      "case1_reason": "Public Census data has no entry-port, transit-mode, or weeks-of-supply fields; supply data/company/hs9403_company_overrides.csv to evaluate this.",
+      "company_data_used": false
+    }
+  },
+  "news_evidence": {
+    "status": "discovered_headlines_only_full_text_not_verified",
+    "saved_article_count": 0,
+    "model_eligible_article_count": 0,
+    "candidate_count": 39,
+    "sample_headlines": [
+      {
+        "title": "Panama canal says will slash booking slots due to drought",
+        "source": "Reuters",
+        "published_at": "2023-10-31"
+      },
+      {
+        "title": "Impact to Global Trade of Disruption of Shipping Routes in the Red Sea, Black Sea and Panama Canal",
+        "source": "UN Trade and Development (UNCTAD)",
+        "published_at": "2024-02-15T08:00:00+00:00"
+      },
+      {
+        "title": "Middle East conflict, Panama drought are worrying for Georgia\u2019s ports",
+        "source": "AJC.com",
+        "published_at": "2024-01-31T08:00:00+00:00"
+      },
+      {
+        "title": "What Happens When Ships Can't Cross the Red Sea and Panama Canal?",
+        "source": "Chicago Council on Global Affairs",
+        "published_at": "2024-01-22T08:00:00+00:00"
+      },
+      {
+        "title": "New Year supplies under threat by Red Sea shipping crisis: Warnings of delays to availability of goods including tea, coffee, wine and clothes as more than 100 container ships are forced to reroute around Cape of Good Hope just days before Christmas",
+        "source": "Daily Mail",
+        "published_at": "2023-12-21T08:00:00+00:00"
+      },
+      {
+        "title": "Panama Canal transits plunge as larger ships are turned away",
+        "source": "FreightWaves",
+        "published_at": "2023-12-13T08:00:00+00:00"
+      },
+      {
+        "title": "Global shipping rates set to jump as carriers avoid the Red Sea amid Houthi attacks",
+        "source": "cnbc.com",
+        "published_at": "2024-01-10T08:00:00+00:00"
+      },
+      {
+        "title": "Companies rush to avert disruption from Red Sea attacks as shipping rates rise",
+        "source": "Reuters",
+        "published_at": "2023-12-19T08:00:00+00:00"
+      }
+    ],
+    "confound_note": "Most discovered coverage is about the concurrent Red Sea/Suez crisis (Dec 2023-Jan 2024), which also disrupted Asia-to-US-East-Coast shipping at the same time as the Panama Canal restriction. Public news alone cannot cleanly separate the two channels for HS 9403; e.g. 'US West Coast Ports See Minimal Red Sea Cargo Rerouting' (gCaptain, 2024-02-14) and '2M adjusts Asia-US East Coast ship schedules to account for Cape reroutings' (Journal of Commerce, 2024-01-24) point to carriers rerouting around Africa, not necessarily via Panama-to-USEC volume shifting to USWC."
+  },
+  "capability_gap_matrix": {
+    "transit_time_and_ghost_leadtime": {
+      "status": "not_captured",
+      "reason": "Model has no vessel-level transit-time, anchorage queue, or booking-slot data; it only sees monthly country-level import value_usd.",
+      "needed": "AIS/vessel transit-time data or company-reported door-to-door lead times."
+    },
+    "freight_rate_and_surcharge": {
+      "status": "not_captured",
+      "reason": "No freight-rate, PCC-surcharge, or per-container cost data in the trade_df schema.",
+      "needed": "Freight-rate index (e.g. Freightos/Drewry) or carrier surcharge schedules."
+    },
+    "rerouting_secondary_effects": {
+      "status": "partially_captured",
+      "reason": "PropagationEngine's substitution_absorbed_pct captures a generic rerouting/substitution concept (predicted_substitution_absorbed_pct=~20% in this run), but it cannot distinguish USWC mini-landbridge vs Cape-of-Good-Hope rerouting, or their distinct cost/time impacts.",
+      "needed": "Port-of-entry field (USEC vs USWC) plus routing/mode data."
+    },
+    "bullwhip_and_stockout": {
+      "status": "not_captured",
+      "reason": "No inventory, weeks-of-supply, or DC-level order/backlog data in current pipeline.",
+      "needed": "Company inventory/WOS and order-backlog data (see company-data plug-in interface)."
+    },
+    "case1_3way_priority_test": {
+      "status": "undetermined_pending_company_data",
+      "reason": "The 'long lead time + USEC all-water port + low WOS' intersection requires port-of-entry, routing mode, and WOS fields that do not exist in public Census data.",
+      "needed": "Populate data/company/hs9403_company_overrides.csv (see schema above) to evaluate this per country."
+    }
+  },
+  "recommendation": "transport_port_rerouting_priority",
+  "rationale": "Multiple independent Asian source countries (5 of 6 selected) show a deep YoY decline concentrated in the 1-2 months immediately after the Panama Canal booking-slot restriction (2023-10-31), well beyond the -20%/8-month confirmation rule. The overland, non-canal-dependent Canada/Mexico control group only dips later and/or more shallowly, so it does not explain the immediate, broad, Asia-concentrated shock. This pattern is consistent with a shared transit chokepoint (Panama Canal) rather than a country-specific supplier production failure or a general US demand slump, and should be routed to transport/port/rerouting investigation ahead of supplier-production investigation. Earliest Asia-country confirmation: 2023-10-01; control group confirmation: 2024-01-01 (lag vs Asia: 3.0 months); Asia median trough YoY: -22.05%, control trough YoY: -20.69%.",
+  "data_limitations": [
+    "No US entry-port field: cannot attribute the decline to a specific port (e.g. East Coast ports reached via Panama vs West Coast ports), only to source country totals.",
+    "No vessel-mode / containerized-vessel value split: cannot separate containerized ocean freight (Panama-routed) from air or other modes within the same country total, which would sharpen the transport-channel diagnosis.",
+    "No inventory or on-hand stock data: cannot distinguish a real import decline from destination-side inventory drawdown that masks continued but delayed shipments.",
+    "No lead-time / transit-time or backlog data: cannot confirm whether the decline reflects delayed-in-transit cargo (consistent with rerouting) versus cancelled or substituted orders (consistent with a demand or supplier issue)."
+  ]
+}

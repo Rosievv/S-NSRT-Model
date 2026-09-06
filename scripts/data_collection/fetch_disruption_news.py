@@ -162,6 +162,19 @@ EVENT_QUERIES = {
         "impact_terms": ["canal", "drought", "transit", "booking", "shipping"],
         "seed_urls": [{"url": "https://www.reuters.com/business/panama-canal-says-will-slash-booking-slots-due-drought-2023-10-31/", "title": "Panama canal says will slash booking slots due to drought", "source": "Reuters", "published_at": "2023-10-31"}],
     },
+    "panama_canal_drought_2023_furniture": {
+        "start_date": "2023-09-01",
+        "end_date": "2024-06-01",
+        "google_queries": [
+            "Panama Canal drought furniture imports delay",
+            "Panama Canal container shipping delay furniture retailers",
+            "Panama Canal drought Asia container shipping rerouting East Coast ports",
+        ],
+        "gdelt_near": [(20, "Panama Canal", "furniture"), (20, "Panama Canal", "container shipping")],
+        "required_terms": ["panama"],
+        "impact_terms": ["canal", "drought", "container", "shipping", "furniture", "reroute", "port"],
+        "seed_urls": [{"url": "https://www.reuters.com/business/panama-canal-says-will-slash-booking-slots-due-drought-2023-10-31/", "title": "Panama canal says will slash booking slots due to drought", "source": "Reuters", "published_at": "2023-10-31"}],
+    },
     "red_sea_rerouting_2023": {
         "start_date": "2023-11-15",
         "end_date": "2024-01-15",
